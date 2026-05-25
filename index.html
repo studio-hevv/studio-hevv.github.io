@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio HEVV</title>
+  <meta name="description" content="An independent software studio focused on building small, thoughtful digital products." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+      --link: #1a1a1a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    header {
+      margin-bottom: 64px;
+    }
+
+    .wordmark {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 56px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: baseline;
+    }
+
+    footer .copyright { flex: 1 1 100%; }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s;
+    }
+
+    a:hover { border-color: var(--text); }
+
+    footer a {
+      color: var(--muted);
+      border-bottom-color: transparent;
+    }
+
+    footer a:hover { color: var(--text); border-bottom-color: var(--text); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="wordmark">Studio HEVV</div>
+    </header>
+
+    <section>
+      <p>An independent software studio focused on building small, thoughtful digital products.</p>
+      <p>We design and develop software that values clarity, calm user experiences, and long-term usefulness.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>What we build</h2>
+      <p>We build focused software products designed to be calm, useful, and easy to live with over time.</p>
+    </section>
+
+    <footer>
+      <span class="copyright">&copy; 2025 Studio HEVV</span>
+      <a href="mailto:studio.hevv@gmail.com">studio.hevv@gmail.com</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </footer>
+  </main>
+</body>
+</html>

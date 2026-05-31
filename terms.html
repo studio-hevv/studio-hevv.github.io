@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서비스 이용약관 — Studio HEVV</title>
+  <meta name="description" content="Studio HEVV 서비스의 이용약관을 확인하세요." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+      --link: #1a1a1a;
+      --card-bg: #fff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 48px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .back:hover { color: var(--text); border-color: var(--text); }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .page-desc {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card-thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+      background: #0d1b2a;
+    }
+
+    .card-body {
+      padding: 18px 20px 20px;
+    }
+
+    .project-name {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .card-links a {
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s;
+      padding-bottom: 1px;
+    }
+
+    .card-links a:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    .card-links .link-primary {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: baseline;
+    }
+
+    footer .copyright { flex: 1 1 100%; }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    footer a:hover { color: var(--text); border-color: var(--text); }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Studio HEVV</a>
+
+    <h1>서비스 이용약관</h1>
+    <p class="page-desc">Studio HEVV 서비스별 이용약관을 확인할 수 있습니다.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img class="card-thumbnail" src="/assets/thumbnails/space-goldrush.png" alt="우주 황금 모으기 썸네일" />
+        <div class="card-body">
+          <h2 class="project-name">우주 황금 모으기</h2>
+          <p class="project-desc">토스 앱 내 우주 테마 자원 채굴 미니앱. 우주 황금을 모아 토스 포인트로 환전하세요.</p>
+          <div class="card-links">
+            <a class="link-primary" href="https://minion.toss.im/VopskHmr" target="_blank" rel="noopener">앱 열기 ↗</a>
+            <a href="/terms/space-goldrush.html">이용약관</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <span class="copyright">&copy; 2026 Studio HEVV</span>
+      <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </footer>
+  </main>
+</body>
+</html>

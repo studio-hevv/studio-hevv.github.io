@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이용약관 — 우주 황금 모으기</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 40px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .back:hover { color: var(--text); border-color: var(--text); }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .version-select {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-bottom: 40px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .version-select select {
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 18px;
+    }
+
+    .version-select::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231a1a1a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    .version-content { display: none; }
+    .version-content.active { display: block; }
+
+    .version-content h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 32px 0 8px;
+    }
+
+    .version-content h3:first-child { margin-top: 0; }
+
+    .version-content p {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .version-content ol,
+    .version-content ul {
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .version-content li { margin-bottom: 7px; }
+
+    .version-content li > ul {
+      margin-top: 7px;
+      margin-bottom: 0;
+    }
+
+    .version-content li > ul li { margin-bottom: 5px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/terms.html">← 서비스 이용약관</a>
+
+    <h1>우주 황금 모으기<br>서비스 이용약관</h1>
+
+    <div class="version-select">
+      <select id="version-select" aria-label="약관 시행일 선택">
+        <option value="2026-05-24">2026.05.24</option>
+      </select>
+    </div>
+
+    <!-- 2026-05-24 -->
+    <div id="version-2026-05-24" class="version-content">
+      <h3>제1조 (목적)</h3>
+      <p>본 약관은 '우주 황금 모으기'(이하 "서비스")가 제공하는 미니앱 기능을 이용함에 있어, 서비스와 사용자 간의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.</p>
+
+      <h3>제2조 (용어의 정의)</h3>
+      <ol>
+        <li>"서비스"라 함은 사용자가 토스 앱 내에서 이용할 수 있는 '우주 황금 모으기'의 자원 채굴, 광고 시청 보상, 토스 포인트 환전 등 제반 기능을 의미합니다.</li>
+        <li>"앱인토스(Apps in Toss)"라 함은 서비스가 제공되는 기반 플랫폼 환경(㈜비바리퍼블리카의 토스 앱 내 미니앱 플랫폼)을 의미합니다.</li>
+        <li>"우주 황금"이라 함은 서비스 내에서 자동 채굴 또는 광고 시청을 통해 획득할 수 있는 가상 자원으로, 현실의 금 또는 그 밖의 재화와 무관한 서비스 내 수치입니다.</li>
+        <li>"화물칸"이라 함은 채굴된 우주 황금이 임시로 적재되는 서비스 내 공간으로, 최대 용량(cap)에 도달하면 채굴이 정지됩니다.</li>
+        <li>"황금 보관함"이라 함은 광고 시청 후 화물칸에서 전송된 우주 황금이 보관되는 서비스 내 공간으로, 환전의 원천이 됩니다.</li>
+        <li>"토스 포인트"라 함은 ㈜비바리퍼블리카가 운영하는 토스 포인트 시스템에서 사용 가능한 포인트를 의미하며, 환전 시 서비스의 환산 공식에 따라 지급됩니다.</li>
+        <li>"우주 산업 지수(MVSPC)"라 함은 MarketVector™ Global Space Industry Screened Index 의 일간 종가 및 등락률로, 서비스가 정보 제공 목적으로 앱 내에 표시하는 외부 지수입니다. 본 지수는 투자 조언 또는 금융 서비스와 무관하며, 서비스 내 게임 수치(우주 황금, 토스 포인트 등)와 연동되지 않습니다.</li>
+      </ol>
+
+      <h3>제3조 (서비스의 제공)</h3>
+      <ol>
+        <li>서비스는 사용자에게 다음 기능을 제공합니다.
+          <ul>
+            <li><strong>자동 채굴</strong>: 앱을 실행하는 동안 우주 황금이 자동으로 화물칸에 적재됩니다.</li>
+            <li><strong>보관함 저장</strong>: 광고를 시청한 후 화물칸의 우주 황금을 황금 보관함으로 이전합니다.</li>
+            <li><strong>환전</strong>: 황금 보관함의 우주 황금을 토스 포인트로 전환합니다. 환전은 서비스 내 확인 절차(모달) 완료 후 진행되며, 지급 포인트는 서비스의 환산 공식에 따라 결정됩니다. 환전 전 예상 지급량은 별도로 안내되지 않으며, 환전 후 실제 지급된 토스 포인트 수량만 확인할 수 있습니다.</li>
+            <li><strong>빨리 모으기</strong>: 광고를 시청한 후 일정 시간 동안 채굴 속도가 가속됩니다. 가속 배율 및 지속 시간은 서비스 운영 정책에 따라 변경될 수 있습니다.</li>
+            <li><strong>즉시 채굴</strong>: 광고를 시청하면 우주 황금이 화물칸에 즉시 가산됩니다. 1회 시청당 추가량 및 1일 시청 횟수 상한은 서비스 운영 정책에 따라 변경될 수 있습니다.</li>
+            <li><strong>알림 (기능성 푸시)</strong>: 사용자의 사전 동의를 받아 서비스 운영에 필요한 알림(예: 빨리 모으기 종료 안내, 보관함 가득 알림, 매일 우주 산업 지수(MVSPC) 안내)을 토스 앱을 통해 전송합니다. 사용자는 언제든 알림 설정에서 동의를 철회할 수 있습니다.</li>
+          </ul>
+        </li>
+        <li>서비스 내 각 기능의 세부 조건(자동 채굴 속도, 빨리 모으기 가속 배율 및 지속 시간, 즉시 채굴 1회당 추가량 및 1일 시청 횟수 상한, 환산 공식, 화물칸 용량 등 모든 수치성 파라미터)은 서비스 운영 정책에 따라 변경될 수 있으며, 변경 시 서비스 내 공지를 통해 안내합니다. 본 약관은 특정 수치를 보장하지 않습니다.</li>
+      </ol>
+
+      <h3>제4조 (광고 시청)</h3>
+      <ol>
+        <li>서비스 내 일부 기능은 광고 시청을 조건으로 제공됩니다.</li>
+        <li>광고 콘텐츠는 앱인토스 플랫폼이 제공하는 광고 인벤토리를 통해 노출되며, 서비스 운영사는 광고 내용에 대한 책임을 지지 않습니다.</li>
+        <li>광고 인벤토리가 소진된 경우, 해당 기능 이용이 일시적으로 제한될 수 있습니다.</li>
+      </ol>
+
+      <h3>제5조 (토스 포인트 환전)</h3>
+      <ol>
+        <li>환전은 황금 보관함에 우주 황금이 일정량 이상 존재할 때 가능하며, 1회 환전 시 처리되는 양에 상한이 있을 수 있습니다.</li>
+        <li>환전에 사용되고 남은 잔여 우주 황금(환산 기준 미만의 잔량)은 황금 보관함에 반환됩니다.</li>
+        <li>토스 포인트 지급은 앱인토스 플랫폼의 보상형 프로모션 방식을 통해 처리되며, 플랫폼 정책 및 지급 가능 한도에 따라 지급이 지연되거나 제한될 수 있습니다.</li>
+        <li>지급된 토스 포인트의 사용 및 유효기간은 ㈜비바리퍼블리카의 토스 포인트 운영 정책을 따릅니다.</li>
+      </ol>
+
+      <h3>제6조 (사용자 정보 수집 및 이용)</h3>
+      <ol>
+        <li>서비스는 게임 상태 저장 및 토스 포인트 환전 처리를 위해 앱인토스 플랫폼이 제공하는 익명 식별자(Anonymous Key)를 수집·이용합니다. 사용자가 기능성 푸시 알림 수신에 동의한 경우 알림 발송에 필요한 토스 사용자 식별자(tossUserKey)를 추가로 보관합니다. 그 외 토스 로그인 정보는 별도로 수집하지 않습니다.</li>
+        <li>수집된 정보는 서비스 제공 이외의 목적으로 사용되지 않습니다.</li>
+        <li>사용자는 서비스 이용을 중단함으로써 언제든지 정보 수집에 대한 동의를 철회할 수 있습니다. 단, 철회 시 서비스 내 게임 진행 상태 및 황금 보관함이 소실될 수 있습니다.</li>
+      </ol>
+
+      <h3>제6조의2 (기능성 푸시 알림)</h3>
+      <ol>
+        <li>서비스는 사용자가 기능성 푸시 알림 수신에 동의한 경우 다음 알림을 발송할 수 있습니다.
+          <ul>
+            <li><strong>빨리 모으기 종료 알림</strong>: 빨리 모으기가 끝났을 때 1회 발송.</li>
+            <li><strong>보관함 가득 알림</strong>: 화물칸이 가득 차서 채굴이 정지되는 시점에 1회 발송.</li>
+            <li><strong>매일 우주 산업 지수(MVSPC) 알림</strong>: 매일 우주 산업 지수(MVSPC)를 1회 발송.</li>
+          </ul>
+        </li>
+        <li>알림 발송은 앱인토스 플랫폼의 Smart Message 시스템을 통해 처리됩니다.</li>
+        <li>사용자는 서비스 내 알림 설정 메뉴에서 언제든 동의를 철회할 수 있으며, 철회 시 위 모든 알림이 즉시 중지됩니다.</li>
+        <li>본 조에 명시되지 않은 알림은 발송되지 않으며, 새로운 알림이 추가될 경우 사전 안내 후 신규 동의를 받습니다.</li>
+      </ol>
+
+      <h3>제7조 (사용자의 의무)</h3>
+      <p>사용자는 다음 행위를 하여서는 안 됩니다.</p>
+      <ol>
+        <li>비정상적인 방법(버그 악용, 자동화 프로그램 등)을 통한 우주 황금 또는 토스 포인트의 부정 취득</li>
+        <li>서비스 시스템에 대한 역공학, 무단 접근, 해킹 또는 장애 유발</li>
+        <li>타인의 서비스 이용을 방해하거나 서비스 운영을 의도적으로 저해하는 행위</li>
+      </ol>
+      <p>위 금지 행위 적발 시 사전 통보 없이 서비스 이용이 제한될 수 있으며, 취득한 토스 포인트는 회수될 수 있습니다.</p>
+
+      <h3>제8조 (가상 자원의 성격)</h3>
+      <ol>
+        <li>서비스 내 우주 황금, 화물칸, 황금 보관함은 서비스 운영을 위한 가상의 수치이며, 현실 세계의 어떠한 재화, 유가증권, 또는 법적 권리와도 무관합니다.</li>
+        <li>서비스가 종료되거나 사용자의 이용이 제한되는 경우, 미환전 상태의 우주 황금 및 황금 보관함은 소멸되며 이에 대해 별도의 보상을 제공하지 않습니다.</li>
+      </ol>
+
+      <h3>제9조 (면책 조항)</h3>
+      <ol>
+        <li>서비스는 무료 엔터테인먼트 목적의 미니앱이며, 토스 포인트 환전 결과는 서비스 내 환산 공식 및 플랫폼 운영 정책에 따릅니다. 특정 환전 결과나 포인트 수익을 보장하지 않습니다.</li>
+        <li>토스 앱 플랫폼의 장애·점검, 광고 인벤토리 소진, 네트워크 오류 등 서비스 운영사의 통제 범위를 벗어난 사유로 인한 서비스 중단 또는 게임 데이터 손실에 대해 책임을 지지 않습니다.</li>
+        <li>서비스는 채굴 속도, 환산율, 광고 시청 조건 등 서비스 운영 조건을 사전 고지 후 변경할 수 있으며, 변경으로 인한 기대 이익 손실에 대해 책임을 지지 않습니다.</li>
+      </ol>
+
+      <h3>제10조 (기타)</h3>
+      <p>본 약관에 명시되지 않은 사항에 대해서는 관련 법령, ㈜비바리퍼블리카의 토스 이용약관 및 앱인토스 운영 정책에 따릅니다.</p>
+    </div>
+    <!-- /2026-05-24 -->
+
+    <footer>
+      &copy; 2026 Studio HEVV
+    </footer>
+  </main>
+
+  <script>
+    var select = document.getElementById('version-select');
+
+    function showVersion(date) {
+      document.querySelectorAll('.version-content').forEach(function(el) {
+        el.classList.toggle('active', el.id === 'version-' + date);
+      });
+    }
+
+    showVersion(select.value);
+
+    select.addEventListener('change', function() {
+      showVersion(this.value);
+    });
+  </script>
+</body>
+</html>

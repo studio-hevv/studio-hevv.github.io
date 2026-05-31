@@ -68,6 +68,70 @@
       margin-bottom: 56px;
     }
 
+    .carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .carousel::-webkit-scrollbar { display: none; }
+
+    .project-card {
+      flex: 0 0 280px;
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card-thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+      background: #0d1b2a;
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+    }
+
+    .project-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .card-links a {
+      font-size: 12px;
+      color: var(--muted);
+      border-bottom-color: var(--border);
+    }
+
+    .card-links a.primary {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding-top: 32px;
@@ -116,11 +180,28 @@
       <p>We build focused software products designed to be calm, useful, and easy to live with over time.</p>
     </section>
 
+    <section>
+      <div class="carousel">
+        <div class="project-card">
+          <img class="card-thumbnail" src="/assets/thumbnails/space-goldrush.png" alt="우주 황금 모으기 썸네일" />
+          <div class="card-body">
+            <h3 class="project-name">우주 황금 모으기</h3>
+            <p class="project-desc">토스 앱 내 우주 테마 자원 채굴 미니앱. 우주 황금을 모아 토스 포인트로 환전하세요.</p>
+            <div class="card-links">
+              <a class="primary" href="https://minion.toss.im/VopskHmr" target="_blank" rel="noopener">앱 열기 ↗</a>
+              <a href="/terms/space-goldrush.html">이용약관</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <span class="copyright">&copy; 2026 Studio HEVV</span>
       <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">이용약관</a>
     </footer>
   </main>
 </body>

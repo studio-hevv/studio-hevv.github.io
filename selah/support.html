@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지원 — 셀라</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 48px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .back:hover { color: var(--text); border-color: var(--text); }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .app-name {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .app-sub {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 36px 0 12px;
+    }
+
+    p { margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    a:hover { border-color: var(--text); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Studio HEVV</a>
+
+    <div class="app-header">
+      <div>
+        <div class="app-name">셀라 (Selah)</div>
+        <div class="app-sub">예배 노트</div>
+      </div>
+    </div>
+
+    <p>셀라를 사용하시면서 문의 사항이나 버그, 개선 제안이 있으시면 편하게 연락해 주세요.</p>
+
+    <h2>문의하기</h2>
+    <p>이메일: <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></p>
+    <p>최대한 빠르게 답변 드리겠습니다.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <p><strong>예배 노트 데이터가 사라졌어요.</strong><br>
+    셀라는 iCloud에 데이터를 저장해요. 설정 → Apple ID → iCloud에서 셀라가 활성화되어 있는지 확인해 주세요.</p>
+
+    <p><strong>구독을 복원하고 싶어요.</strong><br>
+    앱 내 설정 → 구독 → 구매 내역 복원을 탭해 주세요.</p>
+
+    <p><strong>위젯이 업데이트되지 않아요.</strong><br>
+    홈 화면을 길게 눌러 위젯을 제거한 후 다시 추가해 보세요.</p>
+
+    <footer>
+      &copy; 2026 Studio HEVV
+    </footer>
+  </main>
+</body>
+</html>

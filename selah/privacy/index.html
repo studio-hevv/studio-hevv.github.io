@@ -117,12 +117,11 @@
     <a class="back" href="/">← Studio HEVV</a>
 
     <h1>개인정보 처리방침</h1>
-    <p class="updated">최종 업데이트: 2026년 6월 13일</p>
+    <p class="updated">최종 업데이트: 2026년 6월 17일</p>
 
-    <p>본 개인정보 처리방침은 셀라(Selah) 예배 노트 앱(이하 "앱")을 사용하실 때 어떤 정보가 처리되는지 안내드립니다. 저희는 사용자의 프라이버시를 최우선으로 고려하며, 외부 서버에 데이터를 전송하거나 제3자와 공유하지 않습니다.</p>
+    <p>본 개인정보 처리방침은 셀라(Selah) 예배 노트 앱(이하 "앱")을 사용하실 때 어떤 정보가 처리되는지 안내드립니다. 저희는 사용자의 프라이버시를 최우선으로 고려합니다.</p>
 
     <h2>1. 수집·처리하는 정보</h2>
-    <p>앱은 사용자가 직접 입력한 정보만 처리하며, 모든 데이터는 사용자 기기와 사용자 본인의 iCloud 계정에만 저장됩니다.</p>
 
     <h3>사용자가 직접 입력하는 정보</h3>
     <ul>
@@ -137,14 +136,22 @@
       <li>앱이 백그라운드로 전환된 시간 및 횟수 (집중도 통계용)</li>
     </ul>
 
+    <h3>서비스 개선을 위해 수집되는 정보 (제3자 서비스 경유)</h3>
+    <ul>
+      <li>앱 사용 이벤트 (화면 조회, 기능 사용 횟수 등) — Firebase Analytics</li>
+      <li>구독 상태 및 결제 이력 — RevenueCat</li>
+      <li>광고 성과 측정을 위한 기기 식별자 (ATT 허용 시에만) — Meta · Google</li>
+    </ul>
+
     <h2>2. 정보의 저장 위치</h2>
     <table>
       <tr><th>항목</th><th>저장 위치</th></tr>
       <tr><td>예배 노트, 다짐 등 모든 콘텐츠</td><td>기기 로컬 + 사용자의 iCloud 계정</td></tr>
       <tr><td>위젯/Live Activity 표시용 데이터</td><td>App Group (기기 로컬)</td></tr>
       <tr><td>구독 정보</td><td>Apple StoreKit (Apple 서버)</td></tr>
+      <tr><td>앱 사용 이벤트</td><td>Firebase (Google 서버, 익명화)</td></tr>
+      <tr><td>구독·결제 분석</td><td>RevenueCat 서버</td></tr>
     </table>
-    <p>저희는 별도의 서버를 운영하지 않으며, 사용자 데이터를 수집하거나 전송받지 않습니다.</p>
 
     <h2>3. 정보의 사용 목적</h2>
     <ul>
@@ -152,42 +159,87 @@
       <li>다짐 실천 진행률 추적 및 위젯 표시</li>
       <li>예배 집중도 통계 계산 및 표시</li>
       <li>Live Activity / Dynamic Island를 통한 진행 상태 표시</li>
-      <li>구독 상태 확인 (Apple StoreKit 통해)</li>
+      <li>구독 상태 확인 (Apple StoreKit · RevenueCat 통해)</li>
+      <li>앱 기능 개선을 위한 사용 패턴 분석 (Firebase Analytics)</li>
+      <li>광고 효과 측정 (ATT 허용 시에만, Meta · Google)</li>
     </ul>
 
-    <h2>4. 정보의 제3자 제공</h2>
-    <p>저희는 사용자의 어떠한 정보도 제3자에게 제공하지 않습니다. 분석 도구(Google Analytics, Firebase 등)나 광고 SDK도 사용하지 않습니다.</p>
-    <p>iCloud 동기화는 Apple의 서비스이며, 데이터는 사용자 본인의 iCloud 계정에만 저장됩니다. Apple의 개인정보 처리방침은 <a href="https://www.apple.com/kr/legal/privacy/" target="_blank">apple.com/kr/legal/privacy</a>를 참고해 주세요.</p>
+    <h2>4. 제3자 서비스</h2>
+    <p>앱은 서비스 운영을 위해 아래 제3자 서비스를 사용합니다. 각 서비스는 자체 개인정보 처리방침을 보유합니다.</p>
+    <table>
+      <tr><th>서비스</th><th>목적</th><th>개인정보 처리방침</th></tr>
+      <tr>
+        <td>Apple iCloud</td>
+        <td>노트 동기화</td>
+        <td><a href="https://www.apple.com/kr/legal/privacy/" target="_blank">apple.com</a></td>
+      </tr>
+      <tr>
+        <td>Apple StoreKit</td>
+        <td>구독 결제</td>
+        <td><a href="https://www.apple.com/kr/legal/privacy/" target="_blank">apple.com</a></td>
+      </tr>
+      <tr>
+        <td>RevenueCat</td>
+        <td>구독 분석</td>
+        <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Firebase Analytics (Google)</td>
+        <td>앱 사용 분석</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td>Meta (Facebook)</td>
+        <td>광고 성과 측정 (ATT 허용 시)</td>
+        <td><a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></td>
+      </tr>
+      <tr>
+        <td>Google Ads</td>
+        <td>광고 성과 측정 (ATT 허용 시)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+      </tr>
+    </table>
 
-    <h2>5. 정보의 보관 기간 및 파기</h2>
+    <h2>5. 광고 추적 (ATT)</h2>
+    <p>앱은 Apple의 앱 추적 투명성(ATT) 정책에 따라, 광고 성과 측정을 위한 기기 식별자(IDFA) 접근 전 사용자의 명시적 동의를 구합니다.</p>
     <ul>
-      <li>모든 데이터는 사용자가 직접 삭제하거나 앱을 삭제할 때까지 보관됩니다.</li>
+      <li><strong>허용 시</strong>: IDFA를 통해 어떤 광고를 통해 앱을 설치했는지 측정합니다.</li>
+      <li><strong>거부 시</strong>: 광고 추적 없이 앱의 모든 기능을 동일하게 이용할 수 있습니다.</li>
+    </ul>
+    <p>추적 설정은 iOS 설정 → 개인정보 보호 및 보안 → 추적에서 언제든지 변경할 수 있습니다.</p>
+
+    <h2>6. 정보의 보관 기간 및 파기</h2>
+    <ul>
+      <li>사용자가 직접 입력한 데이터는 삭제하거나 앱을 삭제할 때까지 보관됩니다.</li>
       <li>개별 노트·실천 항목은 앱 내에서 언제든지 삭제 가능합니다.</li>
-      <li>앱을 삭제하면 기기 내 데이터가 즉시 삭제됩니다. iCloud에 저장된 데이터는 iOS 설정 → Apple ID → iCloud → 저장공간 관리에서 삭제할 수 있습니다.</li>
+      <li>앱을 삭제하면 기기 내 데이터가 즉시 삭제됩니다. iCloud 데이터는 iOS 설정 → Apple ID → iCloud → 저장공간 관리에서 삭제할 수 있습니다.</li>
+      <li>Firebase · RevenueCat 등 제3자 서비스에 전송된 데이터는 각 서비스의 보관 정책을 따릅니다.</li>
     </ul>
 
-    <h2>6. 사용자의 권리</h2>
+    <h2>7. 사용자의 권리</h2>
     <ul>
       <li>자신의 데이터 열람 (앱 내에서 직접 확인)</li>
       <li>데이터 수정 및 삭제 (앱 내 편집/삭제 기능)</li>
       <li>앱 삭제를 통한 모든 로컬 데이터 일괄 삭제</li>
       <li>iCloud 동기화 비활성화 (iOS 설정에서 가능)</li>
+      <li>광고 추적 거부 (iOS 설정 → 개인정보 보호 및 보안 → 추적)</li>
     </ul>
 
-    <h2>7. 알림 및 권한</h2>
+    <h2>8. 앱 권한</h2>
     <ul>
-      <li>알림 (Notifications): 주일 예배 리마인더 (선택)</li>
+      <li>알림 (Notifications): 주일 예배 리마인더 및 매주 수요일 말씀 되새김 알림 (선택)</li>
       <li>iCloud: 노트 동기화 (선택, iOS 설정에서 제어)</li>
       <li>Live Activities: Dynamic Island/잠금화면 표시 (선택)</li>
+      <li>앱 추적 (ATT): 광고 성과 측정 (선택, 거부 시에도 앱 전체 이용 가능)</li>
     </ul>
 
-    <h2>8. 14세 미만 아동의 개인정보</h2>
+    <h2>9. 14세 미만 아동의 개인정보</h2>
     <p>본 앱은 14세 미만 아동을 주 대상으로 하지 않으며, 의도적으로 아동의 개인정보를 수집하지 않습니다.</p>
 
-    <h2>9. 정책 변경</h2>
+    <h2>10. 정책 변경</h2>
     <p>본 개인정보 처리방침이 변경될 경우 앱 내 안내 또는 본 페이지를 통해 사전 고지합니다.</p>
 
-    <h2>10. 문의</h2>
+    <h2>11. 문의</h2>
     <p>개인정보 처리에 관한 문의사항이 있으시면 아래로 연락해 주세요.<br>
     이메일: <a href="mailto:studio.hevv@gmail.com">studio.hevv@gmail.com</a></p>
 

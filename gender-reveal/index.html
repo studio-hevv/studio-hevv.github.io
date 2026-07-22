@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>온라인 젠더리빌 — 성별 공개 초대장 만들기 | 젠더 리빌</title>
+  <meta name="description" content="딸일까 아들일까? 가족·친구에게 링크로 보내는 온라인 젠더리빌 초대장. 손님들이 투표하고 두근두근 공개 애니메이션으로 성별을 확인합니다. 토스 앱에서 바로 만들기." />
+  <link rel="canonical" href="https://studio-hevv.com/gender-reveal/" />
+  <meta name="keywords" content="온라인 젠더리빌, 젠더리빌 초대장, 성별 공개 이벤트, 아들딸 맞추기, 태아 성별 공개, 젠더 리빌 파티" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio HEVV" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="온라인 젠더리빌 — 성별 공개 초대장 만들기" />
+  <meta property="og:description" content="가족·친구에게 링크로 보내는 젠더리빌 초대장. 투표하고 공개 애니메이션으로 딸·아들을 확인하세요." />
+  <meta property="og:url" content="https://studio-hevv.com/gender-reveal/" />
+  <meta property="og:image" content="https://studio-hevv.com/assets/og/gender-reveal.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="온라인 젠더리빌 — 성별 공개 초대장" />
+  <meta name="twitter:description" content="링크로 보내는 젠더리빌 초대장. 투표하고 공개 애니메이션으로 확인." />
+  <meta name="twitter:image" content="https://studio-hevv.com/assets/og/gender-reveal.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "온라인 젠더 리빌",
+    "url": "https://studio-hevv.com/gender-reveal/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "토스 앱 (Apps in Toss)",
+    "image": "https://studio-hevv.com/assets/og/gender-reveal.png",
+    "description": "가족·친구에게 링크로 보내는 성별 공개 초대장. 손님이 투표하고 공개 애니메이션으로 딸·아들을 확인하는 미니앱.",
+    "publisher": { "@type": "Organization", "name": "Studio HEVV", "url": "https://studio-hevv.com/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "어떻게 공유하나요?", "acceptedAnswer": { "@type": "Answer", "text": "초대장을 만들면 링크가 생성됩니다. 가족 카톡방이나 SNS에 링크를 공유하면 손님들이 바로 투표할 수 있습니다." } },
+      { "@type": "Question", "name": "초음파 사진을 넣을 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "초대장에 초음파 사진을 첨부할 수 있습니다. 사진은 정해진 보관 기간이 지나면 자동으로 삭제됩니다." } },
+      { "@type": "Question", "name": "비용은 얼마인가요?", "acceptedAnswer": { "@type": "Answer", "text": "부모가 초대장을 한 번 결제해 발행하며, 손님은 무료로 투표하고 응원 메시지를 남길 수 있습니다." } },
+      { "@type": "Question", "name": "데이터는 얼마나 보관되나요?", "acceptedAnswer": { "@type": "Answer", "text": "발행한 초대장과 첨부 사진은 일정 기간 후 자동으로 폐기됩니다. 자세한 내용은 개인정보 처리방침에서 확인할 수 있습니다." } }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#f8f8f6; --text:#1a1a1a; --muted:#888; --border:#e0e0dc; --link:#1a1a1a; --accent:#f2709c; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; padding:0 24px; }
+    main { max-width:600px; margin:0 auto; padding:56px 0 60px; }
+    .wordmark { font-size:15px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:none; display:inline-block; margin-bottom:48px; }
+    h1 { font-size:30px; line-height:1.32; font-weight:700; letter-spacing:-.02em; margin-bottom:16px; }
+    .lead { font-size:18px; color:#555; margin-bottom:32px; }
+    .cta-wrap { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; font-size:16px; padding:14px 26px; border-radius:10px; border-bottom:none; }
+    .btn:hover { border-bottom:none; opacity:.92; }
+    .qr-wrap { text-align:center; }
+    .qr-wrap img { width:104px; height:104px; background:#fff; border:1px solid var(--border); border-radius:10px; padding:8px; display:block; }
+    .qr-hint { font-size:12px; color:var(--muted); margin-top:6px; }
+    @media (max-width:520px){ .qr-wrap { display:none; } }
+    section { margin:48px 0; }
+    h2 { font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+    .steps { list-style:none; counter-reset:s; }
+    .steps li { counter-increment:s; position:relative; padding-left:40px; margin-bottom:18px; }
+    .steps li::before { content:counter(s); position:absolute; left:0; top:1px; width:26px; height:26px; background:var(--text); color:#fff; border-radius:50%; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center; }
+    .step-t { font-weight:600; }
+    .faq { margin-bottom:20px; }
+    .faq h3 { font-size:16px; font-weight:600; margin-bottom:5px; }
+    .faq p { color:#555; margin:0; }
+    footer { border-top:1px solid var(--border); padding-top:32px; margin-top:56px; font-size:14px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; }
+    footer .copyright { flex:1 1 100%; }
+    a { color:var(--link); text-decoration:none; border-bottom:1px solid var(--border); transition:border-color .15s; }
+    a:hover { border-color:var(--text); }
+    footer a { color:var(--muted); border-bottom-color:transparent; }
+    footer a:hover { color:var(--text); border-bottom-color:var(--text); }
+  </style>
+  <script>
+  (function(){
+    var ID = "G-XXXXXXXXXX"; // TODO: studio-hevv GA4 측정 ID로 교체하면 자동 활성화
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    if (ID && ID.indexOf("XXXX") === -1) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+      document.head.appendChild(s);
+      gtag('js', new Date()); gtag('config', ID);
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('[data-app-open]').forEach(function(el){
+        el.addEventListener('click', function(){
+          gtag('event', 'app_open_click', {
+            product: el.getAttribute('data-product'),
+            placement: el.getAttribute('data-app-open'),
+            destination: el.getAttribute('href')
+          });
+        });
+      });
+    });
+  })();
+  </script>
+</head>
+<body>
+  <main>
+    <a class="wordmark" href="/">Studio HEVV</a>
+
+    <h1>온라인 젠더리빌<br />— 딸일까, 아들일까?</h1>
+    <p class="lead"><strong>링크 하나로</strong> 여는 성별 공개 이벤트. 가족·친구가 딸·아들을 투표하고, 공개 애니메이션으로 결과를 함께 확인해요.</p>
+
+    <div class="cta-wrap">
+      <a class="btn" href="https://minion.toss.im/L0puUEuy" target="_blank" rel="noopener" data-app-open="hero-cta" data-product="gender-reveal">토스에서 만들기 ↗</a>
+      <div class="qr-wrap">
+        <a href="https://minion.toss.im/L0puUEuy" target="_blank" rel="noopener" data-app-open="qr" data-product="gender-reveal" style="border:none;">
+          <img src="/assets/qr/gender-reveal.svg" alt="온라인 젠더 리빌 토스 앱 QR 코드" />
+        </a>
+        <div class="qr-hint">폰으로 스캔</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>어떤 서비스인가요</h2>
+      <p>멀리 있는 가족과도 <strong>온라인에서 함께 여는 성별 공개 이벤트</strong>예요. 초대장을 만들어 링크를 보내면 손님들이 딸·아들을 투표하고 애니메이션으로 결과를 확인합니다. 투표와 응원 메시지는 대시보드에서 한눈에 모아봐요.</p>
+    </section>
+
+    <section>
+      <h2>사용 방법</h2>
+      <ol class="steps">
+        <li><span class="step-t">초대장 만들기</span><br />토스 앱에서 테마를 고르고 초음파 사진을 더해 초대장을 발행합니다.</li>
+        <li><span class="step-t">링크 공유</span><br />가족 카톡방·SNS에 링크를 보내면 손님들이 바로 투표합니다.</li>
+        <li><span class="step-t">공개 &amp; 반응 모아보기</span><br />공개 애니메이션으로 성별을 확인하고, 투표와 응원 메시지를 대시보드에서 봅니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>자주 묻는 질문</h2>
+      <div class="faq"><h3>어떻게 공유하나요?</h3><p>초대장을 만들면 링크가 생성됩니다. 가족 카톡방이나 SNS에 공유하면 됩니다.</p></div>
+      <div class="faq"><h3>초음파 사진을 넣을 수 있나요?</h3><p>초대장에 초음파 사진을 첨부할 수 있고, 보관 기간이 지나면 자동 삭제됩니다.</p></div>
+      <div class="faq"><h3>비용은 얼마인가요?</h3><p>부모가 초대장을 한 번 결제해 발행하며, 손님은 무료로 투표·응원합니다.</p></div>
+      <div class="faq"><h3>데이터는 얼마나 보관되나요?</h3><p>초대장과 사진은 일정 기간 후 자동 폐기됩니다.</p></div>
+    </section>
+
+    <footer>
+      <span class="copyright">&copy; 2026 Studio HEVV</span>
+      <a href="/">홈</a>
+      <a href="/gender-reveal/privacy.html">개인정보 처리방침</a>
+      <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio HEVV</title>
-  <meta name="description" content="An independent software studio focused on building small, thoughtful digital products." />
+  <title>Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오</title>
+  <meta name="description" content="Studio HEVV(스튜디오 헤브)는 인스타 DM 분석, 온라인 젠더리빌, 예배 노트 앱 셀라 등 작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다." />
+  <link rel="canonical" href="https://studio-hevv.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio HEVV" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오" />
+  <meta property="og:description" content="인스타 DM 분석, 온라인 젠더리빌, 예배 노트 앱 셀라를 만드는 독립 소프트웨어 스튜디오." />
+  <meta property="og:url" content="https://studio-hevv.com/" />
+  <meta property="og:image" content="https://studio-hevv.com/assets/og/selah.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Studio HEVV",
+    "alternateName": "스튜디오 헤브",
+    "url": "https://studio-hevv.com/",
+    "email": "contact@studio-hevv.com",
+    "description": "작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오.",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "인스타 DM 분석하기", "url": "https://studio-hevv.com/insta-dm/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "온라인 젠더 리빌", "url": "https://studio-hevv.com/gender-reveal/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "셀라 (Selah)", "url": "https://studio-hevv.com/selah/" } }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -173,6 +198,19 @@
 
     footer a:hover { color: var(--text); border-bottom-color: var(--text); }
   </style>
+  <script>
+  (function(){
+    var ID = "G-XXXXXXXXXX"; // TODO: studio-hevv GA4 측정 ID로 교체하면 자동 활성화
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    if (ID && ID.indexOf("XXXX") === -1) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+      document.head.appendChild(s);
+      gtag('js', new Date()); gtag('config', ID);
+    }
+  })();
+  </script>
 </head>
 <body>
   <main>
@@ -195,6 +233,18 @@
     <section>
       <div class="carousel">
         <div class="project-card">
+          <div class="card-thumbnail-selah">✳</div>
+          <div class="card-body">
+            <h3 class="project-name">셀라 (Selah)</h3>
+            <p class="project-desc">예배 말씀 노트 앱. 말씀을 듣고, 기록하고, 삶으로 살아내도록.</p>
+            <div class="card-links">
+              <a class="primary" href="/selah/">자세히</a>
+              <a href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" target="_blank" rel="noopener">App Store ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
           <img class="card-thumbnail" src="/assets/thumbnails/space-goldrush.png" alt="우주 황금 모으기 썸네일" />
           <div class="card-body">
             <h3 class="project-name">우주 황금 모으기</h3>
@@ -207,14 +257,25 @@
         </div>
 
         <div class="project-card">
-          <div class="card-thumbnail-selah">✳</div>
+          <img class="card-thumbnail" src="/assets/og/insta-dm.png" alt="인스타 DM 분석하기 썸네일" />
           <div class="card-body">
-            <h3 class="project-name">셀라 (Selah)</h3>
-            <p class="project-desc">예배 말씀 노트 앱. 말씀을 듣고, 기록하고, 삶으로 살아내도록.</p>
+            <h3 class="project-name">인스타 DM 분석하기</h3>
+            <p class="project-desc">인스타 DM 데이터로 노력·애정을 진단. 우리 둘 중 누가 더 진심일까요?</p>
             <div class="card-links">
-              <a class="primary" href="https://apps.apple.com/kr/app/selah/id6745850124" target="_blank" rel="noopener">App Store ↗</a>
-              <a href="/selah/support.html">지원</a>
-              <a href="/selah/privacy.html">개인정보</a>
+              <a class="primary" href="/insta-dm/">자세히</a>
+              <a href="https://minion.toss.im/v8My6ttg" target="_blank" rel="noopener">앱 열기 ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="card-thumbnail" src="/assets/og/gender-reveal.png" alt="온라인 젠더 리빌 썸네일" />
+          <div class="card-body">
+            <h3 class="project-name">온라인 젠더 리빌</h3>
+            <p class="project-desc">링크로 보내는 성별 공개 초대장. 투표하고 공개 애니메이션으로 딸·아들을 확인하세요.</p>
+            <div class="card-links">
+              <a class="primary" href="/gender-reveal/">자세히</a>
+              <a href="https://minion.toss.im/L0puUEuy" target="_blank" rel="noopener">앱 열기 ↗</a>
             </div>
           </div>
         </div>

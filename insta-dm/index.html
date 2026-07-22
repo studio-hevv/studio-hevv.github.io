@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인스타 DM 분석 — 우리 둘 중 누가 더 진심일까? | 인스타 DM 분석하기</title>
+  <meta name="description" content="인스타그램 DM 데이터를 올리면 노력·애정 두 축으로 관계를 진단합니다. 썸·연인·친구 사이에서 누가 더 좋아하는지 무료로 확인하세요. 토스 앱에서 바로 실행." />
+  <link rel="canonical" href="https://studio-hevv.com/insta-dm/" />
+  <meta name="keywords" content="인스타 DM 분석, 인스타 관계 분석, 누가 더 좋아하는지, 썸 판별, DM 분석하기, 인스타 대화 분석" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio HEVV" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="인스타 DM 분석 — 우리 둘 중 누가 더 진심일까?" />
+  <meta property="og:description" content="인스타그램 DM 데이터로 노력·애정을 정량 진단. 누가 더 좋아하는지 무료로 확인하세요." />
+  <meta property="og:url" content="https://studio-hevv.com/insta-dm/" />
+  <meta property="og:image" content="https://studio-hevv.com/assets/og/insta-dm.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="인스타 DM 분석 — 누가 더 진심일까?" />
+  <meta name="twitter:description" content="인스타그램 DM 데이터로 관계를 정량 진단. 무료로 확인." />
+  <meta name="twitter:image" content="https://studio-hevv.com/assets/og/insta-dm.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "인스타 DM 분석하기",
+    "url": "https://studio-hevv.com/insta-dm/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "토스 앱 (Apps in Toss)",
+    "image": "https://studio-hevv.com/assets/og/insta-dm.png",
+    "description": "인스타그램 DM 데이터를 업로드하면 노력·애정 두 축으로 관계를 정량 진단하는 미니앱.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "publisher": { "@type": "Organization", "name": "Studio HEVV", "url": "https://studio-hevv.com/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "내 DM 데이터가 안전한가요?", "acceptedAnswer": { "@type": "Answer", "text": "분석에 필요한 값만 계산에 사용하며, 원본 대화 내용을 그대로 저장하거나 공유하지 않습니다. 자세한 내용은 개인정보 처리방침에서 확인할 수 있습니다." } },
+      { "@type": "Question", "name": "무료인가요?", "acceptedAnswer": { "@type": "Answer", "text": "관계 진단 요약 결과는 무료로 확인할 수 있습니다. 점수 근거까지 담은 상세 리포트는 유료로 잠금 해제합니다." } },
+      { "@type": "Question", "name": "어떤 데이터가 필요한가요?", "acceptedAnswer": { "@type": "Answer", "text": "인스타그램 '내 정보 다운로드' 기능으로 받은 메시지(DM) 데이터 파일이 필요합니다. 앱 안내에 따라 내려받아 업로드하면 됩니다." } },
+      { "@type": "Question", "name": "어떻게 실행하나요?", "acceptedAnswer": { "@type": "Answer", "text": "토스 앱에서 '인스타 DM 분석하기'를 열면 별도 설치 없이 바로 사용할 수 있습니다." } }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#f8f8f6; --text:#1a1a1a; --muted:#888; --border:#e0e0dc; --link:#1a1a1a; --accent:#3182F6; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; padding:0 24px; }
+    main { max-width:600px; margin:0 auto; padding:56px 0 60px; }
+    .wordmark { font-size:15px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:none; display:inline-block; margin-bottom:48px; }
+    h1 { font-size:30px; line-height:1.32; font-weight:700; letter-spacing:-.02em; margin-bottom:16px; }
+    .lead { font-size:18px; color:#555; margin-bottom:32px; }
+    .cta-wrap { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; font-size:16px; padding:14px 26px; border-radius:10px; border-bottom:none; }
+    .btn:hover { border-bottom:none; opacity:.92; }
+    .qr-wrap { text-align:center; }
+    .qr-wrap img { width:104px; height:104px; background:#fff; border:1px solid var(--border); border-radius:10px; padding:8px; display:block; }
+    .qr-hint { font-size:12px; color:var(--muted); margin-top:6px; }
+    @media (max-width:520px){ .qr-wrap { display:none; } }
+    section { margin:48px 0; }
+    h2 { font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+    .steps { list-style:none; counter-reset:s; }
+    .steps li { counter-increment:s; position:relative; padding-left:40px; margin-bottom:18px; }
+    .steps li::before { content:counter(s); position:absolute; left:0; top:1px; width:26px; height:26px; background:var(--text); color:#fff; border-radius:50%; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center; }
+    .step-t { font-weight:600; }
+    .faq { margin-bottom:20px; }
+    .faq h3 { font-size:16px; font-weight:600; margin-bottom:5px; }
+    .faq p { color:#555; margin:0; }
+    footer { border-top:1px solid var(--border); padding-top:32px; margin-top:56px; font-size:14px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; }
+    footer .copyright { flex:1 1 100%; }
+    a { color:var(--link); text-decoration:none; border-bottom:1px solid var(--border); transition:border-color .15s; }
+    a:hover { border-color:var(--text); }
+    footer a { color:var(--muted); border-bottom-color:transparent; }
+    footer a:hover { color:var(--text); border-bottom-color:var(--text); }
+  </style>
+  <script>
+  (function(){
+    var ID = "G-XXXXXXXXXX"; // TODO: studio-hevv GA4 측정 ID로 교체하면 자동 활성화
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    if (ID && ID.indexOf("XXXX") === -1) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+      document.head.appendChild(s);
+      gtag('js', new Date()); gtag('config', ID);
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('[data-app-open]').forEach(function(el){
+        el.addEventListener('click', function(){
+          gtag('event', 'app_open_click', {
+            product: el.getAttribute('data-product'),
+            placement: el.getAttribute('data-app-open'),
+            destination: el.getAttribute('href')
+          });
+        });
+      });
+    });
+  })();
+  </script>
+</head>
+<body>
+  <main>
+    <a class="wordmark" href="/">Studio HEVV</a>
+
+    <h1>인스타 DM 분석<br />— 우리 둘 중 누가 더 진심일까?</h1>
+    <p class="lead">인스타 DM을 올리면 <strong>노력·애정 두 점수</strong>로 알려드려요. 우리 둘 중 누가 더 좋아하는지, 데이터로 확인하세요.</p>
+
+    <div class="cta-wrap">
+      <a class="btn" href="https://minion.toss.im/v8My6ttg" target="_blank" rel="noopener" data-app-open="hero-cta" data-product="insta-dm">토스에서 분석하기 ↗</a>
+      <div class="qr-wrap">
+        <a href="https://minion.toss.im/v8My6ttg" target="_blank" rel="noopener" data-app-open="qr" data-product="insta-dm" style="border:none;">
+          <img src="/assets/qr/insta-dm.svg" alt="인스타 DM 분석하기 토스 앱 QR 코드" />
+        </a>
+        <div class="qr-hint">폰으로 스캔</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>어떤 앱인가요</h2>
+      <p>인스타그램에서 받은 DM 데이터를 올리면, 누가 먼저 말을 걸고 누가 더 반응하는지 분석해 <strong>노력·애정 두 점수</strong>로 보여줍니다. 관계 모드(썸·연인 / 친구·지인)를 고르면 상황에 맞게 해석해줘요.</p>
+    </section>
+
+    <section>
+      <h2>사용 방법</h2>
+      <ol class="steps">
+        <li><span class="step-t">인스타 DM 데이터 내려받기</span><br />인스타그램 '내 정보 다운로드'에서 메시지 데이터를 요청해 받습니다.</li>
+        <li><span class="step-t">파일 업로드</span><br />토스 앱에서 인스타 DM 분석하기를 열고 받은 파일을 올립니다.</li>
+        <li><span class="step-t">관계 진단 결과 확인</span><br />상대를 고르고 관계 모드를 선택하면 노력·애정 점수와 해석이 나옵니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>자주 묻는 질문</h2>
+      <div class="faq"><h3>내 DM 데이터가 안전한가요?</h3><p>분석에 필요한 값만 계산에 쓰며, 원본 대화 내용을 그대로 저장·공유하지 않습니다.</p></div>
+      <div class="faq"><h3>무료인가요?</h3><p>요약 결과는 무료로 볼 수 있고, 점수 근거까지 담은 상세 리포트는 유료로 잠금 해제합니다.</p></div>
+      <div class="faq"><h3>어떤 데이터가 필요한가요?</h3><p>인스타그램 '내 정보 다운로드'로 받은 메시지(DM) 데이터 파일이 필요합니다.</p></div>
+      <div class="faq"><h3>어떻게 실행하나요?</h3><p>토스 앱에서 '인스타 DM 분석하기'를 열면 설치 없이 바로 사용할 수 있습니다.</p></div>
+    </section>
+
+    <footer>
+      <span class="copyright">&copy; 2026 Studio HEVV</span>
+      <a href="/">홈</a>
+      <a href="/terms/insta-dm.html">이용약관</a>
+      <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
+    </footer>
+  </main>
+</body>
+</html>

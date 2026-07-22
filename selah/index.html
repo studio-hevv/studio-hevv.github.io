@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>셀라(Selah) — 예배·설교 말씀 노트 앱 | iOS</title>
+  <meta name="description" content="예배와 설교 말씀을 듣고 기록하고 삶으로 살아내는 iOS 노트 앱 셀라(Selah). 말씀 노트, 묵상, QT 기록을 한 곳에서. App Store에서 받으세요." />
+  <link rel="canonical" href="https://studio-hevv.com/selah/" />
+  <meta name="keywords" content="예배 노트 앱, 설교 노트 앱, 말씀 기록, 묵상 앱, QT 앱, 성경 노트, 셀라, Selah" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio HEVV" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="셀라(Selah) — 예배·설교 말씀 노트 앱" />
+  <meta property="og:description" content="말씀을 듣고, 기록하고, 삶으로 살아내도록. 예배·설교·묵상 노트 iOS 앱." />
+  <meta property="og:url" content="https://studio-hevv.com/selah/" />
+  <meta property="og:image" content="https://studio-hevv.com/assets/og/selah.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="셀라(Selah) — 예배 말씀 노트 앱" />
+  <meta name="twitter:description" content="말씀을 듣고, 기록하고, 삶으로 살아내도록. iOS 앱." />
+  <meta name="twitter:image" content="https://studio-hevv.com/assets/og/selah.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "셀라 (Selah)",
+    "url": "https://studio-hevv.com/selah/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "image": "https://studio-hevv.com/assets/og/selah.png",
+    "description": "예배와 설교 말씀을 듣고 기록하고 삶으로 살아내는 iOS 노트 앱. 말씀 노트, 묵상, QT 기록.",
+    "downloadUrl": "https://apps.apple.com/app/apple-store/id6779875313",
+    "installUrl": "https://apps.apple.com/app/apple-store/id6779875313",
+    "publisher": { "@type": "Organization", "name": "Studio HEVV", "url": "https://studio-hevv.com/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "셀라는 어떤 앱인가요?", "acceptedAnswer": { "@type": "Answer", "text": "예배와 설교 말씀을 그 자리에서 기록하고, 이후 묵상하며 삶으로 이어가도록 돕는 iOS 말씀 노트 앱입니다." } },
+      { "@type": "Question", "name": "어디서 받을 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone App Store에서 '셀라' 또는 'Selah'로 검색해 받을 수 있습니다." } },
+      { "@type": "Question", "name": "무료인가요?", "acceptedAnswer": { "@type": "Answer", "text": "노트 3개까지는 무료로 쓸 수 있고, 그 이상 기록하려면 결제가 필요합니다." } },
+      { "@type": "Question", "name": "안드로이드도 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "현재 셀라는 iOS(iPhone)에서 사용할 수 있습니다." } }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#f8f8f6; --text:#1a1a1a; --muted:#888; --border:#e0e0dc; --link:#1a1a1a; --accent:#1a1a1a; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; padding:0 24px; }
+    main { max-width:600px; margin:0 auto; padding:56px 0 60px; }
+    .wordmark { font-size:15px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:none; display:inline-block; margin-bottom:48px; }
+    h1 { font-size:30px; line-height:1.32; font-weight:700; letter-spacing:-.02em; margin-bottom:16px; }
+    .lead { font-size:18px; color:#555; margin-bottom:32px; }
+    .cta-wrap { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; font-size:16px; padding:14px 26px; border-radius:10px; border-bottom:none; }
+    .btn:hover { border-bottom:none; opacity:.92; }
+    .qr-wrap { text-align:center; }
+    .qr-wrap img { width:104px; height:104px; background:#fff; border:1px solid var(--border); border-radius:10px; padding:8px; display:block; }
+    .qr-hint { font-size:12px; color:var(--muted); margin-top:6px; }
+    @media (max-width:520px){ .qr-wrap { display:none; } }
+    section { margin:48px 0; }
+    h2 { font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+    .steps { list-style:none; counter-reset:s; }
+    .steps li { counter-increment:s; position:relative; padding-left:40px; margin-bottom:18px; }
+    .steps li::before { content:counter(s); position:absolute; left:0; top:1px; width:26px; height:26px; background:var(--text); color:#fff; border-radius:50%; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center; }
+    .step-t { font-weight:600; }
+    .faq { margin-bottom:20px; }
+    .faq h3 { font-size:16px; font-weight:600; margin-bottom:5px; }
+    .faq p { color:#555; margin:0; }
+    footer { border-top:1px solid var(--border); padding-top:32px; margin-top:56px; font-size:14px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; }
+    footer .copyright { flex:1 1 100%; }
+    a { color:var(--link); text-decoration:none; border-bottom:1px solid var(--border); transition:border-color .15s; }
+    a:hover { border-color:var(--text); }
+    footer a { color:var(--muted); border-bottom-color:transparent; }
+    footer a:hover { color:var(--text); border-bottom-color:var(--text); }
+  </style>
+  <script>
+  (function(){
+    var ID = "G-XXXXXXXXXX"; // TODO: studio-hevv GA4 측정 ID로 교체하면 자동 활성화
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    if (ID && ID.indexOf("XXXX") === -1) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+      document.head.appendChild(s);
+      gtag('js', new Date()); gtag('config', ID);
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('[data-app-open]').forEach(function(el){
+        el.addEventListener('click', function(){
+          gtag('event', 'app_open_click', {
+            product: el.getAttribute('data-product'),
+            placement: el.getAttribute('data-app-open'),
+            destination: el.getAttribute('href')
+          });
+        });
+      });
+    });
+  })();
+  </script>
+</head>
+<body>
+  <main>
+    <a class="wordmark" href="/">Studio HEVV</a>
+
+    <h1>셀라 (Selah)<br />— 예배 말씀 노트 앱</h1>
+    <p class="lead">말씀을 듣고, 기록하고, <strong>삶으로.</strong> 예배·설교 말씀을 그 자리에서 적는 iOS 노트 앱이에요.</p>
+
+    <div class="cta-wrap">
+      <a class="btn" href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" target="_blank" rel="noopener" data-app-open="hero-cta" data-product="selah">App Store에서 받기 ↗</a>
+      <div class="qr-wrap">
+        <a href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" target="_blank" rel="noopener" data-app-open="qr" data-product="selah" style="border:none;">
+          <img src="/assets/qr/selah.svg" alt="셀라 Selah App Store QR 코드" />
+        </a>
+        <div class="qr-hint">폰으로 스캔</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>어떤 앱인가요</h2>
+      <p>예배와 설교는 그 순간엔 닿아도 금방 흩어지기 쉽죠. 셀라는 <strong>말씀을 듣는 자리에서 바로 기록</strong>하고, 다시 펼쳐 묵상하도록 도와요. 예배 노트, 설교 정리, QT·묵상까지 한 곳에 모입니다.</p>
+    </section>
+
+    <section>
+      <h2>이렇게 쓰세요</h2>
+      <ol class="steps">
+        <li><span class="step-t">그 자리에서 기록</span><br />예배·설교 중 마음에 닿은 말씀과 생각을 바로 적습니다.</li>
+        <li><span class="step-t">다시 펼쳐 묵상</span><br />저장한 노트를 다시 열어 말씀을 곱씹고 묵상합니다.</li>
+        <li><span class="step-t">삶으로 살아내기</span><br />기록을 쌓아 나만의 말씀 아카이브를 만들고 삶에 적용합니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>자주 묻는 질문</h2>
+      <div class="faq"><h3>셀라는 어떤 앱인가요?</h3><p>예배·설교 말씀을 기록하고 묵상하며 삶으로 이어가도록 돕는 iOS 말씀 노트 앱입니다.</p></div>
+      <div class="faq"><h3>어디서 받을 수 있나요?</h3><p>iPhone App Store에서 '셀라' 또는 'Selah'로 검색해 받을 수 있습니다.</p></div>
+      <div class="faq"><h3>무료인가요?</h3><p>노트 3개까지는 무료로 쓸 수 있고, 그 이상 기록하려면 결제가 필요합니다.</p></div>
+      <div class="faq"><h3>안드로이드도 되나요?</h3><p>현재 셀라는 iOS(iPhone)에서 사용할 수 있습니다.</p></div>
+    </section>
+
+    <footer>
+      <span class="copyright">&copy; 2026 Studio HEVV</span>
+      <a href="/">홈</a>
+      <a href="/selah/support.html">지원</a>
+      <a href="/selah/privacy.html">개인정보</a>
+      <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
+    </footer>
+  </main>
+</body>
+</html>

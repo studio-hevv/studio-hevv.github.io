@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 — Receipt Cam</title>
+  <meta property="og:title" content="Receipt Cam 개인정보처리방침" />
+  <meta property="og:description" content="Receipt Cam 앱 개인정보처리방침입니다." />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 40px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .back:hover { color: var(--text); border-color: var(--text); }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .version-select {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-bottom: 40px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .version-select select {
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 18px;
+    }
+
+    .version-select::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231a1a1a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    .version-content { display: none; }
+    .version-content.active { display: block; }
+
+    .version-content h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 32px 0 8px;
+    }
+
+    .version-content h3:first-child { margin-top: 0; }
+
+    .version-content p {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .version-content ol,
+    .version-content ul {
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .version-content li { margin-bottom: 7px; }
+
+    .version-content li > ul {
+      margin-top: 7px;
+      margin-bottom: 0;
+    }
+
+    .version-content li > ul li { margin-bottom: 5px; }
+
+    .version-content a {
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+    }
+
+    .version-content a:hover { border-color: var(--text); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Studio HEVV</a>
+
+    <h1>Receipt Cam<br>개인정보처리방침</h1>
+
+    <div class="version-select">
+      <select id="version-select" aria-label="방침 시행일 선택">
+        <option value="2026-07-24">2026.07.24</option>
+      </select>
+    </div>
+
+    <!-- 2026-07-24 -->
+    <div id="version-2026-07-24" class="version-content">
+
+      <h3>제1조 (총칙)</h3>
+      <p>Studio HEVV(이하 "운영사")는 iOS 앱 'Receipt Cam'(이하 "앱")을 운영함에 있어 「개인정보 보호법」 등 관계 법령을 준수합니다. 본 방침은 앱이 수집·이용하는 정보의 범위와 목적을 안내합니다.</p>
+
+      <h3>제2조 (수집하는 정보 및 수집 방법)</h3>
+      <p>앱은 서버와 통신하지 않으며, 모든 데이터는 사용자의 기기 내에만 저장됩니다. 수집하는 정보는 다음과 같습니다.</p>
+      <ol>
+        <li><strong>카메라</strong>: 촬영한 사진을 영수증 형태로 변환하기 위해 카메라에 접근합니다. 촬영된 이미지는 기기 내 앱 전용 저장소에만 보관됩니다.</li>
+        <li><strong>사진 라이브러리</strong>: 사용자가 저장을 요청할 때 완성된 영수증 이미지를 사진 앨범에 기록합니다. 기존 사진을 읽지 않습니다.</li>
+        <li><strong>위치</strong>: 영수증에 촬영 장소를 표시하는 선택적 기능입니다. 위치 정보는 기기 내에서 텍스트로 변환된 후 영수증에만 사용되며, 외부로 전송되지 않습니다.</li>
+        <li><strong>앱 설정</strong>: 앱 내 설정값(알림 허용 여부 등)은 기기의 UserDefaults에만 저장됩니다.</li>
+      </ol>
+
+      <h3>제3조 (수집 목적)</h3>
+      <ol>
+        <li>카메라 접근 — 사진 촬영 및 영수증 이미지 생성</li>
+        <li>사진 라이브러리 쓰기 — 완성된 영수증 앨범 저장</li>
+        <li>위치 접근 — 영수증 내 촬영 위치 스탬프 표시 (선택)</li>
+        <li>알림 — 매일 22시 영수증 저장 안내, 매일 9시 필름 충전 알내</li>
+      </ol>
+
+      <h3>제4조 (제3자 제공 및 외부 전송)</h3>
+      <p>앱은 외부 서버와 통신하지 않습니다. 수집된 어떠한 정보도 운영사 또는 제3자에게 전송·공유·판매되지 않습니다.</p>
+
+      <h3>제5조 (보유 및 이용 기간)</h3>
+      <p>모든 데이터는 사용자의 기기 내에만 존재합니다. 앱을 삭제하면 앱 전용 저장소의 모든 데이터가 함께 삭제됩니다. 사진 앨범에 저장된 이미지는 사용자가 직접 관리합니다.</p>
+
+      <h3>제6조 (사용자의 권리)</h3>
+      <ol>
+        <li>iOS 설정 앱에서 카메라, 위치, 사진, 알림 권한을 언제든지 철회할 수 있습니다.</li>
+        <li>앱을 삭제하면 기기 내 모든 앱 데이터가 즉시 삭제됩니다.</li>
+        <li>기타 문의는 <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>으로 접수할 수 있습니다.</li>
+      </ol>
+
+      <h3>제7조 (개인정보 보호책임자 및 문의)</h3>
+      <ul>
+        <li>운영사: Studio HEVV</li>
+        <li>이메일: <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+
+      <h3>제8조 (방침의 변경)</h3>
+      <p>본 방침의 내용이 변경되는 경우, 시행일 및 변경 사항을 본 페이지를 통해 안내합니다. 본 방침은 2026년 7월 24일부터 적용됩니다.</p>
+
+    </div>
+    <!-- /2026-07-24 -->
+
+    <footer>
+      &copy; 2026 Studio HEVV
+    </footer>
+  </main>
+
+  <script>
+    var select = document.getElementById('version-select');
+
+    function showVersion(date) {
+      document.querySelectorAll('.version-content').forEach(function(el) {
+        el.classList.toggle('active', el.id === 'version-' + date);
+      });
+    }
+
+    showVersion(select.value);
+
+    select.addEventListener('change', function() {
+      showVersion(this.value);
+    });
+  </script>
+</body>
+</html>

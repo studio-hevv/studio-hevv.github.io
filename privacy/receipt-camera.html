@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>개인정보처리방침 — Receipt Cam</title>
-  <meta property="og:title" content="Receipt Cam 개인정보처리방침" />
-  <meta property="og:description" content="Receipt Cam 앱 개인정보처리방침입니다." />
+  <title>Privacy Policy — Receipt Cam</title>
+  <meta property="og:title" content="Receipt Cam Privacy Policy" />
+  <meta property="og:description" content="Receipt Cam Privacy Policy" />
   <meta property="og:type" content="website" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,7 +20,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.7;
       padding: 0 24px;
@@ -37,36 +37,41 @@
       font-size: 14px;
       color: var(--muted);
       text-decoration: none;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       border-bottom: 1px solid transparent;
       transition: color 0.15s, border-color 0.15s;
     }
 
     .back:hover { color: var(--text); border-color: var(--text); }
 
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     h1 {
       font-size: 26px;
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 24px;
       color: var(--text);
     }
 
-    .version-select {
+    .lang-select-box {
+      position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 8px 14px;
-      margin-bottom: 40px;
+      padding: 6px 12px;
       background: #fff;
-      cursor: pointer;
-      position: relative;
     }
 
-    .version-select select {
-      font-size: 15px;
+    .lang-select-box select {
+      font-size: 14px;
       font-family: inherit;
       color: var(--text);
       background: transparent;
@@ -75,60 +80,54 @@
       cursor: pointer;
       -webkit-appearance: none;
       appearance: none;
-      padding-right: 18px;
+      padding-right: 20px;
     }
 
-    .version-select::after {
+    .lang-select-box::after {
       content: '';
       display: block;
-      width: 10px;
-      height: 6px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231a1a1a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      width: 8px;
+      height: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M1 1l3 3 3-3' stroke='%231a1a1a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
       pointer-events: none;
-      flex-shrink: 0;
+      position: absolute;
+      right: 10px;
     }
 
-    .version-content { display: none; }
-    .version-content.active { display: block; }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
 
-    .version-content h3 {
-      font-size: 15px;
+    .lang-content h3 {
+      font-size: 16px;
       font-weight: 600;
       margin: 32px 0 8px;
     }
 
-    .version-content h3:first-child { margin-top: 0; }
+    .lang-content h3:first-child { margin-top: 0; }
 
-    .version-content p {
-      margin-bottom: 10px;
+    .lang-content p {
+      margin-bottom: 12px;
       font-size: 15px;
     }
 
-    .version-content ol,
-    .version-content ul {
+    .lang-content ol,
+    .lang-content ul {
       padding-left: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-size: 15px;
     }
 
-    .version-content li { margin-bottom: 7px; }
+    .lang-content li { margin-bottom: 7px; }
 
-    .version-content li > ul {
-      margin-top: 7px;
-      margin-bottom: 0;
-    }
-
-    .version-content li > ul li { margin-bottom: 5px; }
-
-    .version-content a {
+    .lang-content a {
       color: var(--text);
       border-bottom: 1px solid var(--border);
       text-decoration: none;
     }
 
-    .version-content a:hover { border-color: var(--text); }
+    .lang-content a:hover { border-color: var(--text); }
 
     footer {
       border-top: 1px solid var(--border);
@@ -143,17 +142,24 @@
   <main>
     <a class="back" href="/">← Studio HEVV</a>
 
-    <h1>Receipt Cam<br>개인정보처리방침</h1>
+    <div class="header-bar">
+      <h1>Receipt Cam<br><span id="page-title">Privacy Policy</span></h1>
 
-    <div class="version-select">
-      <select id="version-select" aria-label="방침 시행일 선택">
-        <option value="2026-07-24">2026.07.24</option>
-      </select>
+      <div class="lang-select-box">
+        <select id="lang-select" aria-label="Select Language">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+          <option value="pt-PT">Português (PT)</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
     </div>
 
-    <!-- 2026-07-24 -->
-    <div id="version-2026-07-24" class="version-content">
-
+    <!-- KO -->
+    <div id="lang-ko" class="lang-content">
       <h3>제1조 (총칙)</h3>
       <p>Studio HEVV(이하 "운영사")는 iOS 앱 'Receipt Cam'(이하 "앱")을 운영함에 있어 「개인정보 보호법」 등 관계 법령을 준수합니다. 본 방침은 앱이 수집·이용하는 정보의 범위와 목적을 안내합니다.</p>
 
@@ -194,10 +200,221 @@
       </ul>
 
       <h3>제8조 (방침의 변경)</h3>
-      <p>본 방침의 내용이 변경되는 경우, 시행일 및 변경 사항을 본 페이지를 통해 안내합니다. 본 방침은 2026년 7월 24일부터 적용됩니다.</p>
-
+      <p>본 방침은 2026년 7월 24일부터 적용됩니다.</p>
     </div>
-    <!-- /2026-07-24 -->
+
+    <!-- EN -->
+    <div id="lang-en" class="lang-content">
+      <h3>Article 1 (General Provisions)</h3>
+      <p>Studio HEVV ("Operator") complies with relevant privacy laws in operating the iOS application 'Receipt Cam' ("App"). This policy outlines the scope and purpose of the information processed by the App.</p>
+
+      <h3>Article 2 (Information Collected & Methods)</h3>
+      <p>The App does not communicate with any external servers. All data is stored exclusively on the user's device. The scope of accessed information is as follows:</p>
+      <ol>
+        <li><strong>Camera</strong>: Accessed to capture photos and generate receipt-style images. Captured photos remain solely in the App's local storage.</li>
+        <li><strong>Photo Library</strong>: Accessed to save rendered receipt images to your Photos album upon your request. Existing photos are never read.</li>
+        <li><strong>Location</strong>: An optional feature to display the capture location on receipts. Location coordinates are converted to text locally on the device and are never transmitted externally.</li>
+        <li><strong>App Settings</strong>: User preferences (such as notification consent) are stored strictly in local UserDefaults.</li>
+      </ol>
+
+      <h3>Article 3 (Purpose of Use)</h3>
+      <ol>
+        <li>Camera — Photo capture and receipt rendering</li>
+        <li>Photo Library Write — Saving completed receipts to album</li>
+        <li>Location — Optional location stamp on receipts</li>
+        <li>Notifications — Daily 22:00 receipt save reminder, daily 09:00 paper reload notification</li>
+      </ol>
+
+      <h3>Article 4 (Third-Party Sharing & External Transfer)</h3>
+      <p>The App operates completely offline regarding server communications. No personal or device information is ever transmitted, shared, or sold to the Operator or third parties.</p>
+
+      <h3>Article 5 (Data Retention & Deletion)</h3>
+      <p>All data exists solely on your device. Deleting the App removes all associated local data permanently. Images saved to your Photos album are managed directly by you.</p>
+
+      <h3>Article 6 (User Rights)</h3>
+      <ol>
+        <li>You can revoke Camera, Location, Photos, or Notification permissions anytime in iOS Settings.</li>
+        <li>Deleting the App instantly purges all local app data.</li>
+        <li>For inquiries, contact us at <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>.</li>
+      </ol>
+
+      <h3>Article 7 (Contact)</h3>
+      <ul>
+        <li>Operator: Studio HEVV</li>
+        <li>Email: <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+
+      <h3>Article 8 (Effective Date)</h3>
+      <p>This policy is effective as of July 24, 2026.</p>
+    </div>
+
+    <!-- JA -->
+    <div id="lang-ja" class="lang-content">
+      <h3>第1条（総則）</h3>
+      <p>Studio HEVV（以下「運営会社」）は、iOSアプリ「Receipt Cam」（以下「本アプリ」）の運営において個人情報保護法等の関連法令を遵守します。本ポリシーは本アプリが利用する情報の範囲と目的をご案内します。</p>
+
+      <h3>第2条（収集情報および収集方法）</h3>
+      <p>本アプリは外部サーバーと通信を行わず、すべてのデータはお客様の端末内にのみ保存されます。</p>
+      <ol>
+        <li><strong>カメラ</strong>：撮影した写真をレシート風画像に変換するためにアクセスします。画像は端末内のアプリ専用ストレージにのみ保存されます。</li>
+        <li><strong>写真ライブラリ</strong>：保存リクエスト時、完成したレシート画像を写真アルバムに保存します。既存の写真を読み込むことはありません。</li>
+        <li><strong>位置情報</strong>：レシートに撮影場所を印字する選択機能です。端末内でテキスト変換された後、レシートにのみ使用され外部へ送信されません。</li>
+        <li><strong>アプリ設定</strong>：通知設定などの設定値は端末のUserDefaultsにのみ保存されます。</li>
+      </ol>
+
+      <h3>第3条（利用目的）</h3>
+      <ol>
+        <li>カメラ：写真撮影およびレシート画像生成</li>
+        <li>写真ライブラリ保存：完成したレシートのアルバム保存</li>
+        <li>位置情報：レシートへの撮影場所スタンプ表示（任意）</li>
+        <li>通知：毎日22時のレシート保存案内、毎日9時の感熱紙補充案内</li>
+      </ol>
+
+      <h3>第4条（第三者提供および外部送信）</h3>
+      <p>本アプリは外部サーバーと通信を行いません。収集された情報が第三者や運営会社へ送信・共有・販売されることはありません。</p>
+
+      <h3>第5条（保有および消去）</h3>
+      <p>すべてのデータは端末内にのみ存在します。アプリを削除すると端末内のデータもすべて削除されます。</p>
+
+      <h3>第6条（お問い合わせ）</h3>
+      <ul>
+        <li>運営会社：Studio HEVV</li>
+        <li>メール：<a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+      <p>本方針は2026年7月24日より適用されます。</p>
+    </div>
+
+    <!-- ZH-HANS -->
+    <div id="lang-zh-Hans" class="lang-content">
+      <h3>第一条（总则）</h3>
+      <p>Studio HEVV（以下简称“运营方”）在运营iOS应用“Receipt Cam”（以下简称“本应用”）时遵守相关隐私法律法规。本政策说明本应用处理信息的范围和目的。</p>
+
+      <h3>第二条（收集的信息及方式）</h3>
+      <p>本应用完全不与任何外部服务器通信，所有数据仅存储于用户的设备本地。</p>
+      <ol>
+        <li><strong>相机</strong>：用于拍摄照片并生成收据风格图像。拍摄的照片仅保存在应用本地存储中。</li>
+        <li><strong>相册</strong>：根据您的保存请求，将生成的收据图像写入系统相册。绝不读取您现有的相册照片。</li>
+        <li><strong>位置信息</strong>：可选功能，用于在收据上打印拍摄地点。位置坐标仅在本地转换为文本，绝不向外传输。</li>
+        <li><strong>应用设置</strong>：应用偏好设置（如通知授权）仅保存在本地 UserDefaults 中。</li>
+      </ol>
+
+      <h3>第三条（使用目的）</h3>
+      <ol>
+        <li>相机 — 拍摄照片及生成收据图像</li>
+        <li>相册写入 — 保存完成的收据至相册</li>
+        <li>位置信息 — 在收据上显示拍摄地点印章（可选）</li>
+        <li>通知 — 每日 22:00 提醒保存收据，每日 09:00 提醒补充热敏纸</li>
+      </ol>
+
+      <h3>第四条（第三方提供与外部传输）</h3>
+      <p>本应用完全离线运行。绝不会将任何数据传输、共享或出售给运营方或任何第三方。</p>
+
+      <h3>第五条（联系方式）</h3>
+      <ul>
+        <li>运营方：Studio HEVV</li>
+        <li>电子邮箱：<a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+      <p>本政策自 2026 年 7 月 24 日起生效。</p>
+    </div>
+
+    <!-- ZH-HANT -->
+    <div id="lang-zh-Hant" class="lang-content">
+      <h3>第一條（總則）</h3>
+      <p>Studio HEVV（以下簡稱「營運方」）在營運 iOS 應用程式「Receipt Cam」（以下簡稱「本應用程式」）時遵守相關個人資料保護法規。本政策說明本應用程式處理資訊的範圍與目的。</p>
+
+      <h3>第二條（蒐集的資訊及方式）</h3>
+      <p>本應用程式完全不與任何外部伺服器連線，所有資料僅儲存於使用者的裝置本地。</p>
+      <ol>
+        <li><strong>相機</strong>：用於拍攝相片並生成收據風格影像。拍攝的相片僅儲存於應用程式本地儲存空間。</li>
+        <li><strong>相片圖庫</strong>：根據您的儲存要求，將生成的收據影像寫入系統相簿。絕不讀取您現有的相片。</li>
+        <li><strong>位置資訊</strong>：可選功能，用於在收據上列印拍攝地點。位置座標僅在本地轉換為文字，絕不向外傳輸。</li>
+        <li><strong>應用程式設定</strong>：偏好設定（如通知授權）僅儲存於本地 UserDefaults 中。</li>
+      </ol>
+
+      <h3>第三條（使用目的）</h3>
+      <ol>
+        <li>相機 — 拍攝相片及生成收據影像</li>
+        <li>相片圖庫寫入 — 儲存完成的收據至相簿</li>
+        <li>位置資訊 — 在收據上顯示拍攝地點印章（可選）</li>
+        <li>通知 — 每日 22:00 提醒儲存收據，每日 09:00 提醒補充感熱紙</li>
+      </ol>
+
+      <h3>第四條（第三方提供與外部傳輸）</h3>
+      <p>本應用程式完全離線運作。絕不會將任何資料傳輸、共享或出售給營運方或任何第三方。</p>
+
+      <h3>第五條（聯絡方式）</h3>
+      <ul>
+        <li>營運方：Studio HEVV</li>
+        <li>電子郵件：<a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+      <p>本政策自 2026 年 7 月 24 日起生效。</p>
+    </div>
+
+    <!-- PT-PT -->
+    <div id="lang-pt-PT" class="lang-content">
+      <h3>Artigo 1.º (Disposições Gerais)</h3>
+      <p>A Studio HEVV ("Operador") cumpre a legislação de proteção de dados aplicável na operação da aplicação iOS 'Receipt Cam' ("Aplicação"). Esta política descreve o âmbito e a finalidade das informações processadas.</p>
+
+      <h3>Artigo 2.º (Informações Recolhidas e Métodos)</h3>
+      <p>A Aplicação não comunica com servidores externos. Todos os dados são armazenados exclusivamente no dispositivo do utilizador.</p>
+      <ol>
+        <li><strong>Câmara</strong>: Acedida para capturar fotos e gerar imagens no estilo de recibo. As fotos capturadas permanecem apenas no armazenamento local da Aplicação.</li>
+        <li><strong>Fototeca</strong>: Acedida para guardar as imagens de recibo concluídas no seu álbum de Fotografias, a seu pedido. As fotos existentes nunca são lidas.</li>
+        <li><strong>Localização</strong>: Funcionalidade opcional para exibir a localização da captura nos recibos. As coordenadas são convertidas em texto localmente e nunca são transmitidas para o exterior.</li>
+        <li><strong>Definições da Aplicação</strong>: As preferências do utilizador são guardadas estritamente no UserDefaults local.</li>
+      </ol>
+
+      <h3>Artigo 3.º (Finalidade do Processamento)</h3>
+      <ol>
+        <li>Câmara — Captura de fotografias e geração de recibos</li>
+        <li>Fototeca — Guardar recibos concluídos no álbum</li>
+        <li>Localização — Carimbo opcional de localização no recibo</li>
+        <li>Notificações — Lembrete diário às 22:00 para guardar recibos, notificação diária às 09:00 para recarga de papel térmico</li>
+      </ol>
+
+      <h3>Artigo 4.º (Partilha com Terceiros)</h3>
+      <p>A Aplicação funciona totalmente offline. Nenhum dado é transmitido, partilhado ou vendido ao Operador ou a terceiros.</p>
+
+      <h3>Artigo 5.º (Contacto)</h3>
+      <ul>
+        <li>Operador: Studio HEVV</li>
+        <li>E-mail: <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+      <p>Esta política entra em vigor a 24 de julho de 2026.</p>
+    </div>
+
+    <!-- ES -->
+    <div id="lang-es" class="lang-content">
+      <h3>Artículo 1 (Disposiciones Generales)</h3>
+      <p>Studio HEVV ("Operador") cumple con las leyes de privacidad aplicables al operar la aplicación iOS 'Receipt Cam' ("Aplicación"). Esta política describe el alcance y propósito de la información procesada.</p>
+
+      <h3>Artículo 2 (Información Recopilada y Métodos)</h3>
+      <p>La Aplicación no se comunica con servidores externos. Todos los datos se almacenan exclusivamente en el dispositivo del usuario.</p>
+      <ol>
+        <li><strong>Cámara</strong>: Se accede para tomar fotos y generar imágenes estilo recibo. Las fotos permanecen únicamente en el almacenamiento local de la Aplicación.</li>
+        <li><strong>Fototeca</strong>: Se accede para guardar las imágenes de recibo finalizadas en su álbum de Fotos a petición suya. Nunca se leen sus fotos existentes.</li>
+        <li><strong>Ubicación</strong>: Función opcional para mostrar el lugar de captura en el recibo. Las coordenadas se convierten a texto localmente y nunca se transmiten externamente.</li>
+        <li><strong>Ajustes</strong>: Las preferencias se guardan estrictamente en el UserDefaults local.</li>
+      </ol>
+
+      <h3>Artículo 3 (Finalidades)</h3>
+      <ol>
+        <li>Cámara — Captura de fotos y generación de recibos</li>
+        <li>Fototeca — Guardar recibos finalizados en el álbum</li>
+        <li>Ubicación — Sello de ubicación opcional en el recibo</li>
+        <li>Notificaciones — Recordatorio diario 22:00 para guardar recibos, notificación diaria 09:00 para recargar papel térmico</li>
+      </ol>
+
+      <h3>Artículo 4 (Transferencia a Terceros)</h3>
+      <p>La Aplicación funciona completamente fuera de línea. Ningún dato se transmite, comparte ni vende al Operador ni a terceros.</p>
+
+      <h3>Artículo 5 (Contacto)</h3>
+      <ul>
+        <li>Operador: Studio HEVV</li>
+        <li>Correo electrónico: <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></li>
+      </ul>
+      <p>Esta política entra en vigor el 24 de julio de 2026.</p>
+    </div>
 
     <footer>
       &copy; 2026 Studio HEVV
@@ -205,18 +422,44 @@
   </main>
 
   <script>
-    var select = document.getElementById('version-select');
+    var select = document.getElementById('lang-select');
+    var pageTitle = document.getElementById('page-title');
 
-    function showVersion(date) {
-      document.querySelectorAll('.version-content').forEach(function(el) {
-        el.classList.toggle('active', el.id === 'version-' + date);
+    var titles = {
+      'ko': '개인정보처리방침',
+      'en': 'Privacy Policy',
+      'ja': 'プライバシーポリシー',
+      'zh-Hans': '隐私政策',
+      'zh-Hant': '隱私政策',
+      'pt-PT': 'Política de Privacidade',
+      'es': 'Política de Privacidad'
+    };
+
+    function detectLanguage() {
+      var navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (navLang.indexOf('ko') === 0) return 'ko';
+      if (navLang.indexOf('ja') === 0) return 'ja';
+      if (navLang.indexOf('zh-tw') === 0 || navLang.indexOf('zh-hk') === 0 || navLang.indexOf('zh-hant') === 0) return 'zh-Hant';
+      if (navLang.indexOf('zh') === 0) return 'zh-Hans';
+      if (navLang.indexOf('pt') === 0) return 'pt-PT';
+      if (navLang.indexOf('es') === 0) return 'es';
+      return 'en'; // default fallback
+    }
+
+    function setLanguage(lang) {
+      if (!titles[lang]) lang = 'en';
+      select.value = lang;
+      pageTitle.textContent = titles[lang];
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.toggle('active', el.id === 'lang-' + lang);
       });
     }
 
-    showVersion(select.value);
+    var initialLang = detectLanguage();
+    setLanguage(initialLang);
 
     select.addEventListener('change', function() {
-      showVersion(this.value);
+      setLanguage(this.value);
     });
   </script>
 </body>

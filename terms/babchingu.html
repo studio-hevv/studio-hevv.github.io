@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Babchingu</title>
+  <meta property="og:title" content="Babchingu Terms of Service" />
+  <meta property="og:description" content="Babchingu Terms of Service" />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f8f6;
+      --text: #1a1a1a;
+      --muted: #888;
+      --border: #e0e0dc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 0 60px;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .back:hover { color: var(--text); border-color: var(--text); }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .lang-select-box {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      background: #fff;
+    }
+
+    .lang-select-box select {
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 20px;
+    }
+
+    .lang-select-box::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M1 1l3 3 3-3' stroke='%231a1a1a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+    }
+
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    .lang-content h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 32px 0 8px;
+    }
+
+    .lang-content h3:first-child { margin-top: 0; }
+
+    .lang-content p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .lang-content ol,
+    .lang-content ul {
+      padding-left: 22px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .lang-content li { margin-bottom: 7px; }
+
+    .lang-content li > ul { margin-top: 7px; margin-bottom: 0; }
+    .lang-content li > ul li { margin-bottom: 5px; }
+
+    .lang-content a {
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+    }
+
+    .lang-content a:hover { border-color: var(--text); }
+
+    .callout {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Studio HEVV</a>
+
+    <div class="header-bar">
+      <h1>Babchingu<br><span id="page-title">Terms of Service</span></h1>
+
+      <div class="lang-select-box">
+        <select id="lang-select" aria-label="Select Language">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh-Hans">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- KO -->
+    <div id="lang-ko" class="lang-content">
+      <h3>제1조 (목적)</h3>
+      <p>본 약관은 Studio HEVV(이하 "운영사")가 제공하는 iOS 앱 '밥친구'(이하 "앱")의 이용과 관련하여 운영사와 이용자 간의 권리·의무 및 책임 사항을 규정함을 목적으로 합니다.</p>
+
+      <h3>제2조 (서비스 내용)</h3>
+      <p>앱은 이용자가 천천히 식사하도록 돕는 도구로서 다음 기능을 제공합니다.</p>
+      <ol>
+        <li>최소 식사 시간 타이머 및 다이나믹 아일랜드·알림을 통한 식사 페이스 안내</li>
+        <li>고양이 캐릭터 동반자와 식사 기록·통계</li>
+        <li>메뉴 사진 첨부(선택) 및 개인화 설정</li>
+      </ol>
+      <p>각 기능의 세부 사항은 서비스 개선을 위해 변경될 수 있으며, 중요한 변경은 앱 또는 본 페이지를 통해 안내합니다.</p>
+
+      <h3>제3조 (요금 및 결제)</h3>
+      <ol>
+        <li>앱은 출시 후 일정 기간 무료로 제공될 수 있으며, 이후 유료로 전환될 수 있습니다. 적용 가격은 App Store에 표시된 금액을 따릅니다.</li>
+        <li>모든 결제·환불은 Apple App Store의 정책 및 절차에 따라 이루어지며, 운영사는 별도의 결제 수단을 운영하지 않습니다. 환불 요청은 Apple을 통해 처리됩니다.</li>
+        <li>이미 유료로 앱을 구매한 이용자는 이후의 가격 변경과 무관하게 계속 이용할 수 있습니다.</li>
+      </ol>
+
+      <h3>제4조 (건강 관련 고지 및 면책)</h3>
+      <div class="callout">
+        <strong>중요.</strong> 밥친구는 천천히 먹는 습관을 돕는 참고용 도구이며, <strong>의료·건강·영양 자문을 제공하지 않습니다.</strong>
+      </div>
+      <p>앱이 제안하는 식사 시간·페이스는 일반적인 참고 정보이며 특정인에게 적합함을 보증하지 않습니다. 소화기 질환, 섭식 장애 등 건강 관련 판단은 반드시 의료 전문가와 상담하시기 바랍니다. 운영사는 이용자가 앱을 신뢰하여 내린 판단이나 그 결과에 대해 책임지지 않습니다.</p>
+
+      <h3>제5조 (이용자의 의무)</h3>
+      <ol>
+        <li>이용자는 앱의 소프트웨어를 역공학·복제·변조하거나 정상적 운영을 방해하는 행위를 하여서는 안 됩니다.</li>
+        <li>이용자는 관련 법령과 본 약관을 준수하여 앱을 이용해야 합니다.</li>
+      </ol>
+
+      <h3>제6조 (지식재산권)</h3>
+      <p>앱 및 앱에 포함된 소프트웨어·디자인·캐릭터·상표 등에 관한 지식재산권은 운영사에 귀속됩니다. 이용자가 앱에 입력하거나 첨부한 데이터(식사 기록, 사진 등)에 대한 권리는 해당 이용자에게 있습니다.</p>
+
+      <h3>제7조 (책임의 제한)</h3>
+      <ol>
+        <li>앱은 "있는 그대로" 제공되며, 운영사는 특정 목적에의 적합성이나 무중단·무오류를 보증하지 않습니다.</li>
+        <li>운영사는 기기 환경, 운영체제, 네트워크 오류 등 합리적 통제를 벗어난 사유로 인한 서비스 중단이나 기기 내 데이터 손실에 대해 책임을 지지 않습니다. 중요한 데이터는 이용자가 별도로 백업하시기 바랍니다.</li>
+      </ol>
+
+      <h3>제8조 (약관의 변경)</h3>
+      <p>본 약관은 관련 법령을 위반하지 않는 범위에서 변경될 수 있으며, 변경 시 적용일자를 명시하여 본 페이지를 통해 안내합니다.</p>
+
+      <h3>제9조 (준거법 및 문의)</h3>
+      <p>본 약관은 대한민국 법을 준거법으로 하며, 본 약관에 명시되지 않은 사항은 관련 법령 및 Apple의 미디어 서비스 약관을 따릅니다. 서비스에 관한 문의는 <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a> 으로 접수할 수 있습니다.</p>
+      <p>본 약관은 2026년 8월 13일부터 적용됩니다.</p>
+    </div>
+
+    <!-- EN -->
+    <div id="lang-en" class="lang-content">
+      <h3>Article 1 (Purpose)</h3>
+      <p>These Terms govern the rights, obligations, and responsibilities between Studio HEVV ("Operator") and users regarding the use of the iOS application 'Babchingu' ("App").</p>
+
+      <h3>Article 2 (Service Description)</h3>
+      <p>The App is a tool that helps you eat more slowly and provides the following features:</p>
+      <ol>
+        <li>A minimum meal-time timer with pacing guidance via the Dynamic Island and notifications</li>
+        <li>A cat character companion with meal records and statistics</li>
+        <li>Optional menu photo attachment and personalization settings</li>
+      </ol>
+      <p>Feature details may change to improve the service; significant changes will be announced in the App or on this page.</p>
+
+      <h3>Article 3 (Pricing & Payment)</h3>
+      <ol>
+        <li>The App may be offered free for a period after launch and may later become paid. The applicable price is the amount shown on the App Store.</li>
+        <li>All payments and refunds are handled through Apple App Store policies and procedures; the Operator does not operate any separate payment method. Refund requests are processed by Apple.</li>
+        <li>Users who have already purchased the paid App may continue to use it regardless of subsequent price changes.</li>
+      </ol>
+
+      <h3>Article 4 (Health Notice & Disclaimer)</h3>
+      <div class="callout">
+        <strong>Important.</strong> Babchingu is a reference tool to help build the habit of eating slowly and <strong>does not provide medical, health, or nutritional advice.</strong>
+      </div>
+      <p>The meal times and pacing suggested by the App are general reference information and are not warranted to be suitable for any individual. For any health-related decision, including digestive conditions or eating disorders, please consult a qualified medical professional. The Operator is not responsible for decisions made in reliance on the App or their outcomes.</p>
+
+      <h3>Article 5 (User Obligations)</h3>
+      <ol>
+        <li>Users shall not reverse-engineer, copy, or tamper with the App's software, or interfere with its normal operation.</li>
+        <li>Users shall use the App in compliance with applicable laws and these Terms.</li>
+      </ol>
+
+      <h3>Article 6 (Intellectual Property)</h3>
+      <p>Intellectual property rights in the App and its software, design, characters, and trademarks belong to the Operator. Rights to the data you enter or attach (meal records, photos, etc.) belong to you.</p>
+
+      <h3>Article 7 (Limitation of Liability)</h3>
+      <ol>
+        <li>The App is provided "as is," and the Operator does not warrant fitness for a particular purpose or that it will be uninterrupted or error-free.</li>
+        <li>The Operator is not liable for service interruptions or loss of on-device data caused by matters beyond its reasonable control, such as device environment, operating system, or network errors. Please back up important data separately.</li>
+      </ol>
+
+      <h3>Article 8 (Changes to These Terms)</h3>
+      <p>These Terms may be changed within the limits of applicable law; changes will be announced on this page with the applicable date.</p>
+
+      <h3>Article 9 (Governing Law & Contact)</h3>
+      <p>These Terms are governed by the laws of the Republic of Korea. Matters not specified herein follow applicable laws and Apple's Media Services Terms. For inquiries, contact <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>.</p>
+      <p>These Terms are effective as of August 13, 2026.</p>
+    </div>
+
+    <!-- JA -->
+    <div id="lang-ja" class="lang-content">
+      <h3>第1条（目的）</h3>
+      <p>本規約は、Studio HEVV（以下「運営会社」）が提供する iOS アプリ「Babchingu」（以下「本アプリ」）の利用に関し、運営会社と利用者との間の権利・義務および責任事項を定めることを目的とします。</p>
+
+      <h3>第2条（サービス内容）</h3>
+      <p>本アプリは、ゆっくり食事をとることを助けるツールとして次の機能を提供します。</p>
+      <ol>
+        <li>最小食事時間タイマー、ならびにダイナミックアイランドおよび通知による食事ペースの案内</li>
+        <li>猫キャラクターの相棒と食事記録・統計</li>
+        <li>メニュー写真の添付（任意）および個人設定</li>
+      </ol>
+      <p>各機能の詳細はサービス改善のため変更されることがあり、重要な変更は本アプリまたは本ページにてご案内します。</p>
+
+      <h3>第3条（料金および決済）</h3>
+      <ol>
+        <li>本アプリはリリース後の一定期間無料で提供される場合があり、その後有料へ移行することがあります。適用価格は App Store に表示された金額に従います。</li>
+        <li>すべての決済・返金は Apple App Store のポリシーおよび手続きに従って行われ、運営会社は独自の決済手段を運営しません。返金のご要望は Apple を通じて処理されます。</li>
+        <li>すでに有料で本アプリを購入した利用者は、その後の価格変更にかかわらず引き続き利用できます。</li>
+      </ol>
+
+      <h3>第4条（健康に関する注意および免責）</h3>
+      <div class="callout">
+        <strong>重要.</strong> Babchingu はゆっくり食べる習慣づくりを助ける参考ツールであり、<strong>医療・健康・栄養に関する助言を提供するものではありません。</strong>
+      </div>
+      <p>本アプリが提案する食事時間・ペースは一般的な参考情報であり、特定の個人に適することを保証しません。消化器疾患や摂食障害など健康に関わる判断は、必ず医療専門家にご相談ください。運営会社は、利用者が本アプリを信頼して行った判断やその結果について責任を負いません。</p>
+
+      <h3>第5条（利用者の義務）</h3>
+      <ol>
+        <li>利用者は、本アプリのソフトウェアをリバースエンジニアリング・複製・改変し、または正常な運営を妨げる行為を行ってはなりません。</li>
+        <li>利用者は、関連法令および本規約を遵守して本アプリを利用するものとします。</li>
+      </ol>
+
+      <h3>第6条（知的財産権）</h3>
+      <p>本アプリおよびそれに含まれるソフトウェア・デザイン・キャラクター・商標等に関する知的財産権は運営会社に帰属します。利用者が入力・添付したデータ（食事記録、写真等）に関する権利は当該利用者に帰属します。</p>
+
+      <h3>第7条（責任の制限）</h3>
+      <ol>
+        <li>本アプリは「現状のまま」提供され、運営会社は特定目的への適合性や無中断・無誤りを保証しません。</li>
+        <li>運営会社は、端末環境・OS・ネットワーク障害など合理的な支配を超える事由による サービスの中断や端末内データの損失について責任を負いません。重要なデータは別途バックアップしてください。</li>
+      </ol>
+
+      <h3>第8条（規約の変更）</h3>
+      <p>本規約は関連法令に反しない範囲で変更されることがあり、変更時は適用日を明示のうえ本ページにてご案内します。</p>
+
+      <h3>第9条（準拠法およびお問い合わせ）</h3>
+      <p>本規約は大韓民国法を準拠法とし、本規約に定めのない事項は関連法令および Apple のメディアサービス規約に従います。サービスに関するお問い合わせは <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a> までお願いします。</p>
+      <p>本規約は2026年8月13日より適用されます。</p>
+    </div>
+
+    <!-- ZH-HANS -->
+    <div id="lang-zh-Hans" class="lang-content">
+      <h3>第一条（目的）</h3>
+      <p>本条款旨在规定 Studio HEVV（以下简称“运营方”）提供的 iOS 应用“Babchingu”（以下简称“本应用”）在使用方面运营方与用户之间的权利、义务及责任事项。</p>
+
+      <h3>第二条（服务内容）</h3>
+      <p>本应用是帮助您慢慢用餐的工具，提供以下功能：</p>
+      <ol>
+        <li>最短用餐时间计时器，以及通过灵动岛和通知进行的用餐节奏提示</li>
+        <li>猫咪角色伙伴与用餐记录、统计</li>
+        <li>菜品照片添加（可选）及个性化设置</li>
+      </ol>
+      <p>各功能的细节可能因服务改进而变更，重大变更将通过本应用或本页面告知。</p>
+
+      <h3>第三条（费用及付款）</h3>
+      <ol>
+        <li>本应用在发布后的一定期间内可能免费提供，此后可能转为付费。适用价格以 App Store 显示的金额为准。</li>
+        <li>所有付款与退款均按照 Apple App Store 的政策和流程进行，运营方不运营任何独立的支付方式。退款请求由 Apple 处理。</li>
+        <li>已付费购买本应用的用户，无论此后价格如何变更，均可继续使用。</li>
+      </ol>
+
+      <h3>第四条（健康提示与免责）</h3>
+      <div class="callout">
+        <strong>重要.</strong> Babchingu 是帮助养成慢食习惯的参考工具，<strong>不提供医疗、健康或营养方面的建议。</strong>
+      </div>
+      <p>本应用建议的用餐时间与节奏为一般参考信息，不保证适合任何特定个人。涉及消化系统疾病、饮食失调等健康判断，请务必咨询专业医疗人员。对于用户信赖本应用所作的判断及其结果，运营方概不负责。</p>
+
+      <h3>第五条（用户义务）</h3>
+      <ol>
+        <li>用户不得对本应用软件进行逆向工程、复制、篡改，或妨碍其正常运行。</li>
+        <li>用户应遵守相关法律法规及本条款使用本应用。</li>
+      </ol>
+
+      <h3>第六条（知识产权）</h3>
+      <p>本应用及其所含软件、设计、角色、商标等的知识产权归运营方所有。用户输入或添加的数据（用餐记录、照片等）的权利归该用户所有。</p>
+
+      <h3>第七条（责任限制）</h3>
+      <ol>
+        <li>本应用按“现状”提供，运营方不保证其适合特定目的，亦不保证不中断或无错误。</li>
+        <li>对于因设备环境、操作系统、网络故障等超出合理控制范围的原因导致的服务中断或设备内数据丢失，运营方不承担责任。请自行另行备份重要数据。</li>
+      </ol>
+
+      <h3>第八条（条款变更）</h3>
+      <p>本条款可在不违反相关法律的范围内变更，变更时将在本页面注明适用日期予以告知。</p>
+
+      <h3>第九条（准据法与联系方式）</h3>
+      <p>本条款以大韩民国法律为准据法，本条款未尽事宜依相关法律及 Apple 媒体服务条款处理。有关服务的咨询请发送至 <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>。</p>
+      <p>本条款自 2026 年 8 月 13 日起生效。</p>
+    </div>
+
+    <!-- ZH-HANT -->
+    <div id="lang-zh-Hant" class="lang-content">
+      <h3>第一條（目的）</h3>
+      <p>本條款旨在規範 Studio HEVV（以下簡稱「營運方」）提供的 iOS 應用程式「Babchingu」（以下簡稱「本應用程式」）在使用方面營運方與使用者之間的權利、義務及責任事項。</p>
+
+      <h3>第二條（服務內容）</h3>
+      <p>本應用程式是協助您慢慢用餐的工具，提供下列功能：</p>
+      <ol>
+        <li>最短用餐時間計時器，以及透過動態島與通知進行的用餐節奏提示</li>
+        <li>貓咪角色夥伴與用餐記錄、統計</li>
+        <li>餐點照片附加（可選）及個人化設定</li>
+      </ol>
+      <p>各功能的細節可能因服務改善而變更，重大變更將透過本應用程式或本頁面告知。</p>
+
+      <h3>第三條（費用及付款）</h3>
+      <ol>
+        <li>本應用程式於發布後的一定期間內可能免費提供，其後可能轉為付費。適用價格以 App Store 顯示的金額為準。</li>
+        <li>所有付款與退款均依照 Apple App Store 的政策與流程進行，營運方不營運任何獨立的支付方式。退款要求由 Apple 處理。</li>
+        <li>已付費購買本應用程式的使用者，無論其後價格如何變更，均可繼續使用。</li>
+      </ol>
+
+      <h3>第四條（健康提示與免責）</h3>
+      <div class="callout">
+        <strong>重要.</strong> Babchingu 是協助養成慢食習慣的參考工具，<strong>不提供醫療、健康或營養方面的建議。</strong>
+      </div>
+      <p>本應用程式建議的用餐時間與節奏為一般參考資訊，不保證適合任何特定個人。涉及消化系統疾病、飲食失調等健康判斷，請務必諮詢專業醫療人員。對於使用者信賴本應用程式所作的判斷及其結果，營運方概不負責。</p>
+
+      <h3>第五條（使用者義務）</h3>
+      <ol>
+        <li>使用者不得對本應用程式軟體進行逆向工程、複製、竄改，或妨礙其正常運作。</li>
+        <li>使用者應遵守相關法律法規及本條款使用本應用程式。</li>
+      </ol>
+
+      <h3>第六條（智慧財產權）</h3>
+      <p>本應用程式及其所含軟體、設計、角色、商標等的智慧財產權歸營運方所有。使用者輸入或附加的資料（用餐記錄、相片等）的權利歸該使用者所有。</p>
+
+      <h3>第七條（責任限制）</h3>
+      <ol>
+        <li>本應用程式依「現狀」提供，營運方不保證其適合特定目的，亦不保證不中斷或無錯誤。</li>
+        <li>對於因裝置環境、作業系統、網路故障等超出合理控制範圍的原因導致的服務中斷或裝置內資料遺失，營運方不承擔責任。請自行另行備份重要資料。</li>
+      </ol>
+
+      <h3>第八條（條款變更）</h3>
+      <p>本條款可在不違反相關法律的範圍內變更，變更時將於本頁面註明適用日期予以告知。</p>
+
+      <h3>第九條（準據法與聯絡方式）</h3>
+      <p>本條款以大韓民國法律為準據法，本條款未盡事宜依相關法律及 Apple 媒體服務條款處理。有關服務的諮詢請寄至 <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>。</p>
+      <p>本條款自 2026 年 8 月 13 日起生效。</p>
+    </div>
+
+    <footer>
+      &copy; 2026 Studio HEVV
+    </footer>
+  </main>
+
+  <script>
+    var select = document.getElementById('lang-select');
+    var pageTitle = document.getElementById('page-title');
+
+    var titles = {
+      'ko': '서비스 이용약관',
+      'en': 'Terms of Service',
+      'ja': '利用規約',
+      'zh-Hans': '服务条款',
+      'zh-Hant': '服務條款'
+    };
+
+    function detectLanguage() {
+      var navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (navLang.indexOf('ko') === 0) return 'ko';
+      if (navLang.indexOf('ja') === 0) return 'ja';
+      if (navLang.indexOf('zh-tw') === 0 || navLang.indexOf('zh-hk') === 0 || navLang.indexOf('zh-hant') === 0) return 'zh-Hant';
+      if (navLang.indexOf('zh') === 0) return 'zh-Hans';
+      return 'en'; // default fallback
+    }
+
+    function setLanguage(lang) {
+      if (!titles[lang]) lang = 'en';
+      select.value = lang;
+      pageTitle.textContent = titles[lang];
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.toggle('active', el.id === 'lang-' + lang);
+      });
+    }
+
+    setLanguage(detectLanguage());
+
+    select.addEventListener('change', function() {
+      setLanguage(this.value);
+    });
+  </script>
+</body>
+</html>

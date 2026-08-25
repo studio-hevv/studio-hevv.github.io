@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오</title>
-  <meta name="description" content="Studio HEVV(스튜디오 헤브)는 인스타 DM 분석, 온라인 젠더리빌, 예배 노트 앱 셀라 등 작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다." />
+  <meta name="description" content="Studio HEVV(스튜디오 헤브)는 예배 말씀 노트 앱 셀라, 성경 원어 사전, 인스타 DM 분석, 온라인 젠더리빌 등 작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다." />
   <link rel="canonical" href="https://studio-hevv.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Studio HEVV" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오" />
-  <meta property="og:description" content="인스타 DM 분석, 온라인 젠더리빌, 예배 노트 앱 셀라를 만드는 독립 소프트웨어 스튜디오." />
+  <meta property="og:description" content="예배 노트 앱 셀라, 성경 원어 사전, 인스타 DM 분석, 온라인 젠더리빌을 만드는 독립 소프트웨어 스튜디오." />
   <meta property="og:url" content="https://studio-hevv.com/" />
   <meta property="og:image" content="https://studio-hevv.com/assets/og/selah.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -26,7 +26,8 @@
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "인스타 DM 분석하기", "url": "https://studio-hevv.com/insta-dm/" } },
       { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "온라인 젠더 리빌", "url": "https://studio-hevv.com/gender-reveal/" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "셀라 (Selah)", "url": "https://studio-hevv.com/selah/" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "셀라 (Selah)", "url": "https://studio-hevv.com/selah/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "성경 원어 사전", "url": "https://studio-hevv.com/biblical-dict/" } }
     ]
   }
   </script>
@@ -132,6 +133,18 @@
       font-size: 40px;
       color: #fff;
       letter-spacing: -1px;
+    }
+
+    .card-thumbnail-biblical-dict {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      background: #181c24;
+      font-size: 32px;
+      color: #e2e8f0;
+      letter-spacing: 2px;
     }
 
     .card-body {
@@ -240,6 +253,18 @@
             <div class="card-links">
               <a class="primary" href="/selah/">자세히</a>
               <a href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" target="_blank" rel="noopener">App Store ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-thumbnail-biblical-dict">א · Ω</div>
+          <div class="card-body">
+            <h3 class="project-name">성경 원어 사전</h3>
+            <p class="project-desc">히브리어·헬라어 스트롱 원어 사전 및 형태소 본문 검색.</p>
+            <div class="card-links">
+              <a class="primary" href="/biblical-dict/">자세히</a>
+              <a href="https://play.google.com/store/apps/details?id=com.studio_hevv.biblical_dict" target="_blank" rel="noopener">Google Play ↗</a>
             </div>
           </div>
         </div>

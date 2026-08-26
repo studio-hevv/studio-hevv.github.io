@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -156,8 +156,8 @@
 
       <div class="lang-select-box">
         <select id="lang-select" aria-label="Select Language">
-          <option value="ko">한국어</option>
           <option value="en">English</option>
+          <option value="ko">한국어</option>
           <option value="ja">日本語</option>
           <option value="zh-Hans">简体中文</option>
           <option value="zh-Hant">繁體中文</option>
@@ -238,7 +238,7 @@
     </div>
 
     <!-- EN -->
-    <div id="lang-en" class="lang-content">
+    <div id="lang-en" class="lang-content active">
       <h3>Article 1 (General Provisions)</h3>
       <p>Studio HEVV ("Operator") complies with applicable privacy laws in operating the iOS application 'Babchingu' ("App"). This policy outlines the scope and purpose of the information the App processes, as well as your rights.</p>
 
@@ -554,6 +554,7 @@
     function setLanguage(lang) {
       if (!titles[lang]) lang = 'en';
       select.value = lang;
+      document.documentElement.lang = lang;
       pageTitle.textContent = titles[lang];
       document.querySelectorAll('.lang-content').forEach(function(el) {
         el.classList.toggle('active', el.id === 'lang-' + lang);

@@ -27,7 +27,8 @@
       { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "인스타 DM 분석하기", "url": "https://studio-hevv.com/insta-dm/" } },
       { "@type": "Offer", "itemOffered": { "@type": "WebApplication", "name": "온라인 젠더 리빌", "url": "https://studio-hevv.com/gender-reveal/" } },
       { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "셀라 (Selah)", "url": "https://studio-hevv.com/selah/" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "성경 원어 사전", "url": "https://studio-hevv.com/biblical-dict/" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "성경 원어 사전", "url": "https://studio-hevv.com/biblical-dict/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MobileApplication", "name": "Receipt Roll (영수증 카메라)", "url": "https://studio-hevv.com/receipt-cam/" } }
     ]
   }
   </script>
@@ -147,6 +148,21 @@
       letter-spacing: 2px;
     }
 
+    .card-thumbnail-receipt-cam {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      background: #f7f7f7;
+      font-family: ui-monospace, "SF Mono", "Menlo", "Courier New", monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 1px;
+      border-bottom: 1px dashed var(--border);
+    }
+
     .card-body {
       padding: 16px 18px 18px;
     }
@@ -245,6 +261,19 @@
 
     <section>
       <div class="carousel">
+        <div class="project-card">
+          <div class="card-thumbnail-receipt-cam">[ RECEIPT ROLL ]</div>
+          <div class="card-body">
+            <h3 class="project-name">Receipt Roll</h3>
+            <p class="project-desc">카메라로 찍은 순간을 감열지 영수증으로 인쇄하는 레트로 카메라 앱.</p>
+            <div class="card-links">
+              <a class="primary" href="/receipt-cam/">자세히</a>
+              <a href="https://apps.apple.com/app/id6742352829" target="_blank" rel="noopener">App Store ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=com.studio_hevv.receipt_cam" target="_blank" rel="noopener">Google Play ↗</a>
+            </div>
+          </div>
+        </div>
+
         <div class="project-card">
           <div class="card-thumbnail-selah">✳</div>
           <div class="card-body">

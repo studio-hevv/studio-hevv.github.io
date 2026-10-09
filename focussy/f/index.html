@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOCUSSY · 냉장고 초대</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="얼음이 다 녹을 때까지 집중해요. 친구 냉장고에 놀러 와요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FOCUSSY" />
+  <meta property="og:title" content="FOCUSSY · 친구 냉장고에 초대받았어요" />
+  <meta property="og:description" content="얼음이 다 녹을 때까지 집중해요. 같이 녹여요." />
+  <meta name="theme-color" content="#000000" />
+  <style>
+    :root { color-scheme: dark; --ice: #8FCDEB; }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      background: #000; color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 56px 22px 36px; max-width: 480px; margin: 0 auto;
+    }
+    .label { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--ice); }
+    h1 { font-weight: 300; font-size: 34px; line-height: 1.3; margin-top: 14px; }
+    p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.6); margin-top: 14px; }
+    .cubes { display: flex; gap: 12px; align-items: flex-end; margin: 64px 0; }
+    .cube { border-radius: 24%; background: linear-gradient(135deg, rgba(238,240,242,.9), rgba(143,156,166,.7)); }
+    .buttons { display: flex; flex-direction: column; gap: 12px; }
+    a.btn, span.btn {
+      display: block; text-align: center; text-decoration: none; border-radius: 999px;
+      padding: 18px; font-size: 15px; font-weight: 700;
+    }
+    a.primary { background: #fff; color: #000; }
+    span.soon { background: rgba(255,255,255,.08); color: rgba(255,255,255,.45); font-weight: 600; }
+    .code { font-size: 11px; color: rgba(255,255,255,.25); text-align: center; margin-top: 18px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="label">FOCUSSY · INVITE</div>
+    <h1>친구 냉장고에<br />초대받았어요</h1>
+    <p>좋아하는 물건을 얼음에 넣고,<br />얼음이 다 녹을 때까지 집중해요.<br />친구와 같은 시각에 같이 녹일 수도 있어요.</p>
+    <div class="cubes" aria-hidden="true">
+      <div class="cube" style="width:44px;height:44px;transform:rotate(-10deg)"></div>
+      <div class="cube" style="width:30px;height:30px;transform:rotate(14deg);opacity:.7"></div>
+      <div class="cube" style="width:20px;height:20px;transform:rotate(4deg);opacity:.5"></div>
+    </div>
+  </main>
+  <div>
+    <div class="buttons">
+      <a class="btn primary" id="open" href="#">앱에서 열기</a>
+      <span class="btn soon">App Store · 곧 출시</span>
+    </div>
+    <div class="code" id="code"></div>
+  </div>
+  <script>
+    // With the app installed iOS opens this link in the app and this page is never seen.
+    // "앱에서 열기" is for when it was opened in a browser anyway (an in-app browser, say).
+    var c = new URLSearchParams(location.search).get("c") || "";
+    if (/^[A-Za-z0-9_-]+$/.test(c)) {
+      document.getElementById("open").href = "icetimer://fridge/" + c;
+      document.getElementById("code").textContent = c.toUpperCase();
+    } else {
+      document.getElementById("open").style.display = "none";
+    }
+  </script>
+</body>
+</html>

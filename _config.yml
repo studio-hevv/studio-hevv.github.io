@@ -1,0 +1,4 @@
+# GitHub Pages hides dot-folders by default; iOS reads universal-link settings from
+# /.well-known/apple-app-site-association.
+include:
+  - .well-known

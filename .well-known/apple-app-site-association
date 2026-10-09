@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["JWLLVLWCJD.com.studio-hevv.focussy"],
+        "components": [
+          { "/": "/focussy/f/*", "comment": "FOCUSSY fridge invites" }
+        ]
+      }
+    ]
+  }
+}

@@ -2,9 +2,18 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["JWLLVLWCJD.com.studio-hevv.focussy"],
+        "appIDs": [
+          "JWLLVLWCJD.com.studio-hevv.focussy"
+        ],
         "components": [
-          { "/": "/focussy/f/*", "comment": "FOCUSSY fridge invites" }
+          {
+            "/": "/til-it-melts/f/*",
+            "comment": "til it melts fridge invites"
+          },
+          {
+            "/": "/focussy/f/*",
+            "comment": "invites sent before the rename"
+          }
         ]
       }
     ]

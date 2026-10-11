@@ -150,7 +150,7 @@
       </div>
     </div>
     <div id="lang-en" class="lang-content active">
-      <p class="updated">Effective: October 10, 2026</p>
+      <p class="updated">Effective: October 11, 2026</p>
       <h3>1. About this policy</h3>
       <p>Studio HEVV ("we") operates the iOS app 'til it melts' ("the App"). This policy explains what information the App handles and how.</p>
 
@@ -182,7 +182,8 @@
         <li>To show your history, magnets and reports</li>
         <li>To show your fridge to friends, melt together, and let friends know you started</li>
         <li>To send the weekly report and the end-of-cup notification</li>
-        <li>Usage statistics to improve the App (section 5)</li>
+        <li>Usage statistics and crash reports to improve the App (section 5)</li>
+        <li>To measure how well our ads work, only as described in section 6</li>
       </ol>
 
       <h3>5. Services we use</h3>
@@ -191,31 +192,46 @@
         <li><strong>Apple WeatherKit</strong>: current temperature and weather for your approximate location</li>
         <li><strong>Apple Push Notifications</strong>: alerts when a friend starts focusing</li>
         <li><strong>App Store</strong>: Club purchases. Payment is handled by Apple; we never receive payment details.</li>
-        <li><strong>Google Firebase Analytics</strong>: anonymous statistics about how the App is used (e.g. cups started and finished, screens viewed, paywall views). No focus content, photos, location or nickname is sent. Not used for ad tracking.</li>
+        <li><strong>Google Firebase Analytics</strong>: anonymous statistics about how the App is used (e.g. cups started and finished, screens viewed, paywall views). No focus content, photos, location or nickname is sent. Google may infer your country or region from your IP address. Kept for up to 14 months.</li>
+        <li><strong>Google Firebase Crashlytics</strong>: when the App crashes or hits an error, a report with the device model, iOS version, app version and what the App was doing at the time. Kept for 90 days.</li>
+        <li><strong>Meta App Events (Facebook SDK)</strong>: see section 6.</li>
       </ul>
 
-      <h3>6. Keeping and deleting your data</h3>
+      <h3>6. Advertising measurement (Meta)</h3>
+      <p>We use Meta's SDK to see whether our ads on Instagram and Facebook lead to installs and purchases. It sends these events to Meta Platforms, Inc.: app install and launch, finishing onboarding, finishing your first cup, starting a free trial, and purchases (product and price).</p>
       <ul>
-        <li><strong>Delete account</strong> (Settings › Account): removes your fridge, focus-start records and friend-alert subscription from the public database, and your nickname and friend list from the device.</li>
-        <li><strong>Erase all records</strong> (Settings › Account): erases your history, magnets and photo items, including on other devices synced through iCloud.</li>
+        <li><strong>If you allow tracking</strong> on the iOS prompt, your device's advertising identifier (IDFA) is sent with these events, so Meta can match them to an ad you saw.</li>
+        <li><strong>If you don't</strong>, no advertising identifier is sent, and Meta only receives aggregated, privacy-preserving measurements.</li>
+        <li>We ask after your first cup, not at launch. You can change it any time in Settings › Privacy &amp; Security › Tracking.</li>
+        <li>Focus content, photos, location, nickname and your fridge are never sent to Meta.</li>
+      </ul>
+      <p>Meta handles this data under its own policy: <a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a>.</p>
+
+      <h3>7. Transfers outside your country</h3>
+      <p>Firebase (Google LLC) and Meta (Meta Platforms, Inc.) process the data above on servers in the United States and elsewhere, over the network, whenever the App sends it. You can refuse: turn off tracking as described in section 6, or email us to stop analytics for your device. The App still works fully either way.</p>
+
+      <h3>8. Keeping and deleting your data</h3>
+      <ul>
+        <li><strong>Delete account</strong> (Settings › Data): removes your fridge, focus-start records and friend-alert subscription from the public database, and your nickname and friend list from the device.</li>
+        <li><strong>Erase all records</strong> (Settings › Data): erases your history, magnets and photo items, including on other devices synced through iCloud.</li>
         <li><strong>Close your fridge</strong>: takes down what's shared, leaving only your name and face.</li>
         <li>Deleting the App removes what's stored on the device.</li>
       </ul>
 
-      <h3>7. Reporting and blocking</h3>
+      <h3>9. Reporting and blocking</h3>
       <p>If you see an inappropriate name or photo on someone's fridge, report or block them from that fridge's ⋯ menu. Reports come to us by email, and we may remove the content.</p>
 
-      <h3>8. Children</h3>
+      <h3>10. Children</h3>
       <p>The App is not directed at children under 13 (under 14 in Korea), and we do not knowingly collect their information.</p>
 
-      <h3>9. Contact</h3>
-      <p>For questions, or to access or delete your data, email <a href="mailto:studio.hevv@gmail.com">studio.hevv@gmail.com</a>.</p>
+      <h3>11. Contact</h3>
+      <p>For questions, or to access or delete your data, email <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>.</p>
 
-      <h3>10. Changes</h3>
+      <h3>12. Changes</h3>
       <p>We'll post changes on this page and announce important ones in the App.</p>
 </div>
     <div id="lang-ko" class="lang-content">
-      <p class="updated">시행일: 2026년 10월 10일</p>
+      <p class="updated">시행일: 2026년 10월 11일</p>
       <h3>제1조 (목적)</h3>
       <p>Studio HEVV(이하 "운영자")는 iOS 앱 'til it melts'(이하 "앱")를 운영하면서 관련 법령을 지켜 이용자의 개인정보를 보호합니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
 
@@ -247,7 +263,8 @@
         <li>집중 기록, 자석, 리포트를 보여주기 위해</li>
         <li>친구와 냉장고를 보여주고, 같이 녹이고, 집중 시작을 알리기 위해</li>
         <li>주간 리포트와 잔이 끝났을 때의 알림을 보내기 위해</li>
-        <li>앱 개선을 위한 이용 통계(아래 제5조)</li>
+        <li>앱 개선을 위한 이용 통계와 오류 기록(아래 제5조)</li>
+        <li>광고 성과를 측정하기 위해(아래 제6조에서 설명하는 범위 안에서만)</li>
       </ol>
 
       <h3>제5조 (외부 서비스)</h3>
@@ -256,27 +273,47 @@
         <li><strong>Apple WeatherKit</strong>: 대략적인 위치로 현재 기온과 날씨를 받아옵니다.</li>
         <li><strong>Apple 푸시 알림</strong>: 친구가 집중을 시작했을 때의 알림</li>
         <li><strong>App Store</strong>: Club 결제. 결제 정보는 Apple이 처리하며 운영자는 받지 않습니다.</li>
-        <li><strong>Google Firebase Analytics</strong>: 앱을 어떻게 쓰는지에 대한 익명 통계(예: 잔 시작·완주, 화면 보기, 결제 화면 보기). 집중 기록 내용, 사진, 위치, 닉네임은 보내지 않습니다. 광고 추적에 쓰지 않습니다.</li>
+        <li><strong>Google Firebase Analytics</strong>: 앱을 어떻게 쓰는지에 대한 익명 통계(예: 잔 시작·완주, 화면 보기, 결제 화면 보기). 집중 기록 내용, 사진, 위치, 닉네임은 보내지 않습니다. Google이 IP 주소로 국가·지역을 추정할 수 있습니다. 최대 14개월 보관합니다.</li>
+        <li><strong>Google Firebase Crashlytics</strong>: 앱이 멈추거나 오류가 났을 때의 기록(기기 모델, iOS 버전, 앱 버전, 그때 앱이 하던 동작). 90일 보관합니다.</li>
+        <li><strong>Meta App Events (Facebook SDK)</strong>: 아래 제6조를 보세요.</li>
       </ul>
 
-      <h3>제6조 (보관과 삭제)</h3>
+      <h3>제6조 (광고 성과 측정 · Meta)</h3>
+      <p>인스타그램·페이스북 광고를 보고 앱을 설치하거나 결제했는지 알기 위해 Meta의 SDK를 사용합니다. 아래 이벤트를 Meta Platforms, Inc.로 보냅니다: 앱 설치와 실행, 온보딩 완료, 첫 잔 완주, 무료 체험 시작, 결제(상품과 금액).</p>
       <ul>
-        <li><strong>계정 삭제</strong>(설정 › 계정 설정): 공개 데이터베이스의 냉장고, 집중 시작 기록, 친구 알림 구독을 지우고, 기기의 닉네임과 친구 목록을 지웁니다.</li>
-        <li><strong>모든 기록 지우기</strong>(설정 › 계정 설정): 집중 기록, 자석, 사진 아이템을 지웁니다. iCloud로 동기화된 다른 기기에서도 지워집니다.</li>
+        <li><strong>추적을 허용하면</strong> iOS 안내 창에서 허용한 경우, 기기의 광고 식별자(IDFA)가 함께 전송되어 Meta가 이용자가 본 광고와 연결할 수 있습니다.</li>
+        <li><strong>허용하지 않으면</strong> 광고 식별자는 보내지 않으며, Meta는 개인을 알아볼 수 없도록 모은 측정값만 받습니다.</li>
+        <li>추적 허용은 앱을 처음 켤 때가 아니라 첫 잔을 다 녹인 뒤에 묻습니다. 설정 › 개인정보 보호 및 보안 › 추적에서 언제든 바꿀 수 있습니다.</li>
+        <li>집중 기록 내용, 사진, 위치, 닉네임, 냉장고 정보는 Meta로 보내지 않습니다.</li>
+      </ul>
+      <p>Meta로 보낸 정보는 Meta의 방침에 따라 처리됩니다: <a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a></p>
+
+      <h3>제7조 (개인정보의 국외 이전)</h3>
+      <p>앱 이용 중 아래 정보가 네트워크를 통해 국외로 전송됩니다.</p>
+      <ul>
+        <li><strong>Google LLC</strong> (미국, Firebase): 이용 통계, 오류 기록, 앱 설치 식별자 / 앱 개선 / 이용 통계 최대 14개월, 오류 기록 90일</li>
+        <li><strong>Meta Platforms, Inc.</strong> (미국): 위 제6조의 이벤트, 추적을 허용한 경우 광고 식별자 / 광고 성과 측정 / Meta의 방침에 따름</li>
+      </ul>
+      <p>국외 이전을 원하지 않으면 제6조의 추적을 끄거나, 아래 문의처로 이용 통계 수집 중단을 요청할 수 있습니다. 거부해도 앱의 모든 기능을 그대로 쓸 수 있습니다.</p>
+
+      <h3>제8조 (보관과 삭제)</h3>
+      <ul>
+        <li><strong>계정 삭제</strong>(설정 › DATA): 공개 데이터베이스의 냉장고, 집중 시작 기록, 친구 알림 구독을 지우고, 기기의 닉네임과 친구 목록을 지웁니다.</li>
+        <li><strong>모든 기록 지우기</strong>(설정 › DATA): 집중 기록, 자석, 사진 아이템을 지웁니다. iCloud로 동기화된 다른 기기에서도 지워집니다.</li>
         <li><strong>냉장고 닫기</strong>: 공개된 냉장고 내용을 내리고 이름과 얼굴만 남깁니다.</li>
         <li>앱을 삭제하면 기기에 저장된 정보는 함께 지워집니다.</li>
       </ul>
 
-      <h3>제7조 (신고와 차단)</h3>
+      <h3>제9조 (신고와 차단)</h3>
       <p>다른 이용자의 냉장고에서 부적절한 이름이나 사진을 보면, 그 냉장고의 ⋯ 메뉴에서 신고하거나 차단할 수 있습니다. 신고는 이메일로 접수되며, 운영자는 확인 후 해당 내용을 삭제할 수 있습니다.</p>
 
-      <h3>제8조 (아동)</h3>
+      <h3>제10조 (아동)</h3>
       <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알고 수집하지 않습니다.</p>
 
-      <h3>제9조 (문의)</h3>
-      <p>개인정보에 관한 문의, 열람·삭제 요청은 <a href="mailto:studio.hevv@gmail.com">studio.hevv@gmail.com</a>으로 보내주세요.</p>
+      <h3>제11조 (문의)</h3>
+      <p>개인정보에 관한 문의, 열람·삭제 요청은 <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>으로 보내주세요.</p>
 
-      <h3>제10조 (변경)</h3>
+      <h3>제12조 (변경)</h3>
       <p>이 방침이 바뀌면 이 페이지에 알리고, 중요한 변경은 앱에서도 안내합니다.</p>
 </div>
     <footer>© 2026 Studio HEVV</footer>

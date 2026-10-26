@@ -172,7 +172,7 @@
       <li>Identificador de usuario anónimo (UUID, no permite identificarte personalmente) — Firebase Analytics · Firebase Crashlytics</li>
       <li>Registros de cierres inesperados (fallas) de la App, información de diagnóstico de errores e información del dispositivo y del sistema operativo — Firebase Crashlytics</li>
       <li>Estado de la suscripción e historial de compras, y el ID de cuenta de suscripción si activas la sincronización con Google Drive — RevenueCat</li>
-      <li>Identificadores del dispositivo para medir el rendimiento de los anuncios (iOS: solo si lo permites en ATT / Android: según la configuración del ID de publicidad) — Meta · Google</li>
+      <li>Eventos de apertura de la App, compra (producto e importe) y número de notas guardadas, e identificadores del dispositivo para medir el rendimiento de los anuncios (identificadores en iOS: solo si lo permites en ATT / Android: según la configuración del ID de publicidad) — Meta, y Google si vinculamos Google Ads</li>
     </ul>
 
     <h2>2. Dónde se guarda la información</h2>
@@ -203,7 +203,7 @@
       <li>Comprobar el estado de tu suscripción en tus otros dispositivos, incluidos los de otro sistema operativo, que conectan la sincronización con Google Drive con la misma Cuenta de Google</li>
       <li>Analizar patrones de uso para mejorar las funciones de la App (Firebase Analytics)</li>
       <li>Analizar las causas de fallas y errores de la App (Firebase Crashlytics)</li>
-      <li>Medir la eficacia de los anuncios (iOS: solo si lo permites en ATT / Android: según la configuración del ID de publicidad; Meta · Google)</li>
+      <li>Medir la eficacia de los anuncios (iOS: solo si lo permites en ATT / Android: según la configuración del ID de publicidad; Meta, y Google si vinculamos Google Ads)</li>
     </ul>
 
     <h2>4. Servicios de terceros</h2>
@@ -252,7 +252,7 @@
       </tr>
       <tr>
         <td>Google Ads</td>
-        <td>Medición del rendimiento de los anuncios (iOS y Android; en iOS, solo si lo permites en ATT)</td>
+        <td>Medición del rendimiento de los anuncios, si lo vinculamos (iOS y Android; en iOS, solo si lo permites en ATT)</td>
         <td><a href="https://policies.google.com/privacy?hl=es-419" target="_blank">policies.google.com/privacy</a></td>
       </tr>
     </table>
@@ -269,16 +269,16 @@
       <li><strong>Google LLC — Firebase Crashlytics (googlekrsupport@google.com)</strong>
         <ul><li>País: Estados Unidos y otros países donde Google tiene centros de datos</li><li>Información enviada: Registros de cierres inesperados, diagnósticos de errores, información del dispositivo y del sistema operativo, identificador de usuario anónimo</li><li>Finalidad: Encontrar la causa de cierres inesperados y errores</li><li>Conservación: Se conservan 90 días y después empieza el proceso de borrado</li></ul>
       </li>
-      <li><strong>Google LLC — Google Ads (googlekrsupport@google.com)</strong>
-        <ul><li>País: Estados Unidos y otros países donde Google tiene centros de datos</li><li>Información enviada: Eventos de instalación y compra a través de Firebase Analytics, ID de publicidad (en iOS solo si permites el rastreo con ATT)</li><li>Finalidad: Medir el rendimiento de los anuncios</li><li>Conservación: Según la política de privacidad de Google</li></ul>
-      </li>
-      <li><strong>Meta Platforms, Inc. (representante local en Corea: korealocalagent@support.facebook.com)</strong>
-        <ul><li>País: Estados Unidos y otros países donde Meta tiene centros de datos</li><li>Información enviada: Eventos de apertura de la App, compra (producto e importe) y número de notas guardadas, ID de publicidad (en iOS solo si permites el rastreo con ATT)</li><li>Finalidad: Medir el rendimiento de los anuncios</li><li>Conservación: Según la política de privacidad de Meta</li></ul>
-      </li>
     </ul>
-    <p><strong>Cómo oponerte y qué ocurre</strong>: La App no tiene un ajuste que desactive solo estos envíos. Si no los quieres, deja de usar la App y elimínala; en ese caso no podrás usarla. Puedes impedir que se envíe el ID de publicidad para medir anuncios si no permites el rastreo (ATT) en iOS, o si eliminas tu ID de publicidad en el apartado Anuncios de los ajustes del dispositivo en Android; podrás seguir usando todas las funciones de la App.</p>
+    <p><strong>Cómo oponerte y qué ocurre</strong>: La App no tiene un ajuste que desactive solo estos envíos. Si no los quieres, deja de usar la App y elimínala; en ese caso no podrás usarla. Las herramientas de medición de anuncios (Meta y Google Ads) se explican en la sección 5.</p>
 
     <h2>5. Seguimiento publicitario</h2>
+    <p>La App incluye el SDK de Meta para medir el rendimiento de los anuncios, así que, mientras usas la App, Meta Platforms, Inc. (Estados Unidos) recopila directamente la información siguiente y la trata conforme a la <a href="https://www.facebook.com/privacy/policy/" target="_blank">política de privacidad de Meta</a>. Si vinculamos Google Ads, Google LLC (Estados Unidos) también recibe información con la misma finalidad a través de Firebase Analytics y la trata conforme a la <a href="https://policies.google.com/privacy" target="_blank">política de privacidad de Google</a>.</p>
+    <ul>
+      <li>Meta: eventos de apertura de la App, compra (producto e importe) y número de notas guardadas, y el ID de publicidad (en iOS solo si permites el rastreo con ATT)</li>
+      <li>Google (si vinculamos Google Ads): eventos de instalación y compra, y el ID de publicidad (en iOS solo si permites el rastreo con ATT)</li>
+    </ul>
+    <p>Puedes impedir que se envíe el ID de publicidad con los ajustes siguientes. Los eventos que se envían sin el ID de publicidad no se pueden desactivar por separado en la App.</p>
     <h3>iOS: Transparencia en el rastreo de apps (ATT)</h3>
     <p>De acuerdo con la política de Transparencia en el rastreo de apps (ATT) de Apple, la App te pide permiso explícito antes de acceder al identificador del dispositivo para publicidad (IDFA) con el fin de medir el rendimiento de los anuncios.</p>
     <ul>
@@ -289,7 +289,7 @@
 
     <h3>Android: ID de publicidad</h3>
     <p>Android no tiene una ventana aparte de permiso de rastreo como ATT. La App usa el ID de publicidad de Google (AAID) para medir a través de qué anuncio instalaste la App.</p>
-    <p>Puedes restablecer el ID de publicidad o desactivar la personalización de anuncios en la sección Anuncios de la configuración del dispositivo y, aun así, usar todas las funciones de la App igual.</p>
+    <p>Puedes eliminar o restablecer el ID de publicidad, o desactivar la personalización de anuncios, en la sección Anuncios de la configuración del dispositivo. Si lo eliminas, el ID de publicidad no se envía. En cualquier caso, puedes usar todas las funciones de la App igual.</p>
 
     <h2>6. Conservación y eliminación de la información</h2>
     <ul>

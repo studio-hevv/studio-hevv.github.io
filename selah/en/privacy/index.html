@@ -172,7 +172,7 @@
       <li>Anonymous user identifier (UUID, cannot identify you personally) — Firebase Analytics · Firebase Crashlytics</li>
       <li>App crash records, error diagnostics, and device and OS information — Firebase Crashlytics</li>
       <li>Subscription status and purchase history, and the subscription account ID if you turn on Google Drive sync — RevenueCat</li>
-      <li>Device identifiers for measuring ad performance (iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings) — Meta · Google</li>
+      <li>App launch, purchase (product and amount) and saved-note count events, and device identifiers for measuring ad performance (device identifiers on iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings) — Meta, and Google if we link Google Ads</li>
     </ul>
 
     <h2>2. Where information is stored</h2>
@@ -203,7 +203,7 @@
       <li>Checking your subscription status on your other devices, including devices on another operating system, that connect Google Drive sync with the same Google Account</li>
       <li>Analyzing usage patterns to improve App features (Firebase Analytics)</li>
       <li>Analyzing the causes of crashes and errors (Firebase Crashlytics)</li>
-      <li>Measuring ad effectiveness (iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings; Meta · Google)</li>
+      <li>Measuring ad effectiveness (iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings; Meta, and Google if we link Google Ads)</li>
     </ul>
 
     <h2>4. Third-party services</h2>
@@ -252,7 +252,7 @@
       </tr>
       <tr>
         <td>Google Ads</td>
-        <td>Ad performance measurement (iOS and Android; on iOS only if you allow tracking under ATT)</td>
+        <td>Ad performance measurement if we link it (iOS and Android; on iOS only if you allow tracking under ATT)</td>
         <td><a href="https://policies.google.com/privacy?hl=en" target="_blank">policies.google.com/privacy</a></td>
       </tr>
     </table>
@@ -269,16 +269,16 @@
       <li><strong>Google LLC — Firebase Crashlytics (googlekrsupport@google.com)</strong>
         <ul><li>Country: United States and other countries where Google has data centers</li><li>Information transferred: Crash records, error diagnostics, device and OS information, anonymous user identifier</li><li>Purpose: Finding the causes of crashes and errors</li><li>Retention: Kept for 90 days, then the deletion process starts</li></ul>
       </li>
-      <li><strong>Google LLC — Google Ads (googlekrsupport@google.com)</strong>
-        <ul><li>Country: United States and other countries where Google has data centers</li><li>Information transferred: App install and purchase events through Firebase Analytics, advertising ID (on iOS only if you allow tracking under ATT)</li><li>Purpose: Measuring ad performance</li><li>Retention: As set out in Google's privacy policy</li></ul>
-      </li>
-      <li><strong>Meta Platforms, Inc. (Korean local agent: korealocalagent@support.facebook.com)</strong>
-        <ul><li>Country: United States and other countries where Meta has data centers</li><li>Information transferred: App launch, purchase (product and amount) and saved-note count events, advertising ID (on iOS only if you allow tracking under ATT)</li><li>Purpose: Measuring ad performance</li><li>Retention: As set out in Meta's privacy policy</li></ul>
-      </li>
     </ul>
-    <p><strong>How to refuse, and what happens</strong>: The App has no setting that turns off only these transfers. If you do not want them, stop using and delete the App; you will then not be able to use the App. You can stop the advertising ID from being sent for ad measurement by not allowing tracking (ATT) on iOS, or by deleting your advertising ID under Ads in your device settings on Android; you can still use every feature of the App.</p>
+    <p><strong>How to refuse, and what happens</strong>: The App has no setting that turns off only these transfers. If you do not want them, stop using and delete the App; you will then not be able to use the App. Ad measurement tools (Meta and Google Ads) are described in section 5.</p>
 
     <h2>5. Ad tracking</h2>
+    <p>The App includes the Meta SDK for measuring ad performance, so while you use the App, Meta Platforms, Inc. (United States) collects the information below directly and processes it under <a href="https://www.facebook.com/privacy/policy/" target="_blank">Meta's privacy policy</a>. If we link Google Ads, Google LLC (United States) also receives information for the same purpose through Firebase Analytics and processes it under <a href="https://policies.google.com/privacy" target="_blank">Google's privacy policy</a>.</p>
+    <ul>
+      <li>Meta: app launch, purchase (product and amount) and saved-note count events, and the advertising ID (on iOS only if you allow tracking under ATT)</li>
+      <li>Google (if we link Google Ads): app install and purchase events, and the advertising ID (on iOS only if you allow tracking under ATT)</li>
+    </ul>
+    <p>You can stop the advertising ID from being sent with the settings below. Events sent without the advertising ID cannot be turned off separately in the App.</p>
     <h3>iOS: App Tracking Transparency (ATT)</h3>
     <p>In line with Apple's App Tracking Transparency (ATT) policy, the App asks for your explicit permission before accessing the device identifier for advertisers (IDFA) to measure ad performance.</p>
     <ul>
@@ -289,7 +289,7 @@
 
     <h3>Android: advertising ID</h3>
     <p>Android has no separate tracking permission prompt like ATT. The App uses the Google advertising ID (AAID) to measure which ad led you to install the App.</p>
-    <p>You can reset your advertising ID or turn off ad personalization under Ads in your device settings, and you can still use every feature of the App in the same way.</p>
+    <p>You can delete or reset your advertising ID, or turn off ad personalization, under Ads in your device settings. If you delete it, the advertising ID is not sent. Either way, you can still use every feature of the App in the same way.</p>
 
     <h2>6. Retention and deletion</h2>
     <ul>

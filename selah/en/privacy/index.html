@@ -137,7 +137,7 @@
     <a class="back" href="/">← Studio HEVV</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 24, 2026</p>
+    <p class="updated">Last updated: October 26, 2026</p>
 
     <p>This Privacy Policy explains what information is processed when you use the Selah worship notes app (the "App"). Your privacy is our top priority.</p>
 
@@ -163,6 +163,7 @@
       <li>The email address of the connected Google Account: used only to show the connected account on the App's settings screen, and not stored on your device.</li>
       <li>The Drive user identifier of the connected Google Account: used to check that it is the same account, and stored only on your device in a transformed form.</li>
       <li>Google sign-in information (authentication tokens): on iOS, stored only in this device's Keychain and never moved to backups or other devices. On Android, obtained through Google Play services on your device.</li>
+      <li>Subscription account ID: a random identifier created by the App, used only to share your subscription across devices that connect Google Drive sync with the same Google Account. It is not derived from your email address or Google Account information. It is stored in the app-only folder of the connected Google Account's Drive and is sent to RevenueCat together with your purchase history to check your subscription status.</li>
     </ul>
 
     <h3>Information collected to improve the service (through third-party services)</h3>
@@ -170,7 +171,7 @@
       <li>App usage events (screen views, how often features are used, etc.) — Firebase Analytics</li>
       <li>Anonymous user identifier (UUID, cannot identify you personally) — Firebase Analytics · Firebase Crashlytics</li>
       <li>App crash records, error diagnostics, and device and OS information — Firebase Crashlytics</li>
-      <li>Subscription status and purchase history — RevenueCat</li>
+      <li>Subscription status and purchase history, and the subscription account ID if you turn on Google Drive sync — RevenueCat</li>
       <li>Device identifiers for measuring ad performance (iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings) — Meta · Google</li>
     </ul>
 
@@ -185,6 +186,7 @@
       <tr><td>Subscription information</td><td>Apple StoreKit (iOS, Apple servers) / Google Play Billing (Android, Google servers)</td></tr>
       <tr><td>App usage events</td><td>Firebase (Google servers, anonymized) — shared by iOS and Android</td></tr>
       <tr><td>Crash and error diagnostics</td><td>Firebase Crashlytics (Google servers) — shared by iOS and Android</td></tr>
+      <tr><td>Subscription account ID</td><td>A separate file in the app-only folder of the connected Google Account's Drive (kept apart from the note sync files) + RevenueCat servers — shared by iOS and Android</td></tr>
       <tr><td>Subscription and purchase analytics</td><td>RevenueCat servers — shared by iOS and Android</td></tr>
     </table>
     <p>The developer does not run its own servers. Your notes and profile are transferred only between your devices and your own iCloud or Google Drive. Because Google sign-in information is kept only on your device, the developer does not access the data stored in your Google Drive. The Google Drive permission the App requests is limited to the app-only folder (drive.appdata), so the App cannot see or change your other Drive files.</p>
@@ -198,6 +200,7 @@
       <li>Syncing notes (iOS: iCloud or Google Drive / Android: Google Drive)</li>
       <li>Showing the account connected to Google Drive sync and checking that it is the same account</li>
       <li>Checking subscription status (iOS: Apple StoreKit / Android: Google Play Billing, through RevenueCat)</li>
+      <li>Checking your subscription status on your other devices, including devices on another operating system, that connect Google Drive sync with the same Google Account</li>
       <li>Analyzing usage patterns to improve App features (Firebase Analytics)</li>
       <li>Analyzing the causes of crashes and errors (Firebase Crashlytics)</li>
       <li>Measuring ad effectiveness (iOS: only if you allow tracking under ATT / Android: according to your advertising ID settings; Meta · Google)</li>
@@ -254,6 +257,27 @@
       </tr>
     </table>
 
+    <h3>International transfers of personal information</h3>
+    <p>The App transfers personal information abroad (to service providers that process and store it on our behalf) to use the services below. Transfers happen over the internet, encrypted with HTTPS, whenever the information is generated while you use the App. Under Article 28-8(1)(3)(a) of the Korean Personal Information Protection Act, we disclose these transfers in this policy.</p>
+    <ul>
+      <li><strong>RevenueCat, Inc. (compliance@revenuecat.com)</strong>
+        <ul><li>Country: United States</li><li>Information transferred: Subscription status and purchase history, and the subscription account ID if you turn on Google Drive sync</li><li>Purpose: Checking subscription status, subscription analytics</li><li>Retention: Until we delete it or our service agreement ends</li></ul>
+      </li>
+      <li><strong>Google LLC — Firebase Analytics (googlekrsupport@google.com)</strong>
+        <ul><li>Country: United States and other countries where Google has data centers</li><li>Information transferred: App usage events, anonymous user identifier, device and OS information</li><li>Purpose: Analyzing how the App is used</li><li>Retention: User- and event-level data is deleted after the Google Analytics retention period (2 or 14 months)</li></ul>
+      </li>
+      <li><strong>Google LLC — Firebase Crashlytics (googlekrsupport@google.com)</strong>
+        <ul><li>Country: United States and other countries where Google has data centers</li><li>Information transferred: Crash records, error diagnostics, device and OS information, anonymous user identifier</li><li>Purpose: Finding the causes of crashes and errors</li><li>Retention: Kept for 90 days, then the deletion process starts</li></ul>
+      </li>
+      <li><strong>Google LLC — Google Ads (googlekrsupport@google.com)</strong>
+        <ul><li>Country: United States and other countries where Google has data centers</li><li>Information transferred: App install and purchase events through Firebase Analytics, advertising ID (on iOS only if you allow tracking under ATT)</li><li>Purpose: Measuring ad performance</li><li>Retention: As set out in Google's privacy policy</li></ul>
+      </li>
+      <li><strong>Meta Platforms, Inc. (Korean local agent: korealocalagent@support.facebook.com)</strong>
+        <ul><li>Country: United States and other countries where Meta has data centers</li><li>Information transferred: App launch, purchase (product and amount) and saved-note count events, advertising ID (on iOS only if you allow tracking under ATT)</li><li>Purpose: Measuring ad performance</li><li>Retention: As set out in Meta's privacy policy</li></ul>
+      </li>
+    </ul>
+    <p><strong>How to refuse, and what happens</strong>: The App has no setting that turns off only these transfers. If you do not want them, stop using and delete the App; you will then not be able to use the App. You can stop the advertising ID from being sent for ad measurement by not allowing tracking (ATT) on iOS, or by deleting your advertising ID under Ads in your device settings on Android; you can still use every feature of the App.</p>
+
     <h2>5. Ad tracking</h2>
     <h3>iOS: App Tracking Transparency (ATT)</h3>
     <p>In line with Apple's App Tracking Transparency (ATT) policy, the App asks for your explicit permission before accessing the device identifier for advertisers (IDFA) to measure ad performance.</p>
@@ -281,6 +305,7 @@
       <li>If you choose This Device Only in the iOS App's Settings → Sync → Storage Location, iCloud sync is turned off on this device. Your notes stay on this device, and the data stored in iCloud and other devices on the same Apple Account are not changed.</li>
       <li>Google Drive sync files are kept in the app-only folder (not shown to other apps or in your regular Drive view). Turning off Google Drive sync in the App on iOS or Android, or deleting the App, does not remove the files stored in Drive. When you turn off sync, the App sends your last changes once and then disconnects this device. Turning off sync in the App is separate from revoking the App's access in your Google Account; you can revoke access in <a href="https://myaccount.google.com/connections" target="_blank">third-party connections in your Google Account</a>. Revoking access is also separate from deleting the content stored in Drive.</li>
       <li>To delete the sync file in Google Drive outside the App, on a computer go to <a href="https://drive.google.com" target="_blank">drive.google.com</a> → Settings → Manage apps, open this App's Options and choose Delete hidden app data.</li>
+      <li>The subscription account ID file is not removed when you delete your account and data in the App or turn off Google Drive sync; it is used to keep your subscription when you connect again. To remove it, delete the App's hidden app data under Manage apps at drive.google.com. This also deletes the note sync files in the same folder, and if any device still has Google Drive sync turned on, a new subscription account ID is created at its next sync. The subscription account ID and purchase history sent to RevenueCat follow RevenueCat's retention policy.</li>
       <li>Data sent to third-party services such as Firebase and RevenueCat follows each service's retention policy.</li>
     </ul>
 

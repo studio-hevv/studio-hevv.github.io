@@ -137,7 +137,7 @@
     <a class="back" href="/">← Studio HEVV</a>
 
     <h1>Política de privacidade</h1>
-    <p class="updated">Última atualização: 24 de outubro de 2026</p>
+    <p class="updated">Última atualização: 26 de outubro de 2026</p>
 
     <p>Esta política de privacidade explica quais informações são tratadas quando você usa o app de anotações de culto Selah (o "App"). Sua privacidade é nossa prioridade.</p>
 
@@ -163,6 +163,7 @@
       <li>Endereço de e-mail da Conta do Google conectada: usado apenas para mostrar a conta conectada na tela de configurações do App, e não é armazenado no dispositivo.</li>
       <li>Identificador de usuário do Drive da Conta do Google conectada: usado para confirmar que é a mesma conta, e armazenado apenas no dispositivo, de forma transformada.</li>
       <li>Dados de login do Google (tokens de autenticação): no iOS, ficam armazenados apenas nas Chaves (Keychain) deste dispositivo e não vão para backups nem para outros dispositivos. No Android, são obtidos pelo Google Play Services do dispositivo.</li>
+      <li>ID da conta de assinatura: um identificador aleatório criado pelo App, usado apenas para compartilhar sua assinatura entre os dispositivos que conectam a sincronização com o Google Drive usando a mesma Conta do Google. Ele não é gerado a partir do seu endereço de e-mail nem das informações da sua Conta do Google. Fica armazenado na pasta exclusiva do App no Drive da Conta do Google conectada e é enviado à RevenueCat junto com o seu histórico de compras para verificar o status da sua assinatura.</li>
     </ul>
 
     <h3>Informações coletadas para melhorar o serviço (por meio de serviços de terceiros)</h3>
@@ -170,7 +171,7 @@
       <li>Eventos de uso do App (visualizações de tela, número de vezes que os recursos são usados etc.) — Firebase Analytics</li>
       <li>Identificador de usuário anônimo (UUID, não permite identificar você pessoalmente) — Firebase Analytics · Firebase Crashlytics</li>
       <li>Registros de encerramentos inesperados (falhas) do App, informações de diagnóstico de erros e informações do dispositivo e do sistema operacional — Firebase Crashlytics</li>
-      <li>Status da assinatura e histórico de pagamentos — RevenueCat</li>
+      <li>Status da assinatura e histórico de compras, e o ID da conta de assinatura se você ativar a sincronização com o Google Drive — RevenueCat</li>
       <li>Identificadores do dispositivo para medir o desempenho de anúncios (iOS: somente se você permitir no ATT / Android: conforme as configurações do ID de publicidade) — Meta · Google</li>
     </ul>
 
@@ -185,6 +186,7 @@
       <tr><td>Informações da assinatura</td><td>Apple StoreKit (iOS, servidores da Apple) / Faturamento do Google Play (Android, servidores do Google)</td></tr>
       <tr><td>Eventos de uso do App</td><td>Firebase (servidores do Google, anonimizados) — comum ao iOS e ao Android</td></tr>
       <tr><td>Informações de diagnóstico de falhas e erros</td><td>Firebase Crashlytics (servidores do Google) — comum ao iOS e ao Android</td></tr>
+      <tr><td>ID da conta de assinatura</td><td>Um arquivo separado na pasta exclusiva do App no Drive da Conta do Google conectada (guardado à parte dos arquivos de sincronização de notas) + servidores da RevenueCat — comum ao iOS e ao Android</td></tr>
       <tr><td>Análise de assinaturas e pagamentos</td><td>Servidores da RevenueCat — comum ao iOS e ao Android</td></tr>
     </table>
     <p>O desenvolvedor não opera servidores próprios. As anotações e o perfil são transferidos apenas entre os seus dispositivos e o seu próprio iCloud ou Google Drive. Como os dados de login do Google ficam apenas no dispositivo, o desenvolvedor não acessa os dados armazenados no seu Google Drive. A permissão do Google Drive solicitada pelo App se limita à pasta exclusiva do App (drive.appdata), então o App não consegue ver nem alterar seus outros arquivos do Drive.</p>
@@ -198,6 +200,7 @@
       <li>Sincronizar anotações (iOS: iCloud ou Google Drive / Android: Google Drive)</li>
       <li>Mostrar a conta conectada à sincronização com o Google Drive e confirmar que é a mesma conta</li>
       <li>Verificar o status da assinatura (iOS: Apple StoreKit / Android: Faturamento do Google Play, por meio da RevenueCat)</li>
+      <li>Verificar o status da sua assinatura nos seus outros dispositivos, inclusive os de outro sistema operacional, que conectam a sincronização com o Google Drive usando a mesma Conta do Google</li>
       <li>Analisar padrões de uso para melhorar os recursos do App (Firebase Analytics)</li>
       <li>Analisar as causas de falhas e erros do App (Firebase Crashlytics)</li>
       <li>Medir a eficácia dos anúncios (iOS: somente se você permitir no ATT / Android: conforme as configurações do ID de publicidade; Meta · Google)</li>
@@ -254,6 +257,27 @@
       </tr>
     </table>
 
+    <h3>Transferências internacionais de informações pessoais</h3>
+    <p>O App transfere informações pessoais para o exterior (a fornecedores que as tratam e armazenam em nosso nome) para usar os serviços abaixo. As transferências são feitas pela internet, criptografadas com HTTPS, sempre que a informação é gerada enquanto você usa o App. Nos termos do artigo 28-8(1)(3)(a) da Lei de Proteção de Informações Pessoais da Coreia, divulgamos essas transferências nesta política.</p>
+    <ul>
+      <li><strong>RevenueCat, Inc. (compliance@revenuecat.com)</strong>
+        <ul><li>País: Estados Unidos</li><li>Informações transferidas: Status da assinatura e histórico de compras, e o ID da conta de assinatura se você ativar a sincronização com o Google Drive</li><li>Finalidade: Verificar o status da assinatura, análise de assinaturas</li><li>Retenção: Até que a excluamos ou que nosso contrato de serviço termine</li></ul>
+      </li>
+      <li><strong>Google LLC — Firebase Analytics (googlekrsupport@google.com)</strong>
+        <ul><li>País: Estados Unidos e outros países onde o Google tem data centers</li><li>Informações transferidas: Eventos de uso do App, identificador de usuário anônimo, informações do dispositivo e do sistema operacional</li><li>Finalidade: Analisar como o App é usado</li><li>Retenção: Os dados no nível do usuário e do evento são excluídos após o período de retenção do Google Analytics (2 ou 14 meses)</li></ul>
+      </li>
+      <li><strong>Google LLC — Firebase Crashlytics (googlekrsupport@google.com)</strong>
+        <ul><li>País: Estados Unidos e outros países onde o Google tem data centers</li><li>Informações transferidas: Registros de falhas, diagnósticos de erros, informações do dispositivo e do sistema operacional, identificador de usuário anônimo</li><li>Finalidade: Encontrar a causa de falhas e erros</li><li>Retenção: Guardados por 90 dias; depois começa o processo de exclusão</li></ul>
+      </li>
+      <li><strong>Google LLC — Google Ads (googlekrsupport@google.com)</strong>
+        <ul><li>País: Estados Unidos e outros países onde o Google tem data centers</li><li>Informações transferidas: Eventos de instalação e compra por meio do Firebase Analytics, ID de publicidade (no iOS, só se você permitir o rastreamento pelo ATT)</li><li>Finalidade: Medir o desempenho dos anúncios</li><li>Retenção: Conforme a política de privacidade do Google</li></ul>
+      </li>
+      <li><strong>Meta Platforms, Inc. (representante local na Coreia: korealocalagent@support.facebook.com)</strong>
+        <ul><li>País: Estados Unidos e outros países onde a Meta tem data centers</li><li>Informações transferidas: Eventos de abertura do App, compra (produto e valor) e número de notas salvas, ID de publicidade (no iOS, só se você permitir o rastreamento pelo ATT)</li><li>Finalidade: Medir o desempenho dos anúncios</li><li>Retenção: Conforme a política de privacidade da Meta</li></ul>
+      </li>
+    </ul>
+    <p><strong>Como recusar e o que acontece</strong>: O App não tem uma configuração que desative só essas transferências. Se você não quiser que elas aconteçam, pare de usar o App e exclua-o; nesse caso, você não poderá usar o App. Você pode impedir o envio do ID de publicidade para medir anúncios se não permitir o rastreamento (ATT) no iOS, ou se excluir seu ID de publicidade em Anúncios, nas configurações do dispositivo, no Android; você continuará podendo usar todos os recursos do App.</p>
+
     <h2>5. Rastreamento de anúncios</h2>
     <h3>iOS: Transparência no Rastreamento de Apps (ATT)</h3>
     <p>De acordo com a política de Transparência no Rastreamento de Apps (ATT) da Apple, o App pede o seu consentimento explícito antes de acessar o identificador de publicidade do dispositivo (IDFA) para medir o desempenho de anúncios.</p>
@@ -281,6 +305,7 @@
       <li>Se você escolher Somente neste dispositivo no App para iOS, em Configurações → Sincronização → Armazenamento, a sincronização com o iCloud é desativada neste dispositivo. As anotações continuam neste dispositivo, e os dados armazenados no iCloud e os outros dispositivos com a mesma Conta Apple não mudam.</li>
       <li>Os arquivos de sincronização armazenados no Google Drive ficam na pasta exclusiva do App (não aparecem para outros apps nem na visualização normal do Drive). Desativar a sincronização com o Google Drive do App no iOS ou no Android, ou excluir o App, não remove os arquivos armazenados no Drive. Ao desativar a sincronização, o App envia as últimas alterações uma vez e depois desconecta este dispositivo. Desativar a sincronização no App é diferente de revogar o acesso do App na sua Conta do Google; você pode revogar o acesso nas <a href="https://myaccount.google.com/connections" target="_blank">conexões de terceiros da sua Conta do Google</a>. Revogar o acesso também é diferente de excluir o conteúdo armazenado no Drive.</li>
       <li>Para excluir o arquivo de sincronização do Google Drive fora do App, em um computador acesse <a href="https://drive.google.com" target="_blank">drive.google.com</a> → Configurações → Gerenciar aplicativos, abra as Opções deste App e escolha excluir os dados ocultos do app.</li>
+      <li>O arquivo do ID da conta de assinatura não é apagado quando você exclui sua conta e seus dados no App nem quando desativa a sincronização com o Google Drive; ele é usado para manter sua assinatura quando você se conectar novamente. Para apagá-lo, exclua os dados ocultos do App em Gerenciar aplicativos, em drive.google.com. Isso também apaga os arquivos de sincronização de notas da mesma pasta e, se algum dispositivo ainda estiver com a sincronização com o Google Drive ativada, um novo ID da conta de assinatura será criado na próxima sincronização dele. O ID da conta de assinatura e o histórico de compras enviados à RevenueCat seguem a política de retenção da RevenueCat.</li>
       <li>Os dados enviados a serviços de terceiros, como Firebase e RevenueCat, seguem a política de retenção de cada serviço.</li>
     </ul>
 

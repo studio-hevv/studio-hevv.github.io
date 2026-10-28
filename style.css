@@ -1,0 +1,213 @@
+:root { font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #171717; background: #f8f8f6; font-synthesis: none; font-size: 14px; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+a:focus-visible { outline: 2px solid #171717; outline-offset: 5px; }
+html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+.page { width: min(880px, calc(100% - 64px)); margin: auto; }
+.header { height: 112px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.wordmark { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; line-height: 1.7; color: #1a1a1a; }
+.header nav { display: flex; gap: 28px; font-size: 12px; color: #555; }
+.language-select { font: inherit; color: inherit; background: transparent; border: 0; padding: 0 16px 0 0; cursor: pointer; max-width: 110px; }
+.language-select:focus-visible { outline: 2px solid #171717; outline-offset: 5px; }
+.intro { padding: 65px 0 70px; max-width: 680px; }
+h1 { font-size: 30px; font-weight: 400; line-height: 1.5; letter-spacing: -.65px; margin: 0 0 22px; text-wrap: pretty; word-break: keep-all; }
+.intro p { font-size: 14px; line-height: 1.9; color: #686868; margin: 0; max-width: 630px; }
+h2 { font-size: 12px; font-weight: 500; color: #686868; margin: 0 0 15px; }
+.products > h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; line-height: 1.7; color: #888; margin-bottom: 16px; }
+.products-intro { font-size: 14px; color: #686868; line-height: 1.8; max-width: 630px; margin: 0 0 30px; }
+.product-list { list-style: none; padding: 0; margin: 0; }
+.product-entry { display: grid; grid-template-columns: 192px 168px minmax(0, 1fr); gap: 24px; border-top: 1px solid #e6e6e6; padding: 29px 0 30px; align-items: start; }
+.product-visual { display: block; width: 192px; }
+.product-image { display: flex; align-items: center; justify-content: center; width: 192px; height: 96px; object-fit: cover; }
+.card-thumbnail-receipt-cam { background: #fff; color: #000; font: 600 12px ui-monospace, 'SF Mono', Menlo, monospace; letter-spacing: .1px; border: 1px solid #e6e6e6; border-bottom: 2px dashed #999; }
+.card-thumbnail-selah { background: #111; color: #fff; font-size: 32px; }
+.card-thumbnail-biblical-dict { background: #181c24; color: #e2e8f0; font-size: 25px; letter-spacing: 2px; }
+.product-entry h3 { font-size: 16px; font-weight: 550; line-height: 1.5; letter-spacing: -.2px; margin: 0 0 8px; }
+.product-entry h3 [aria-hidden] { font-size: 12px; font-weight: 400; color: #777; margin-left: 5px; }
+.platform { display: block; font-size: 11px; color: #686868; line-height: 1.5; }
+.product-info p { margin: 1px 0 14px; font-size: 14px; color: #555; line-height: 1.8; word-break: keep-all; }
+.links { display: flex; gap: 7px 17px; flex-wrap: wrap; font-size: 12px; line-height: 1.8; color: #686868; }
+.links a { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #ccc; }
+.links a:hover { color: #171717; text-decoration-color: #171717; }
+.documents { border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 29px 0; margin-top: 17px; }
+.documents h2 { color: #171717; font-size: 14px; margin: 0; font-weight: 500; }
+.documents > a { font-size: 12px; white-space: nowrap; }
+.documents > a span { margin-left: 7px; }
+footer { padding: 36px 0 30px; font-size: 11px; color: #686868; }
+.footer-main { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 29px; }
+.footer-meta { display: flex; justify-content: space-between; gap: 15px; font-size: 10px; }
+.skip:not(:focus) { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip:focus { position: fixed; top: 10px; left: 10px; background: #fff; padding: 10px; z-index: 2; }
+@media (max-width: 900px) and (min-width: 701px) {
+  .product-entry { grid-template-columns: 160px minmax(0, 1fr); gap: 20px 24px; }
+  .product-visual { grid-row: 1 / 3; }
+  .product-name, .product-info { grid-column: 2; }
+  .product-visual, .product-image { width: 160px; }
+  .product-image { height: 80px; }
+  .card-thumbnail-receipt-cam { font-size: 10px; }
+}
+@media (max-width: 700px) {
+  .page { width: min(600px, calc(100% - 48px)); }
+  .header { min-height: 112px; height: auto; padding: 26px 0; flex-wrap: wrap; gap: 18px; }
+  .header nav { width: 100%; font-size: 12px; gap: 24px; align-items: center; }
+  .language-select { margin-left: auto; }
+  .intro { padding: 43px 0 50px; }
+  h1 { font-size: 25px; letter-spacing: -.45px; line-height: 1.55; margin-bottom: 22px; }
+  .intro p { font-size: 13px; line-height: 1.9; }
+  .products-intro { font-size: 14px; margin-bottom: 24px; }
+  .product-entry { grid-template-columns: 144px minmax(0, 1fr); column-gap: 20px; row-gap: 20px; padding: 25px 0 27px; }
+  .product-visual, .product-image { width: 144px; }
+  .product-image { height: 72px; }
+  .card-thumbnail-receipt-cam { font-size: 9px; }
+  .card-thumbnail-selah { font-size: 25px; }
+  .card-thumbnail-biblical-dict { font-size: 21px; }
+  .product-name { align-self: center; }
+  .product-entry h3 { font-size: 16px; margin-bottom: 7px; }
+  .platform { font-size: 10px; }
+  .product-info { grid-column: 1 / -1; }
+  .product-info p { font-size: 14px; margin-top: 0; margin-bottom: 14px; }
+  .links { font-size: 12px; gap: 10px 19px; }
+  .documents { padding: 26px 0; margin-top: 8px; }
+  .documents > a { font-size: 11px; }
+  .footer-main { font-size: 11px; }
+  .footer-meta { font-size: 9px; }
+  footer { padding-top: 28px; }
+}
+@media (max-width: 360px) {
+  .page { width: calc(100% - 40px); }
+  h1 { font-size: 23px; }
+  .header nav { gap: 16px; font-size: 12px; }
+  .product-entry { column-gap: 15px; }
+  .product-visual, .product-image { width: 120px; }
+  .product-image { height: 60px; }
+  .product-entry { grid-template-columns: 120px minmax(0, 1fr); }
+  .card-thumbnail-receipt-cam { font-size: 8px; }
+  .links { gap: 8px 15px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Toss mini apps: a restrained, horizontally browsable card row. */
+.toss-apps { margin-top: 54px; }
+.toss-apps > h2 { margin-bottom: 18px; }
+.toss-cards { display: flex; gap: 20px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; list-style: none; margin: 0; padding: 0 0 14px; }
+.toss-cards:focus-visible { outline: 2px solid #171717; outline-offset: 5px; }
+.toss-card { display: flex; flex: 0 0 max(240px, calc((100% - 40px) / 3)); min-width: 0; flex-direction: column; gap: 0; scroll-snap-align: start; padding: 0; background: #fff; border: 1px solid #e0e0dc; border-radius: 10px; overflow: hidden; }
+.toss-card .product-visual { width: 100%; }
+.toss-card .product-image { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+.toss-card .toss-card-body { display: flex; flex: 1; flex-direction: column; padding: 16px 18px 18px; }
+.toss-card .product-name { align-self: auto; margin: 0 0 8px; }
+.toss-card .product-name h3 { margin: 0; }
+.toss-card .product-info { display: flex; flex: 1; flex-direction: column; grid-column: auto; }
+.toss-card .product-info p { margin-top: 0; }
+.toss-card .links { margin-top: auto; }
+@media (max-width: 700px) {
+  .toss-card { flex-basis: min(280px, calc(100% - 32px)); }
+}
+
+/* Match the original homepage card typography inside Toss cards only. */
+.toss-card { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.7; }
+.toss-card .product-name { margin-bottom: 5px; color: #1a1a1a; font-size: 14px; font-weight: 600; line-height: inherit; }
+.toss-card .product-name h3 { font: inherit; }
+.toss-card .product-info p { margin: 0 0 14px; color: #888; font-size: 13px; font-weight: 400; line-height: 1.55; }
+.toss-card .links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: auto; color: #888; font-size: 12px; line-height: 1.7; }
+.toss-card .links a { color: #888; font-size: inherit; line-height: inherit; text-decoration: none; text-underline-offset: initial; text-decoration-color: initial; border-bottom: 1px solid #e0e0dc; transition: border-color .15s; }
+.toss-card .links a:hover { color: #888; border-color: #1a1a1a; }
+.toss-card .links a:first-child { color: #1a1a1a; font-weight: 500; }
+.toss-card .product-name h3 { letter-spacing: normal; }
+
+/* Give the three mobile apps more visual weight without affecting Toss cards. */
+.product-list .product-entry { grid-template-columns: 224px 168px minmax(0, 1fr); }
+.product-list .product-visual, .product-list .product-image { width: 224px; }
+.product-list .product-image { height: 112px; }
+.product-list .product-entry h3 { font-size: 18px; }
+.product-list .product-info p { font-size: 15px; }
+@media (max-width: 900px) and (min-width: 701px) {
+  .product-list .product-entry { grid-template-columns: 176px minmax(0, 1fr); }
+  .product-list .product-visual, .product-list .product-image { width: 176px; }
+  .product-list .product-image { height: 88px; }
+}
+@media (max-width: 700px) {
+  .product-list .product-entry { grid-template-columns: 160px minmax(0, 1fr); column-gap: 20px; }
+  .product-list .product-visual, .product-list .product-image { width: 160px; }
+  .product-list .product-image { height: 80px; }
+}
+@media (max-width: 360px) {
+  .product-list .product-entry { grid-template-columns: 132px minmax(0, 1fr); column-gap: 15px; }
+  .product-list .product-visual, .product-list .product-image { width: 132px; }
+  .product-list .product-image { height: 66px; }
+}
+
+/* Tighten Toss card copy spacing while keeping links pinned to the bottom. */
+.toss-card .product-name { margin-bottom: 2px; }
+.toss-card .product-info p { margin-bottom: 6px; }
+
+/* Bring the preview back to the original site's narrow, quiet rhythm. */
+:root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #1a1a1a; background: #f8f8f6; font-size: 16px; line-height: 1.7; }
+.page { width: min(880px, calc(100% - 48px)); }
+.header { height: auto; min-height: 0; padding: 80px 0 0; margin-bottom: 64px; align-items: flex-start; }
+.header nav { flex-wrap: wrap; gap: 16px 24px; }
+.intro { max-width: none; margin: 0 0 56px; padding: 0 0 56px; border-bottom: 1px solid #e0e0dc; }
+h1 { font-size: 16px; font-weight: 400; line-height: 1.7; letter-spacing: normal; margin: 0 0 12px; text-wrap: initial; }
+.intro p { max-width: none; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
+.products { margin-bottom: 56px; }
+.products > h2 { font-size: 13px; font-weight: 600; letter-spacing: .1em; line-height: 1.7; color: #888; margin-bottom: 16px; }
+.products-intro { max-width: none; margin: 0 0 56px; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
+.product-list .product-entry { grid-template-columns: 224px minmax(0, 1fr); gap: 0 24px; }
+.product-list .product-visual, .product-list .product-image { width: 224px; }
+.product-list .product-image { height: 112px; }
+.product-list .product-visual { grid-row: 1 / 3; }
+.product-list .product-name, .product-list .product-info { grid-column: 2; }
+.product-list .product-name { align-self: start; }
+.product-list .product-entry h3 { font-size: 18px; }
+.product-list .product-info p { font-size: 15px; }
+.toss-cards { gap: 16px; padding-bottom: 2px; scrollbar-width: none; -ms-overflow-style: none; }
+.toss-cards::-webkit-scrollbar { display: none; }
+.toss-card { flex-basis: 280px; }
+footer { display: flex; flex-direction: column-reverse; gap: 8px; padding: 32px 0 60px; color: #888; font-size: 14px; }
+footer .footer-main { justify-content: flex-start; gap: 24px; margin-bottom: 0; font-size: 14px; }
+footer .footer-meta { font-size: 14px; }
+@media (max-width: 700px) {
+  .page { width: min(880px, calc(100% - 48px)); }
+  .header { padding-top: 80px; margin-bottom: 48px; }
+  .header nav { width: 100%; flex-wrap: wrap; gap: 12px 20px; }
+  .intro { margin-bottom: 48px; padding-bottom: 48px; }
+  .products-intro { margin-bottom: 40px; }
+  .product-list .product-entry { grid-template-columns: 160px minmax(0, 1fr); gap: 20px; }
+  .product-list .product-visual { grid-row: auto; }
+  .product-list .product-name { grid-column: 2; align-self: center; }
+  .product-list .product-info { grid-column: 1 / -1; }
+  .product-list .product-visual, .product-list .product-image { width: 160px; }
+  .product-list .product-image { height: 80px; }
+  .toss-card { flex-basis: min(280px, calc(100% - 32px)); }
+}
+@media (max-width: 360px) {
+  .page { width: min(880px, calc(100% - 48px)); }
+  .product-list .product-entry { grid-template-columns: 132px minmax(0, 1fr); column-gap: 15px; }
+  .product-list .product-visual, .product-list .product-image { width: 132px; }
+  .product-list .product-image { height: 66px; }
+}
+
+/* Mobile products are the primary work: give each a larger presentation. */
+.product-list .product-entry { min-height: 300px; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 0 40px; align-content: center; padding: 28px 0; }
+html[lang="es"] .product-list .product-entry { min-height: 352px; }
+html[lang="pt-BR"] .product-list .product-entry { min-height: 332px; }
+.product-list .product-visual, .product-list .product-image { width: 100%; }
+.product-list .product-visual { align-self: center; }
+.product-list .product-image { height: auto; aspect-ratio: 2 / 1; }
+.product-list .product-entry h3 { font-size: 24px; margin-bottom: 12px; }
+.product-list .product-info p { font-size: 16px; }
+.product-list .links { font-size: 13px; }
+.product-list .card-thumbnail-selah { font-size: 44px; }
+.product-list .card-thumbnail-receipt-cam { font-size: 14px; }
+.product-list .card-thumbnail-biblical-dict { font-size: 34px; }
+@media (max-width: 900px) and (min-width: 701px) {
+  .product-list .product-entry { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 0 32px; }
+}
+@media (max-width: 700px) {
+  .product-list .product-entry { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 24px 0; }
+  .product-list .product-visual { grid-row: auto; }
+  .product-list .product-name, .product-list .product-info { grid-column: 1; align-self: start; }
+  .product-list .product-entry h3 { margin-bottom: 0; }
+}

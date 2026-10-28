@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오</title>
-  <meta name="description" content="Studio HEVV(스튜디오 헤브)는 예배 말씀 노트 앱 셀라, 성경 원어 사전, 인스타 DM 분석, 온라인 젠더리빌 등 작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <script src="locale.js"></script>
+  <title data-en="Studio HEVV — Small, thoughtful digital products" data-es="Studio HEVV: productos digitales pequeños y bien pensados" data-pt="Studio HEVV: produtos digitais pequenos e bem pensados">Studio HEVV — 작고 다정한 디지털 제품을 만드는 스튜디오</title>
+  <meta name="description" data-en-content="Studio HEVV is an independent software studio creating small, thoughtful digital products, including Selah, Biblical Dictionary, Instagram DM Analysis, and Online Gender Reveal." data-es-content="Studio HEVV es un estudio de software independiente que crea productos digitales pequeños y bien pensados, como Selah, el Diccionario bíblico de idiomas originales, el análisis de mensajes de Instagram y el anuncio virtual del sexo del bebé." data-pt-content="Studio HEVV é um estúdio independente de software que cria produtos digitais pequenos e bem pensados, como Selah, o Dicionário bíblico de línguas originais, a análise de mensagens do Instagram e a revelação virtual do sexo do bebê." content="Studio HEVV(스튜디오 헤브)는 예배 말씀 노트 앱 셀라, 성경 원어 사전, 인스타 DM 분석, 온라인 젠더리빌 등 작고 쓸모 있는 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다." />
   <link rel="canonical" href="https://studio-hevv.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Studio HEVV" />
@@ -32,319 +34,65 @@
     ]
   }
   </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #f8f8f6;
-      --text: #1a1a1a;
-      --muted: #888;
-      --border: #e0e0dc;
-      --link: #1a1a1a;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      padding: 0 24px;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 80px 0 60px;
-    }
-
-    header {
-      margin-bottom: 64px;
-    }
-
-    .wordmark {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    section {
-      margin-bottom: 56px;
-    }
-
-    h2 {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    p {
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin-bottom: 56px;
-    }
-
-    .carousel {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding-bottom: 2px;
-    }
-
-    .carousel::-webkit-scrollbar { display: none; }
-
-    .project-card {
-      flex: 0 0 280px;
-      scroll-snap-align: start;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .card-thumbnail {
-      display: block;
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      object-fit: cover;
-      background: #0d1b2a;
-    }
-
-    .card-thumbnail-selah {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      background: #111;
-      font-size: 40px;
-      color: #fff;
-      letter-spacing: -1px;
-    }
-
-    .card-thumbnail-biblical-dict {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      background: #181c24;
-      font-size: 32px;
-      color: #e2e8f0;
-      letter-spacing: 2px;
-    }
-
-    .card-thumbnail-receipt-cam {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      background: #f7f7f7;
-      font-family: ui-monospace, "SF Mono", "Menlo", "Courier New", monospace;
-      font-size: 16px;
-      font-weight: 700;
-      color: #000;
-      letter-spacing: 1px;
-      border-bottom: 1px dashed var(--border);
-    }
-
-    .card-body {
-      padding: 16px 18px 18px;
-    }
-
-    .project-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 5px;
-    }
-
-    .project-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.55;
-      margin-bottom: 14px;
-    }
-
-    .card-links {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .card-links a {
-      font-size: 12px;
-      color: var(--muted);
-      border-bottom-color: var(--border);
-    }
-
-    .card-links a.primary {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 32px;
-      font-size: 14px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 24px;
-      align-items: baseline;
-    }
-
-    footer .copyright { flex: 1 1 100%; }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      transition: border-color 0.15s;
-    }
-
-    a:hover { border-color: var(--text); }
-
-    footer a {
-      color: var(--muted);
-      border-bottom-color: transparent;
-    }
-
-    footer a:hover { color: var(--text); border-bottom-color: var(--text); }
-  </style>
-  <script>
-  (function(){
-    var ID = "G-XXXXXXXXXX"; // TODO: studio-hevv GA4 측정 ID로 교체하면 자동 활성화
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){ dataLayer.push(arguments); };
-    if (ID && ID.indexOf("XXXX") === -1) {
-      var s = document.createElement('script'); s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
-      document.head.appendChild(s);
-      gtag('js', new Date()); gtag('config', ID);
-    }
-  })();
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="style.css?v=app-spacing-1">
 </head>
 <body>
-  <main>
-    <header>
-      <div class="wordmark">Studio HEVV</div>
+  <a class="skip" href="#main" data-en="Skip to content" data-es="Saltar al contenido" data-pt="Pular para o conteúdo">본문으로 건너뛰기</a>
+  <div class="page">
+    <header class="header">
+      <a class="wordmark" href="./" aria-label="Studio HEVV 홈" data-en-aria-label="Studio HEVV home" data-es-aria-label="Inicio de Studio HEVV" data-pt-aria-label="Início do Studio HEVV">Studio HEVV</a>
+      <nav aria-label="주 메뉴" data-en-aria-label="Main navigation" data-es-aria-label="Navegación principal" data-pt-aria-label="Navegação principal"><a href="#products" data-en="Products" data-es="Productos" data-pt="Produtos">서비스</a><a href="policies.html" data-en="Terms &amp; policies" data-es="Términos y políticas" data-pt="Termos e políticas">약관 및 정책</a><select class="language-select" data-language-select aria-label="언어 선택" data-en-aria-label="Language" data-es-aria-label="Idioma" data-pt-aria-label="Idioma"><option value="ko" lang="ko">한국어</option><option value="en" lang="en">English</option><option value="es" lang="es">Español</option><option value="pt" lang="pt-BR">Português</option></select></nav>
     </header>
-
-    <section>
-      <p>An independent software studio focused on building small, thoughtful digital products.</p>
-      <p>We design and develop software that values clarity, calm user experiences, and long-term usefulness.</p>
-    </section>
-
-    <hr />
-
-    <section>
-      <h2>What we build</h2>
-      <p>We build focused software products designed to be calm, useful, and easy to live with over time.</p>
-    </section>
-
-    <section>
-      <div class="carousel">
-        <div class="project-card">
-          <div class="card-thumbnail-receipt-cam">[ RECEIPT CAMERA ]</div>
-          <div class="card-body">
-            <h3 class="project-name">Receipt Camera</h3>
-            <p class="project-desc">카메라로 찍은 순간을 감열지 영수증으로 인쇄하는 레트로 카메라 앱.</p>
-            <div class="card-links">
-              <a class="primary" href="/receipt-cam/">자세히</a>
-              <a href="https://apps.apple.com/app/id6742352829" target="_blank" rel="noopener">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.studio_hevv.receipt_cam" target="_blank" rel="noopener">Google Play ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-thumbnail-selah">✳</div>
-          <div class="card-body">
-            <h3 class="project-name">셀라 (Selah)</h3>
-            <p class="project-desc">예배 말씀 노트 앱. 말씀을 듣고, 기록하고, 삶으로 살아내도록.</p>
-            <div class="card-links">
-              <a class="primary" href="/selah/">자세히</a>
-              <a href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" target="_blank" rel="noopener">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.studio_hevv.selah" target="_blank" rel="noopener">Google Play ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-thumbnail-biblical-dict">א · Ω</div>
-          <div class="card-body">
-            <h3 class="project-name">성경 원어 사전</h3>
-            <p class="project-desc">히브리어·헬라어 스트롱 원어 사전 및 형태소 본문 검색.</p>
-            <div class="card-links">
-              <a class="primary" href="/biblical-dict/">자세히</a>
-              <a href="https://apps.apple.com/app/apple-store/id6785055025" target="_blank" rel="noopener">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.studio_hevv.biblical_dict" target="_blank" rel="noopener">Google Play ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img class="card-thumbnail" src="/assets/thumbnails/space-goldrush.png" alt="우주 황금 모으기 썸네일" />
-          <div class="card-body">
-            <h3 class="project-name">우주 황금 모으기</h3>
-            <p class="project-desc">토스 앱 내 우주 테마 자원 채굴 미니앱. 우주 황금을 모아 토스 포인트로 환전하세요.</p>
-            <div class="card-links">
-              <a class="primary" href="https://minion.toss.im/VopskHmr" target="_blank" rel="noopener">앱 열기 ↗</a>
-              <a href="/space-goldrush/terms/">이용약관</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img class="card-thumbnail" src="/assets/og/insta-dm.png" alt="인스타 DM 분석하기 썸네일" />
-          <div class="card-body">
-            <h3 class="project-name">인스타 DM 분석하기</h3>
-            <p class="project-desc">인스타 DM 데이터로 노력·애정을 진단. 우리 둘 중 누가 더 진심일까요?</p>
-            <div class="card-links">
-              <a class="primary" href="/insta-dm/">자세히</a>
-              <a href="https://minion.toss.im/v8My6ttg" target="_blank" rel="noopener">앱 열기 ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img class="card-thumbnail" src="/assets/og/gender-reveal.png" alt="온라인 젠더 리빌 썸네일" />
-          <div class="card-body">
-            <h3 class="project-name">온라인 젠더 리빌</h3>
-            <p class="project-desc">링크로 보내는 성별 공개 초대장. 투표하고 공개 애니메이션으로 딸·아들을 확인하세요.</p>
-            <div class="card-links">
-              <a class="primary" href="/gender-reveal/">자세히</a>
-              <a href="https://minion.toss.im/L0puUEuy" target="_blank" rel="noopener">앱 열기 ↗</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span class="copyright">&copy; 2026 Studio HEVV</span>
-      <a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a>
-      <a href="/support.html">Support</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">이용약관</a>
-    </footer>
-  </main>
+    <main id="main">
+      <section class="intro" id="studio" aria-labelledby="intro-title">
+        <h1 id="intro-title" data-en="An independent software studio focused on building small, thoughtful digital products." data-es="Un estudio de software independiente dedicado a crear productos digitales pequeños y bien pensados." data-pt="Um estúdio independente de software dedicado a criar produtos digitais pequenos e bem pensados.">작고 세심한 디지털 제품을 만드는 독립 소프트웨어 스튜디오입니다.</h1>
+        <p data-en="We design and develop software that values clarity, calm user experiences, and long-term usefulness." data-es="Diseñamos y desarrollamos software con claridad, experiencias tranquilas y utilidad a largo plazo." data-pt="Criamos e desenvolvemos software que valoriza a clareza, experiências tranquilas e utilidade duradoura.">명확함과 차분한 사용자 경험, 오래도록 이어지는 유용성을 중요하게 생각하며 소프트웨어를 디자인하고 개발합니다.</p>
+      </section>
+      <section class="products" id="products" aria-labelledby="products-title">
+        <h2 id="products-title" lang="en">What we build</h2>
+        <p class="products-intro" data-en="We build focused software products designed to be calm, useful, and easy to live with over time." data-es="Creamos productos de software enfocados, tranquilos, útiles y fáciles de incorporar a la vida diaria." data-pt="Criamos produtos de software objetivos, tranquilos, úteis e fáceis de incorporar ao dia a dia.">차분하고 유용하며, 오래도록 편안하게 사용할 수 있는 목적이 분명한 소프트웨어를 만듭니다.</p>
+        <ul class="product-list">
+          <li class="product-entry">
+            <a class="product-visual" href="/selah/" aria-label="셀라 (Selah)" data-en-aria-label="Selah" data-es-aria-label="Selah" data-pt-aria-label="Selah"><div class="product-image card-thumbnail-selah" aria-hidden="true">✳</div></a>
+            <div class="product-name"><h3><a href="/selah/"><span data-en="Selah" data-es="Selah" data-pt="Selah">셀라 (Selah)</span></a></h3></div>
+            <div class="product-info"><p data-en="A worship notes app. Listen to the Word, write it down, and live it out." data-es="Una app para tomar notas durante el culto. Escucha la Palabra, anótala y ponla en práctica." data-pt="Um app para fazer anotações durante o culto. Ouça a Palavra, registre-a e coloque-a em prática.">예배 말씀 노트 앱. 말씀을 듣고, 기록하고, 삶으로 살아내도록.</p><div class="links"><a href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=studio-hevv-selah&amp;mt=8" aria-label="셀라 App Store" data-en-aria-label="Selah App Store" data-es-aria-label="Selah en App Store" data-pt-aria-label="Selah na App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=com.studio_hevv.selah" aria-label="셀라 Google Play" data-en-aria-label="Selah Google Play" data-es-aria-label="Selah en Google Play" data-pt-aria-label="Selah no Google Play">Google Play</a><a href="policies.html?product=selah&amp;type=terms" aria-label="셀라 이용약관" data-en-aria-label="Selah Terms of service" data-es-aria-label="Términos del servicio de Selah" data-pt-aria-label="Termos de serviço do Selah" data-en="Terms of service" data-es="Términos del servicio" data-pt="Termos de serviço">이용약관</a><a href="policies.html?product=selah&amp;type=privacy" aria-label="셀라 개인정보 처리방침" data-en-aria-label="Selah Privacy policy" data-es-aria-label="Política de privacidad de Selah" data-pt-aria-label="Política de privacidade do Selah" data-en="Privacy policy" data-es="Política de privacidad" data-pt="Política de privacidade">개인정보 처리방침</a></div></div>
+          </li>
+          <li class="product-entry">
+            <a class="product-visual" href="/receipt-cam/" aria-label="Receipt Camera" data-en-aria-label="Receipt Camera" data-es-aria-label="Receipt Camera" data-pt-aria-label="Receipt Camera"><div class="product-image card-thumbnail-receipt-cam" aria-hidden="true">[ RECEIPT CAMERA ]</div></a>
+            <div class="product-name"><h3><a href="/receipt-cam/">Receipt Camera</a></h3></div>
+            <div class="product-info"><p data-en="A retro camera app that prints the moments you capture on thermal receipt paper." data-es="Una app de cámara retro que imprime en papel térmico de recibo los momentos que capturas." data-pt="Um app de câmera retrô que imprime os momentos capturados em papel térmico de recibo.">카메라로 찍은 순간을 감열지 영수증으로 인쇄하는 레트로 카메라 앱.</p><div class="links"><a href="https://apps.apple.com/app/id6742352829" aria-label="Receipt Camera App Store" data-en-aria-label="Receipt Camera App Store" data-es-aria-label="Receipt Camera en App Store" data-pt-aria-label="Receipt Camera na App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=com.studio_hevv.receipt_cam" aria-label="Receipt Camera Google Play" data-en-aria-label="Receipt Camera Google Play" data-es-aria-label="Receipt Camera en Google Play" data-pt-aria-label="Receipt Camera no Google Play">Google Play</a><a href="/receipt-cam/terms/" aria-label="Receipt Camera 이용약관" data-en-aria-label="Receipt Camera Terms of service" data-es-aria-label="Términos del servicio de Receipt Camera" data-pt-aria-label="Termos de serviço do Receipt Camera" data-en="Terms of service" data-es="Términos del servicio" data-pt="Termos de serviço">이용약관</a><a href="/receipt-cam/privacy/" aria-label="Receipt Camera 개인정보 처리방침" data-en-aria-label="Receipt Camera Privacy policy" data-es-aria-label="Política de privacidad de Receipt Camera" data-pt-aria-label="Política de privacidade do Receipt Camera" data-en="Privacy policy" data-es="Política de privacidad" data-pt="Política de privacidade">개인정보 처리방침</a></div></div>
+          </li>
+          <li class="product-entry">
+            <a class="product-visual" href="/biblical-dict/" aria-label="성경 원어 사전" data-en-aria-label="Biblical Dictionary" data-es-aria-label="Diccionario bíblico de idiomas originales" data-pt-aria-label="Dicionário bíblico de línguas originais"><div class="product-image card-thumbnail-biblical-dict" aria-hidden="true">א · Ω</div></a>
+            <div class="product-name"><h3><a href="/biblical-dict/"><span data-en="Biblical Dictionary" data-es="Diccionario bíblico de idiomas originales" data-pt="Dicionário bíblico de línguas originais">성경 원어 사전</span></a></h3></div>
+            <div class="product-info"><p data-en="A Hebrew and Greek Strong’s dictionary with morphological text search." data-es="Un diccionario Strong de hebreo y griego con búsqueda morfológica en el texto." data-pt="Um dicionário Strong de hebraico e grego com busca morfológica no texto.">히브리어·헬라어 스트롱 원어 사전 및 형태소 본문 검색.</p><div class="links"><a href="https://apps.apple.com/app/apple-store/id6785055025" aria-label="성경 원어 사전 App Store" data-en-aria-label="Biblical Dictionary App Store" data-es-aria-label="Diccionario bíblico de idiomas originales en App Store" data-pt-aria-label="Dicionário bíblico de línguas originais na App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=com.studio_hevv.biblical_dict" aria-label="성경 원어 사전 Google Play" data-en-aria-label="Biblical Dictionary Google Play" data-es-aria-label="Diccionario bíblico de idiomas originales en Google Play" data-pt-aria-label="Dicionário bíblico de línguas originais no Google Play">Google Play</a><a href="/biblical-dict/privacy/" aria-label="성경 원어 사전 개인정보 처리방침" data-en-aria-label="Biblical Dictionary Privacy policy (Korean)" data-es-aria-label="Política de privacidad del Diccionario bíblico de idiomas originales (coreano)" data-pt-aria-label="Política de privacidade do Dicionário bíblico de línguas originais (coreano)" data-en="Privacy policy (Korean)" data-es="Política de privacidad (coreano)" data-pt="Política de privacidade (coreano)" hreflang="ko">개인정보 처리방침</a></div></div>
+          </li>
+        </ul>
+      </section>
+      <section class="toss-apps" aria-labelledby="toss-title">
+        <h2 id="toss-title" data-en="Toss mini apps" data-es="Miniapps de Toss" data-pt="Miniapps do Toss">토스 미니앱</h2>
+        <ul class="toss-cards" tabindex="0" aria-label="토스 미니앱 가로 카드 목록" data-en-aria-label="Horizontal card list of Toss mini apps" data-es-aria-label="Lista horizontal de miniapps de Toss" data-pt-aria-label="Lista horizontal de miniapps do Toss">
+          <li class="product-entry toss-card">
+            <a class="product-visual" href="https://minion.toss.im/VopskHmr" aria-label="우주 황금 모으기" data-en-aria-label="Space Goldrush" data-es-aria-label="Fiebre del oro espacial" data-pt-aria-label="Corrida do ouro espacial"><img class="product-image" src="/assets/thumbnails/space-goldrush.png" alt="우주 황금 모으기 썸네일" data-en-alt="Space Goldrush thumbnail" data-es-alt="Miniatura de Fiebre del oro espacial" data-pt-alt="Miniatura da Corrida do ouro espacial" loading="lazy" width="144" height="72"></a>
+            <div class="toss-card-body"><div class="product-name"><h3><a href="https://minion.toss.im/VopskHmr"><span data-en="Space Goldrush" data-es="Fiebre del oro espacial" data-pt="Corrida do ouro espacial">우주 황금 모으기</span></a></h3></div>
+            <div class="product-info"><p data-en="A space-themed resource-mining mini app in Toss. Collect space gold and exchange it for Toss points." data-es="Una miniapp de minería espacial en Toss. Reúne oro espacial y cámbialo por puntos de Toss." data-pt="Um miniapp de mineração espacial no Toss. Colete ouro espacial e troque por pontos Toss.">토스 앱 내 우주 테마 자원 채굴 미니앱. 우주 황금을 모아 토스 포인트로 환전하세요.</p><div class="links"><a href="https://minion.toss.im/VopskHmr" aria-label="우주 황금 모으기 토스에서 열기" data-en-aria-label="Space Goldrush Open in Toss" data-es-aria-label="Abrir Fiebre del oro espacial en Toss" data-pt-aria-label="Abrir Corrida do ouro espacial no Toss" data-en="Open app" data-es="Abrir app" data-pt="Abrir app">앱 열기</a><a href="/space-goldrush/terms/" aria-label="우주 황금 모으기 이용약관" data-en-aria-label="Space Goldrush Terms of service (Korean)" data-es-aria-label="Términos del servicio de Fiebre del oro espacial (coreano)" data-pt-aria-label="Termos de serviço da Corrida do ouro espacial (coreano)" data-en="Terms of service (Korean)" data-es="Términos del servicio (coreano)" data-pt="Termos de serviço (coreano)" hreflang="ko">이용약관</a></div></div></div>
+          </li>
+          <li class="product-entry toss-card">
+            <a class="product-visual" href="/insta-dm/" aria-label="인스타 DM 분석하기" data-en-aria-label="Instagram DM Analysis" data-es-aria-label="Análisis de mensajes de Instagram" data-pt-aria-label="Análise de mensagens do Instagram"><img class="product-image" src="/assets/og/insta-dm.png" alt="인스타 DM 분석하기 썸네일" data-en-alt="Instagram DM Analysis thumbnail" data-es-alt="Miniatura del análisis de mensajes de Instagram" data-pt-alt="Miniatura da análise de mensagens do Instagram" loading="lazy" width="144" height="72"></a>
+            <div class="toss-card-body"><div class="product-name"><h3><a href="/insta-dm/"><span data-en="Instagram DM Analysis" data-es="Análisis de mensajes de Instagram" data-pt="Análise de mensagens do Instagram">인스타 DM 분석하기</span></a></h3></div>
+            <div class="product-info"><p data-en="Explore effort and affection through your Instagram DM data. Which of you is more invested?" data-es="Descubre cuánto esfuerzo y cariño hay en sus mensajes de Instagram. ¿Quién de los dos se implica más?" data-pt="Descubra quanto esforço e carinho há nas mensagens do Instagram. Qual de vocês se dedica mais?">인스타 DM 데이터로 노력·애정을 진단. 우리 둘 중 누가 더 진심일까요?</p><div class="links"><a href="https://minion.toss.im/v8My6ttg" aria-label="인스타 DM 분석하기 토스에서 열기" data-en-aria-label="Instagram DM Analysis Open in Toss" data-es-aria-label="Abrir análisis de mensajes de Instagram en Toss" data-pt-aria-label="Abrir análise de mensagens do Instagram no Toss" data-en="Open app" data-es="Abrir app" data-pt="Abrir app">앱 열기</a><a href="/insta-dm/terms/" aria-label="인스타 DM 분석하기 이용약관" data-en-aria-label="Instagram DM Analysis Terms of service (Korean)" data-es-aria-label="Términos del servicio del análisis de mensajes de Instagram (coreano)" data-pt-aria-label="Termos de serviço da análise de mensagens do Instagram (coreano)" data-en="Terms of service (Korean)" data-es="Términos del servicio (coreano)" data-pt="Termos de serviço (coreano)" hreflang="ko">이용약관</a></div></div></div>
+          </li>
+          <li class="product-entry toss-card">
+            <a class="product-visual" href="/gender-reveal/" aria-label="온라인 젠더 리빌" data-en-aria-label="Online Gender Reveal" data-es-aria-label="Anuncio virtual del sexo del bebé" data-pt-aria-label="Revelação virtual do sexo do bebê"><img class="product-image" src="/assets/og/gender-reveal.png" alt="온라인 젠더 리빌 썸네일" data-en-alt="Online Gender Reveal thumbnail" data-es-alt="Miniatura del anuncio virtual del sexo del bebé" data-pt-alt="Miniatura da revelação virtual do sexo do bebê" loading="lazy" width="144" height="72"></a>
+            <div class="toss-card-body"><div class="product-name"><h3><a href="/gender-reveal/"><span data-en="Online Gender Reveal" data-es="Anuncio virtual del sexo del bebé" data-pt="Revelação virtual do sexo do bebê">온라인 젠더 리빌</span></a></h3></div>
+            <div class="product-info"><p data-en="Send a gender-reveal invitation by link. Vote, then discover the answer with a reveal animation." data-es="Envía un enlace de invitación para revelar el sexo del bebé. Voten y descubran el resultado con una animación." data-pt="Envie um convite por link para revelar o sexo do bebê. Votem e descubram o resultado com uma animação.">링크로 보내는 성별 공개 초대장. 투표하고 공개 애니메이션으로 딸·아들을 확인하세요.</p><div class="links"><a href="https://minion.toss.im/L0puUEuy" aria-label="온라인 젠더 리빌 토스에서 열기" data-en-aria-label="Online Gender Reveal Open in Toss" data-es-aria-label="Abrir anuncio virtual del sexo del bebé en Toss" data-pt-aria-label="Abrir revelação virtual do sexo do bebê no Toss" data-en="Open app" data-es="Abrir app" data-pt="Abrir app">앱 열기</a><a href="/gender-reveal/privacy/" aria-label="온라인 젠더 리빌 개인정보 처리방침" data-en-aria-label="Online Gender Reveal Privacy policy (Korean)" data-es-aria-label="Política de privacidad del anuncio virtual del sexo del bebé (coreano)" data-pt-aria-label="Política de privacidade da revelação virtual do sexo do bebê (coreano)" data-en="Privacy policy (Korean)" data-es="Política de privacidad (coreano)" data-pt="Política de privacidade (coreano)" hreflang="ko">개인정보 처리방침</a></div></div></div>
+          </li>
+        </ul>
+      </section>
+      <section class="documents" aria-labelledby="documents-title"><div><h2 id="documents-title" data-en="Terms &amp; policies" data-es="Términos y políticas" data-pt="Termos e políticas">약관 및 정책</h2></div><a href="policies.html"><span data-en="View all documents" data-es="Ver todos los documentos" data-pt="Ver todos os documentos">문서 전체 보기</span> <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer><div class="footer-main"><a href="mailto:contact@studio-hevv.com">contact@studio-hevv.com</a></div><div class="footer-meta"><span>© 2026 Studio HEVV</span></div></footer>
+  </div>
 </body>
 </html>

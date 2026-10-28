@@ -51,6 +51,10 @@
     .wordmark { font-size:15px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-bottom:none; display:inline-block; margin-bottom:48px; }
     h1 { font-size:30px; line-height:1.32; font-weight:700; letter-spacing:-.02em; margin-bottom:16px; }
     .lead { font-size:18px; color:#555; margin-bottom:32px; }
+    .service-guide { margin-bottom:32px; padding:16px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .service-guide h2 { margin:0 0 8px; color:#555; letter-spacing:0; text-transform:none; }
+    .service-guide-links { display:flex; flex-wrap:wrap; gap:8px 24px; font-size:14px; }
+    .service-guide a:focus-visible { outline:2px solid var(--text); outline-offset:4px; }
     .cta-wrap { display:flex; gap:24px; align-items:center; flex-wrap:wrap; }
     .btn { display:inline-block; background:var(--accent); color:#fff; font-weight:600; font-size:16px; padding:14px 26px; border-radius:10px; border-bottom:none; }
     .btn:hover { border-bottom:none; opacity:.92; }
@@ -106,6 +110,13 @@
     <h1>온라인 젠더리빌<br />— 딸일까, 아들일까?</h1>
     <p class="lead"><strong>링크 하나로</strong> 여는 성별 공개 이벤트. 가족·친구가 딸·아들을 투표하고, 공개 애니메이션으로 결과를 함께 확인해요.</p>
 
+    <nav class="service-guide" aria-labelledby="gender-reveal-service-guide">
+      <h2 id="gender-reveal-service-guide">온라인 젠더 리빌 서비스 안내</h2>
+      <div class="service-guide-links">
+        <a href="/gender-reveal/privacy/">개인정보 처리방침</a>
+      </div>
+    </nav>
+
     <div class="cta-wrap">
       <a class="btn" href="https://minion.toss.im/L0puUEuy" target="_blank" rel="noopener" data-app-open="hero-cta" data-product="gender-reveal">토스에서 만들기 ↗</a>
       <div class="qr-wrap">
@@ -141,7 +152,6 @@
     <footer>
       <span class="copyright">&copy; 2026 Studio HEVV</span>
       <a href="/">홈</a>
-      <a href="/gender-reveal/privacy/">개인정보 처리방침</a>
       <a href="mailto:feedback@studio-hevv.com">feedback@studio-hevv.com</a>
     </footer>
   </main>

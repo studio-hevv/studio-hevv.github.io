@@ -12,35 +12,6 @@
   <link rel="alternate" hreflang="es" href="https://studio-hevv.com/selah/es/terms/" />
   <link rel="alternate" hreflang="pt-BR" href="https://studio-hevv.com/selah/pt-br/terms/" />
   <link rel="alternate" hreflang="x-default" href="https://studio-hevv.com/selah/terms/" />
-  <script>
-    (function () {
-      /* pickSelahLang:start */
-      function pickSelahLang(langs, search, stored) {
-        if (/[?&]lang=ko(?:[&#]|$)/i.test(search || "")) return null;
-        if (stored === "ko") return null;
-        langs = langs || [];
-        for (var i = 0; i < langs.length; i++) {
-          if (/^ko(?:-|$)/i.test(String(langs[i]))) return null;
-        }
-        var first = String(langs[0] || "").toLowerCase();
-        if (first.indexOf("es") === 0) return "es";
-        if (first.indexOf("pt") === 0) return "pt-br";
-        return "en";
-      }
-      /* pickSelahLang:end */
-      var stored = null;
-      try { stored = window.localStorage.getItem("selah-lang"); } catch (e) {}
-      var search = window.location.search;
-      if (/[?&]lang=ko(?:[&#]|$)/i.test(search)) {
-        try { window.localStorage.setItem("selah-lang", "ko"); } catch (e) {}
-      }
-      var langs = navigator.languages && navigator.languages.length
-        ? navigator.languages
-        : (navigator.language ? [navigator.language] : []);
-      var target = pickSelahLang(langs, search, stored);
-      if (target) window.location.replace("/selah/" + target + "/terms/" + window.location.hash);
-    })();
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

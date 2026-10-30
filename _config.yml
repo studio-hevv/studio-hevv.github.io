@@ -2,3 +2,7 @@
 # /.well-known/apple-app-site-association.
 include:
   - .well-known
+# Implementation notes and validation tools are not public site content.
+exclude:
+  - docs
+  - tests

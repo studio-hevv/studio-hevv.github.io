@@ -13,35 +13,6 @@
   <link rel="alternate" hreflang="es" href="https://studio-hevv.com/selah/es/" />
   <link rel="alternate" hreflang="pt-BR" href="https://studio-hevv.com/selah/pt-br/" />
   <link rel="alternate" hreflang="x-default" href="https://studio-hevv.com/selah/" />
-  <script>
-    (function () {
-      /* pickSelahLang:start */
-      function pickSelahLang(langs, search, stored) {
-        if (/[?&]lang=ko(?:[&#]|$)/i.test(search || "")) return null;
-        if (stored === "ko") return null;
-        langs = langs || [];
-        for (var i = 0; i < langs.length; i++) {
-          if (/^ko(?:-|$)/i.test(String(langs[i]))) return null;
-        }
-        var first = String(langs[0] || "").toLowerCase();
-        if (first.indexOf("es") === 0) return "es";
-        if (first.indexOf("pt") === 0) return "pt-br";
-        return "en";
-      }
-      /* pickSelahLang:end */
-      var stored = null;
-      try { stored = window.localStorage.getItem("selah-lang"); } catch (e) {}
-      var search = window.location.search;
-      if (/[?&]lang=ko(?:[&#]|$)/i.test(search)) {
-        try { window.localStorage.setItem("selah-lang", "ko"); } catch (e) {}
-      }
-      var langs = navigator.languages && navigator.languages.length
-        ? navigator.languages
-        : (navigator.language ? [navigator.language] : []);
-      var target = pickSelahLang(langs, search, stored);
-      if (target) window.location.replace("/selah/" + target + "/" + window.location.hash);
-    })();
-  </script>
   <meta name="keywords" content="예배 노트 앱, 설교 노트 앱, 말씀 기록, 묵상 앱, QT 앱, 성경 노트, 셀라, Selah" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Studio HEVV" />
@@ -55,31 +26,84 @@
   <meta name="twitter:description" content="말씀을 듣고, 기록하고, 삶으로 살아내도록. iPhone·Android 앱." />
   <meta name="twitter:image" content="https://studio-hevv.com/assets/og/selah.png" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "셀라 (Selah)",
-    "url": "https://studio-hevv.com/selah/",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "iOS, Android",
-    "image": "https://studio-hevv.com/assets/og/selah.png",
-    "description": "예배와 설교 말씀을 듣고 기록하고 삶으로 살아내는 노트 앱. 말씀 노트, 묵상, QT 기록.",
-    "downloadUrl": ["https://apps.apple.com/app/apple-store/id6779875313", "https://play.google.com/store/apps/details?id=com.studio_hevv.selah"],
-    "installUrl": ["https://apps.apple.com/app/apple-store/id6779875313", "https://play.google.com/store/apps/details?id=com.studio_hevv.selah"],
-    "publisher": { "@type": "Organization", "name": "Studio HEVV", "url": "https://studio-hevv.com/" }
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "셀라 (Selah)",
+  "url": "https://studio-hevv.com/selah/",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "image": "https://studio-hevv.com/assets/og/selah.png",
+  "description": "예배와 설교 말씀을 듣고 기록하고 삶으로 살아내는 노트 앱. 말씀 노트, 묵상, QT 기록.",
+  "downloadUrl": [
+    "https://apps.apple.com/app/apple-store/id6779875313",
+    "https://play.google.com/store/apps/details?id=com.studio_hevv.selah"
+  ],
+  "installUrl": [
+    "https://apps.apple.com/app/apple-store/id6779875313",
+    "https://play.google.com/store/apps/details?id=com.studio_hevv.selah"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Studio HEVV",
+    "url": "https://studio-hevv.com/"
+  },
+  "inLanguage": "ko",
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://apps.apple.com/app/apple-store/id6779875313",
+      "price": 0,
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://play.google.com/store/apps/details?id=com.studio_hevv.selah",
+      "price": 0,
+      "priceCurrency": "USD"
+    }
+  ]
+}
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "셀라는 어떤 앱인가요?", "acceptedAnswer": { "@type": "Answer", "text": "예배와 설교 말씀을 그 자리에서 기록하고, 이후 묵상하며 삶으로 이어가도록 돕는 말씀 노트 앱입니다. iPhone과 Android에서 쓸 수 있습니다." } },
-      { "@type": "Question", "name": "어디서 받을 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone은 App Store, Android는 Google Play에서 '셀라' 또는 'Selah'로 검색해 받을 수 있습니다." } },
-      { "@type": "Question", "name": "무료인가요?", "acceptedAnswer": { "@type": "Answer", "text": "노트 3개까지는 무료로 쓸 수 있고, 그 이상 기록하려면 결제가 필요합니다." } },
-      { "@type": "Question", "name": "안드로이드도 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. Google Play에서 받을 수 있습니다." } }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "셀라는 어떤 앱인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "예배·설교 말씀을 기록하고 묵상하며 삶으로 이어가도록 돕는 말씀 노트 앱입니다. iPhone과 Android에서 쓸 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "어디서 받을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone은 App Store, Android는 Google Play에서 '셀라' 또는 'Selah'로 검색해 받을 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "무료인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "노트 3개까지는 무료로 쓸 수 있고, 그 이상 기록하려면 결제가 필요합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "안드로이드도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. Google Play에서 받을 수 있습니다."
+      }
+    }
+  ]
+}
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -205,6 +229,11 @@
       <div class="faq"><h3>어디서 받을 수 있나요?</h3><p>iPhone은 App Store, Android는 Google Play에서 '셀라' 또는 'Selah'로 검색해 받을 수 있습니다.</p></div>
       <div class="faq"><h3>무료인가요?</h3><p>노트 3개까지는 무료로 쓸 수 있고, 그 이상 기록하려면 결제가 필요합니다.</p></div>
       <div class="faq"><h3>안드로이드도 되나요?</h3><p>네. Google Play에서 받을 수 있습니다.</p></div>
+    </section>
+
+    <section id="sermon-notes-guide" aria-labelledby="sermon-notes-guide-title">
+      <h2 id="sermon-notes-guide-title">설교 노트 작성 가이드</h2>
+      <p>예배 중에는 모든 문장을 옮기기보다 본문 구절, 설교의 핵심, 내게 남은 질문을 짧게 기록해 보세요. 예배 후에는 한 가지 실천을 덧붙여 다시 읽을 수 있는 말씀 노트로 정리합니다.</p><ol class="steps"><li><span class="step-t">본문과 핵심 말씀</span><br />설교 제목과 성경 구절을 적고, 기억하고 싶은 말씀을 내 말로 요약합니다.</li><li><span class="step-t">질문과 묵상</span><br />이해가 어려웠던 부분과 오늘 내 상황에 비추어 떠오른 생각을 구분해 적습니다.</li><li><span class="step-t">이번 주의 실천</span><br />이번 주에 할 수 있는 행동 하나를 적고, 다음 예배 전에 노트를 다시 펼쳐 돌아봅니다.</li></ol><p>예를 들어 “감사”에 관한 말씀을 들었다면, 핵심 요약 아래에 감사한 일 한 가지와 감사 인사를 전할 사람을 기록할 수 있어요. 같은 노트를 평일 QT·묵상 때 다시 읽으며 생각을 이어가 보세요.</p>
     </section>
 
     <footer>

@@ -2,3 +2,4 @@
 
 # git worktrees (Claude Code 기본 위치)
 .claude/worktrees/
+__pycache__/

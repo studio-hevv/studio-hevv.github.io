@@ -13,9 +13,6 @@
   <link rel="alternate" hreflang="es" href="https://studio-hevv.com/selah/es/" />
   <link rel="alternate" hreflang="pt-BR" href="https://studio-hevv.com/selah/pt-br/" />
   <link rel="alternate" hreflang="x-default" href="https://studio-hevv.com/selah/" />
-  <script>
-    try { if (window.localStorage.getItem("selah-lang") === "ko") window.localStorage.removeItem("selah-lang"); } catch (e) {}
-  </script>
   <meta name="keywords" content="church notes app, sermon notes app, sermon journal, devotion app, bible notes, Selah" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Studio HEVV" />
@@ -51,7 +48,21 @@
     "@type": "Organization",
     "name": "Studio HEVV",
     "url": "https://studio-hevv.com/"
-  }
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://apps.apple.com/app/apple-store/id6779875313",
+      "price": 0,
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://play.google.com/store/apps/details?id=com.studio_hevv.selah",
+      "price": 0,
+      "priceCurrency": "USD"
+    }
+  ]
 }
   </script>
   <script type="application/ld+json">
@@ -162,8 +173,8 @@
 </head>
 <body>
   <main>
-    <nav class="lang-switch" aria-label="Language"><a href="/selah/?lang=ko" lang="ko" hreflang="ko">한국어</a> · <span lang="en" aria-current="page">English</span> · <a href="/selah/es/" lang="es" hreflang="es">Español</a> · <a href="/selah/pt-br/" lang="pt-BR" hreflang="pt-BR">Português</a></nav>
-    <a class="wordmark" href="/">Studio HEVV</a>
+    <nav class="lang-switch" aria-label="Language"><a href="/selah/" lang="ko" hreflang="ko">한국어</a> · <span lang="en" aria-current="page">English</span> · <a href="/selah/es/" lang="es" hreflang="es">Español</a> · <a href="/selah/pt-br/" lang="pt-BR" hreflang="pt-BR">Português</a></nav>
+    <a class="wordmark" href="/en/">Studio HEVV</a>
 
     <img class="app-icon" src="/assets/icons/selah-256.png" alt="Selah app icon" width="88" height="88" />
 
@@ -220,9 +231,14 @@
       <div class="faq"><h3>Does it work on Android?</h3><p>Yes. You can get it on Google Play.</p></div>
     </section>
 
+    <section id="sermon-notes-guide" aria-labelledby="sermon-notes-guide-title">
+      <h2 id="sermon-notes-guide-title">How to write sermon notes you can return to</h2>
+      <p>Rather than transcribing every sentence, note the Bible passage, the main message and a question you want to reflect on. After church, add one practical response.</p><ol class="steps"><li><span class="step-t">Passage and main point</span><br />Write the sermon title and Bible reference, then summarize the message in your own words.</li><li><span class="step-t">Questions and reflection</span><br />Separate what you want to understand better from thoughts about your own life.</li><li><span class="step-t">One action for the week</span><br />Choose something you can do this week and revisit your note before the next service.</li></ol><p>For a sermon about gratitude, for example, write one thing you are thankful for and someone you want to thank. Return to the same note during your weekday devotions to continue your reflection.</p>
+    </section>
+
     <footer>
       <span class="copyright">&copy; 2026 Studio HEVV</span>
-      <a href="/">Home</a>
+      <a href="/en/">Home</a>
       <a href="mailto:feedback@studio-hevv.com">feedback@studio-hevv.com</a>
     </footer>
   </main>

@@ -175,8 +175,21 @@ process.stdout.write(JSON.stringify(results));
                 self.assertEqual(item['got'], item['want'])
                 self.assertEqual(item['selected'], item['want'])
 
+    def test_selah_share_download_page_stays_out_of_search_and_tags_both_stores(self):
+        doc = Document('/selah/app/')
+        self.assertEqual(doc.attrs('meta', name='robots')[0]['content'], 'noindex')
+        ios = doc.attrs('a', id='ios')[0]['href']
+        android = doc.attrs('a', id='android')[0]['href']
+        self.assertIn('id6779875313', ios)
+        self.assertEqual(parse_qs(urlsplit(ios).query)['ct'], ['share-note-image'])
+        referrer = parse_qs(urlsplit(android).query)['referrer'][0]
+        self.assertIn('utm_source=share', referrer)
+        self.assertIn('com.studio_hevv.selah', android)
+        locs = ET.parse(ROOT / 'sitemap.xml').getroot().itertext()
+        self.assertFalse(any('/selah/app' in loc for loc in locs))
+
     def test_landing_links_and_assets_resolve_in_published_tree(self):
-        paths = set([*HOME.values(), *SELAH.values(), *CAMERA.values(), '/biblical-dict/'])
+        paths = set([*HOME.values(), *SELAH.values(), *CAMERA.values(), '/biblical-dict/', '/selah/app/'])
         for path in paths:
             with self.subTest(path=path):
                 for tag, attrs in Document(path).tags:

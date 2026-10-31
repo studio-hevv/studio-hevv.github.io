@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/selah-32.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/selah-apple-touch.png" />
+  <title>셀라 받기</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#f8f8f6; --text:#1a1a1a; --muted:#888; --border:#e0e0dc; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size:16px; line-height:1.7; padding:0 24px; }
+    main { max-width:480px; margin:0 auto; padding:72px 0 60px; text-align:center; }
+    .app-icon { display:block; width:88px; height:88px; border-radius:20px; border:1px solid var(--border); margin:0 auto 24px; }
+    h1 { font-size:26px; line-height:1.35; font-weight:700; letter-spacing:-.02em; margin-bottom:8px; }
+    .lead { font-size:16px; color:#555; margin-bottom:32px; }
+    .cta-wrap { display:flex; flex-direction:column; gap:12px; align-items:stretch; }
+    .btn { display:block; background:var(--text); color:#fff; font-weight:600; font-size:16px; padding:14px 26px; border-radius:10px; text-decoration:none; }
+    .btn:hover { opacity:.92; }
+    .btn:focus-visible { outline:2px solid var(--text); outline-offset:3px; }
+    .home { display:inline-block; margin-top:40px; font-size:14px; color:var(--muted); text-decoration:none; border-bottom:1px solid transparent; }
+    .home:hover { color:var(--text); border-bottom-color:var(--text); }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="app-icon" src="/assets/icons/selah-256.png" alt="" width="88" height="88" />
+    <h1 data-i18n="title">셀라 — 나만의 예배 노트</h1>
+    <p class="lead" data-i18n="lead">말씀을 듣고, 기록하고, 다시 꺼내 보세요.</p>
+    <div class="cta-wrap">
+      <a class="btn" id="ios" href="https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&amp;ct=share-note-image&amp;mt=8" data-i18n="ios">App Store에서 받기</a>
+      <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.studio_hevv.selah&amp;referrer=utm_source%3Dshare%26utm_medium%3Dnote_image%26utm_campaign%3Dshare-note-image" data-i18n="android">Google Play에서 받기</a>
+    </div>
+    <a class="home" href="/selah/" data-i18n="more">셀라 더 알아보기</a>
+  </main>
+  <script>
+    (function () {
+      // Shared note images link here. ?src=<campaign> (letters, digits, '-', up to 30) replaces the
+      // default campaign so later share surfaces (e.g. a year-end event card) are counted separately.
+      var campaign = 'share-note-image';
+      var src = new URLSearchParams(location.search).get('src');
+      if (src && /^[a-z0-9-]{1,30}$/i.test(src)) campaign = 'share-' + src.toLowerCase();
+
+      var ios = 'https://apps.apple.com/app/apple-store/id6779875313?pt=128948450&ct=' + campaign + '&mt=8';
+      var android = 'https://play.google.com/store/apps/details?id=com.studio_hevv.selah&referrer=' +
+        encodeURIComponent('utm_source=share&utm_medium=note_image&utm_campaign=' + campaign);
+      document.getElementById('ios').href = ios;
+      document.getElementById('android').href = android;
+
+      var copy = {
+        en: { title: 'Selah — Your Worship Notes', lead: 'Hear the Word, write it down, and come back to it.', ios: 'Download on the App Store', android: 'Get it on Google Play', more: 'Learn more about Selah', page: 'Get Selah' },
+        es: { title: 'Selah — Tus notas de culto', lead: 'Escucha la Palabra, anótala y vuelve a ella.', ios: 'Descargar en App Store', android: 'Disponible en Google Play', more: 'Más sobre Selah', page: 'Descargar Selah' },
+        pt: { title: 'Selah — Suas anotações de culto', lead: 'Ouça a Palavra, anote e volte a ela.', ios: 'Baixar na App Store', android: 'Disponível no Google Play', more: 'Saiba mais sobre o Selah', page: 'Baixar o Selah' }
+      };
+      var lang = (navigator.language || 'ko').toLowerCase().slice(0, 2);
+      var t = copy[lang];
+      if (t) {
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+        document.title = t.page;
+        document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t[el.getAttribute('data-i18n')]; });
+        document.querySelector('.home').href = '/selah/' + (lang === 'pt' ? 'pt-br' : lang) + '/';
+      }
+
+      var ua = navigator.userAgent;
+      var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isIOS) location.replace(ios);
+      else if (/Android/.test(ua)) location.replace(android);
+    })();
+  </script>
+</body>
+</html>

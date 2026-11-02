@@ -6,7 +6,19 @@
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/selah-32.png" />
   <link rel="apple-touch-icon" href="/assets/icons/selah-apple-touch.png" />
-  <title>셀라 받기</title>
+  <title>셀라 — 나만의 예배 노트</title>
+  <meta name="description" content="말씀을 듣고, 기록하고, 다시 꺼내 보는 예배 노트 앱 셀라. iPhone·Android에서 받으세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio HEVV" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="셀라 — 나만의 예배 노트" />
+  <meta property="og:description" content="말씀을 듣고, 기록하고, 다시 꺼내 보세요. iPhone·Android에서 받을 수 있어요." />
+  <meta property="og:url" content="https://studio-hevv.com/selah/app" />
+  <meta property="og:image" content="https://studio-hevv.com/assets/og/selah.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="셀라 — 나만의 예배 노트" />
+  <meta name="twitter:description" content="말씀을 듣고, 기록하고, 다시 꺼내 보세요. iPhone·Android에서 받을 수 있어요." />
+  <meta name="twitter:image" content="https://studio-hevv.com/assets/og/selah.png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg:#f8f8f6; --text:#1a1a1a; --muted:#888; --border:#e0e0dc; }
@@ -49,9 +61,9 @@
       document.getElementById('android').href = android;
 
       var copy = {
-        en: { title: 'Selah — Your Worship Notes', lead: 'Hear the Word, write it down, and come back to it.', ios: 'Download on the App Store', android: 'Get it on Google Play', more: 'Learn more about Selah', page: 'Get Selah' },
-        es: { title: 'Selah — Tus notas de culto', lead: 'Escucha la Palabra, anótala y vuelve a ella.', ios: 'Descargar en App Store', android: 'Disponible en Google Play', more: 'Más sobre Selah', page: 'Descargar Selah' },
-        pt: { title: 'Selah — Suas anotações de culto', lead: 'Ouça a Palavra, anote e volte a ela.', ios: 'Baixar na App Store', android: 'Disponível no Google Play', more: 'Saiba mais sobre o Selah', page: 'Baixar o Selah' }
+        en: { title: 'Selah — Your Worship Notes', lead: 'Hear the Word, write it down, and come back to it.', ios: 'Download on the App Store', android: 'Get it on Google Play', more: 'Learn more about Selah', page: 'Selah — Your Worship Notes' },
+        es: { title: 'Selah — Tus notas de culto', lead: 'Escucha la Palabra, anótala y vuelve a ella.', ios: 'Descargar en App Store', android: 'Disponible en Google Play', more: 'Más sobre Selah', page: 'Selah — Tus notas de culto' },
+        pt: { title: 'Selah — Suas anotações de culto', lead: 'Ouça a Palavra, anote e volte a ela.', ios: 'Baixar na App Store', android: 'Disponível no Google Play', more: 'Saiba mais sobre o Selah', page: 'Selah — Suas anotações de culto' }
       };
       var lang = (navigator.language || 'ko').toLowerCase().slice(0, 2);
       var t = copy[lang];

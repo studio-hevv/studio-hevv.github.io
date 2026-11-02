@@ -178,7 +178,7 @@ process.stdout.write(JSON.stringify(results));
     def test_selah_share_download_page_stays_out_of_search_and_tags_both_stores(self):
         doc = Document('/selah/app/')
         self.assertEqual(doc.attrs('meta', name='robots')[0]['content'], 'noindex')
-        self.assertEqual(doc.attrs('meta', property='og:title')[0]['content'], '셀라 — 나만의 예배 노트')
+        self.assertEqual(doc.attrs('meta', property='og:title')[0]['content'], '셀라: 나만의 예배 노트')
         self.assertTrue(doc.attrs('meta', property='og:description')[0]['content'])
         self.assertEqual(doc.attrs('meta', property='og:image')[0]['content'], ORIGIN + '/assets/og/selah.png')
         ios = doc.attrs('a', id='ios')[0]['href']

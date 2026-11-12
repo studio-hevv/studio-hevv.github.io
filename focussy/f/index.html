@@ -32,7 +32,7 @@
       padding: 18px; font-size: 15px; font-weight: 700;
     }
     a.primary { background: #fff; color: #000; }
-    span.soon { background: rgba(255,255,255,.08); color: rgba(255,255,255,.45); font-weight: 600; }
+    a.secondary { background: rgba(255,255,255,.08); color: rgba(255,255,255,.75); font-weight: 600; }
     .code { font-size: 11px; color: rgba(255,255,255,.25); text-align: center; margin-top: 18px; letter-spacing: 1px; }
   </style>
 </head>
@@ -49,12 +49,24 @@
   </main>
   <div>
     <div class="buttons">
-      <a class="btn primary" id="open" href="#">앱에서 열기</a>
-      <span class="btn soon">App Store · 곧 출시</span>
+      <a class="btn primary" href="https://apps.apple.com/app/id6821605863">App Store에서 받기</a>
+      <a class="btn secondary" id="open" href="#">이미 있다면 앱에서 열기</a>
     </div>
     <div class="code" id="code"></div>
   </div>
   <script>
+    // KakaoTalk and LINE open links in their own browser, where iOS never hands a link to the
+    // app. Out to the system instead: with the app installed it opens straight in the app,
+    // otherwise this page again, in Safari.
+    (function () {
+      var ua = navigator.userAgent;
+      if (/KAKAOTALK/i.test(ua)) {
+        location.href = "kakaotalk://web/openExternal?url=" + encodeURIComponent(location.href);
+      } else if (/ Line\//.test(ua) && location.search.indexOf("openExternalBrowser=1") < 0) {
+        location.href = location.href + (location.search ? "&" : "?") + "openExternalBrowser=1";
+      }
+    })();
+
     // With the app installed iOS opens this link in the app and this page is never seen.
     // "앱에서 열기" is for when it was opened in a browser anyway (an in-app browser, say).
     var c = new URLSearchParams(location.search).get("c") || "";
